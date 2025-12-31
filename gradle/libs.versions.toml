@@ -1,0 +1,30 @@
+[versions]
+shadow = "9.1.0"
+netty = "4.2.8.Final"
+logback = "1.5.18"
+slf4j = "2.0.17"
+jspecify = "1.0.0"
+cosine = "1.0"
+adventure = "4.25.0-SNAPSHOT"
+
+[libraries]
+netty = { module = "io.netty:netty-all", version.ref = "netty" }
+logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+jspecify = { module = "org.jspecify:jspecify", version.ref = "jspecify" }
+cosine = { module = "xyz.endelith.cosine:cosine", version.ref = "cosine"}
+
+adventure = { module = "net.kyori:adventure-api", version.ref = "adventure" }
+adventure-nbt = { module = "net.kyori:adventure-nbt", version.ref = "adventure" }
+adventure-minimessage = { module = "net.kyori:adventure-text-minimessage", version.ref = "adventure" }
+adventure-serializer-gson = { module = "net.kyori:adventure-text-serializer-gson", version.ref = "adventure" }
+adventure-serializer-plain = { module = "net.kyori:adventure-text-serializer-plain", version.ref = "adventure" }
+
+[bundles]
+adventure = [
+    "adventure", "adventure-nbt", "adventure-minimessage", 
+    "adventure-serializer-gson", "adventure-serializer-plain"
+]
+
+[plugins]
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
