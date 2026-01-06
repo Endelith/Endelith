@@ -11,18 +11,16 @@ import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
-import io.netty.channel.IoHandlerFactory;
-import io.netty.channel.MultiThreadIoEventLoopGroup;
-import io.netty.channel.nio.NioIoHandler;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import xyz.endelith.configuration.ServerConfiguration;
 import xyz.endelith.server.MinecraftServerImpl;
-import xyz.endelith.server.network.pipeline.decoder.PacketDecoder;
-import xyz.endelith.server.network.pipeline.decoder.PacketLenghtDecoder;
-import xyz.endelith.server.network.pipeline.encoder.PacketEncoder;
-import xyz.endelith.server.network.pipeline.encoder.PacketLenghtEncoder;
-import xyz.endelith.server.network.pipeline.handler.PacketHandler;
+import xyz.endelith.server.network.netty.decoder.PacketDecoder;
+import xyz.endelith.server.network.netty.decoder.PacketLenghtDecoder;
+import xyz.endelith.server.network.netty.encoder.PacketEncoder;
+import xyz.endelith.server.network.netty.encoder.PacketLenghtEncoder;
+import xyz.endelith.server.network.netty.handler.PacketHandler;
+import xyz.endelith.server.network.netty.transport.NettyTransportType;
 
 @NullMarked
 public class NetworkManager extends ChannelInitializer<SocketChannel> {
@@ -44,12 +42,23 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
     private Channel channel;
 
     public NetworkManager(MinecraftServerImpl server) {
-        IoHandlerFactory factory = NioIoHandler.newFactory(); //TODO: EPOLL?
         this.server = Objects.requireNonNull(server, "server");
 
-        this.bossGroup = new MultiThreadIoEventLoopGroup(factory);
-        this.workerGroup = new MultiThreadIoEventLoopGroup(factory); 
-        
+        NettyTransportType transport = server.configuration()
+                                             .transportSelector()
+                                             .transportType();
+        if (!transport.isAvailable()) {
+            NettyTransportType oldTransport = transport;
+            transport = NettyTransportType.select();
+            LOGGER.warn(
+                    "The netty transport specified - {} - is not available, falling back to {}...",
+                    oldTransport, transport
+            );
+        }
+
+        this.bossGroup = transport.createEventLoop();
+        this.workerGroup = transport.createEventLoop();
+
         this.bootstrap = new ServerBootstrap()
             .group(bossGroup, workerGroup)
             .channel(NioServerSocketChannel.class)
@@ -62,7 +71,7 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
         if (channel != null)
             throw new IllegalStateException("The network manager has already been started");
        
-        ServerConfiguration configuration = server.serverConfiguration();
+        ServerConfiguration configuration = server.configuration();
         String address = configuration.serverAddress();
         int port = configuration.serverPort();
 

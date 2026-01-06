@@ -6,6 +6,6 @@ public interface MinecraftServer {
     String brandName();
     String minecraftVersion();
     int protocolVersion();
-    ServerConfiguration serverConfiguration();
+    ServerConfiguration configuration();
     void shutdown();
 }

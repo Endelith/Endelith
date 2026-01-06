@@ -10,6 +10,7 @@ import org.simpleyaml.configuration.file.YamlFile;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import xyz.endelith.configuration.ServerConfiguration;
+import xyz.endelith.server.network.netty.transport.NettyTransportSelector;
 
 public final class ServerConfigurationImpl implements ServerConfiguration {
 
@@ -22,6 +23,8 @@ public final class ServerConfigurationImpl implements ServerConfiguration {
     private Component motd;
     private Component unsupportedVersionMessage;
     private Component transferNotAllowedMessage;
+
+    private NettyTransportSelector transport;
 
     public ServerConfigurationImpl() {
         this.file = Path.of(FILE_NAME);
@@ -36,6 +39,7 @@ public final class ServerConfigurationImpl implements ServerConfiguration {
         config.load();
         writeDefaults();
         loadComponents();
+        loadTransport();
         config.save();
     }
 
@@ -53,6 +57,16 @@ public final class ServerConfigurationImpl implements ServerConfiguration {
         this.motd = this.deserialize(Key.MOTD);
         this.unsupportedVersionMessage = this.deserialize(Key.UNSUPPORTED_VERSION_MESSAGE);
         this.transferNotAllowedMessage = this.deserialize(Key.TRANSFER_NOT_ALLOWED_MESSAGE);
+    }
+
+    private void loadTransport() {
+        String value = config.getString(Key.TRANSPORT.path, "auto");
+    
+        try {
+            transport = NettyTransportSelector.valueOf(value.trim().toUpperCase());
+        } catch (IllegalArgumentException ex) {
+            transport = NettyTransportSelector.AUTO;
+        }
     }
 
     private Component deserialize(Key key) {
@@ -103,6 +117,10 @@ public final class ServerConfigurationImpl implements ServerConfiguration {
     @Override
     public Component transferNotAllowedMessage() {
         return this.transferNotAllowedMessage;
+    }
+
+    public NettyTransportSelector transportSelector() {
+        return transport;
     }
 
     private enum Key {
@@ -181,6 +199,19 @@ public final class ServerConfigurationImpl implements ServerConfiguration {
             """
             Message sent when a client attempts to connect via Transfer packet
             while transfers are disabled
+            """
+        ),
+        
+        TRANSPORT(
+            "transport",
+            "auto",
+            """
+            Network transport backend used by Netty
+            Possible values:
+              - auto   (recommended)
+              - nio
+              - epoll  (linux only)
+              - kqueue (macos and bsd only)
             """
         );
 

@@ -55,7 +55,7 @@ public final class MinecraftServerImpl implements MinecraftServer {
     }
 
     @Override
-    public ServerConfigurationImpl serverConfiguration() {
+    public ServerConfigurationImpl configuration() {
         return configuration;
     }
 

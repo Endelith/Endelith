@@ -8,8 +8,8 @@ public interface ServerConfiguration {
     boolean onlineMode();
     int maxPlayers();
     Component serverListDescription();
-    Component unsupportedVersionMessage();
-    boolean enforceSecureChat();
-    boolean allowTransferPacket();
-    Component transferNotAllowedMessage();
+//    Component unsupportedVersionMessage();
+//    boolean enforceSecureChat();
+//    boolean allowTransferPacket();
+//    Component transferNotAllowedMessage();
 }
