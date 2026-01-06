@@ -1,10 +1,6 @@
 package xyz.endelith.server.network.packet.client.handshake;
 
-import org.jspecify.annotations.NullMarked;
-
 import xyz.endelith.cosine.stream.StreamCodec;
-import xyz.endelith.network.PlayerConnection;
-import xyz.endelith.server.network.ConnectionState;
 import xyz.endelith.server.network.PlayerConnectionImpl;
 import xyz.endelith.server.network.packet.client.ClientPacket;
 

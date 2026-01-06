@@ -3,6 +3,7 @@ package xyz.endelith.server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import xyz.endelith.ApiVersion;
 import xyz.endelith.MinecraftServer;
 import xyz.endelith.server.configuration.ServerConfigurationImpl;
 import xyz.endelith.server.network.NetworkManager;
@@ -12,23 +13,18 @@ public final class MinecraftServerImpl implements MinecraftServer {
     private static final Logger LOGGER = LoggerFactory.getLogger(MinecraftServerImpl.class);
     
     private static final String BRAND_NAME = "Endelith";
-    private static final String MINECRAFT_VERSION = "1.21.10";
-
-    private static final int PROTOCOL_VERSION = 773;
- 
-    private final ServerConfigurationImpl configuration;
+    
+    private final ServerConfigurationImpl configuration = ServerConfigurationImpl.create();
     private final NetworkManager networkManager;
 
     private final Thread shutdownThread = createShutdownThread();
 
     public MinecraftServerImpl() {
-        this.configuration = new ServerConfigurationImpl();
         this.networkManager = new NetworkManager(this);
  
         try {
             Runtime.getRuntime().addShutdownHook(shutdownThread);
-            configuration.load();
-            networkManager.bind();
+            networkManager.bind(); 
         } catch (Throwable t) {
             LOGGER.error("an error occurred while starting the server", t);
             shutdown();
@@ -46,16 +42,16 @@ public final class MinecraftServerImpl implements MinecraftServer {
 
     @Override
     public String minecraftVersion() {
-        return MINECRAFT_VERSION; 
+        return ApiVersion.LATEST.name(); 
     }
 
     @Override
     public int protocolVersion() {
-        return PROTOCOL_VERSION;
+        return ApiVersion.LATEST.protocolVersion();
     }
 
     @Override
-    public ServerConfigurationImpl serverConfiguration() {
+    public ServerConfigurationImpl configuration() {
         return configuration;
     }
 

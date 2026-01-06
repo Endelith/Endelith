@@ -1,26 +1,28 @@
-package xyz.endelith.server.network.pipeline.handler;
+package xyz.endelith.server.network.netty.encoder;
 
 import java.util.Objects;
 
 import org.jspecify.annotations.NullMarked;
 
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.handler.codec.MessageToByteEncoder;
+import xyz.endelith.cosine.stream.StreamCodec;
 import xyz.endelith.server.network.PlayerConnectionImpl;
-import xyz.endelith.server.network.packet.client.ClientPacket;
 
 @NullMarked
-public class PacketHandler extends SimpleChannelInboundHandler<ClientPacket> {
+public class PacketLenghtEncoder extends MessageToByteEncoder<ByteBuf> {
 
     private final PlayerConnectionImpl connection;
 
-    public PacketHandler(PlayerConnectionImpl connection) {
+    public PacketLenghtEncoder(PlayerConnectionImpl connection) {
         this.connection = Objects.requireNonNull(connection, "connection");
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, ClientPacket msg) throws Exception {
-        msg.handle(connection);
+    protected void encode(ChannelHandlerContext ctx, ByteBuf msg, ByteBuf out) throws Exception { 
+        StreamCodec.VAR_INT.write(out, msg.readableBytes());
+        out.writeBytes(msg);    
     }
 
     @Override

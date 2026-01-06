@@ -1,4 +1,4 @@
-package xyz.endelith.server.network.pipeline.encoder;
+package xyz.endelith.server.network.netty.encoder;
 
 import java.util.Objects;
 

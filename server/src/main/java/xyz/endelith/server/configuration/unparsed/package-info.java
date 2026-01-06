@@ -1,4 +1,4 @@
 @NullMarked
-package xyz.endelith.server.network.pipeline.handler;
+package xyz.endelith.server.configuration.unparsed;
 
 import org.jspecify.annotations.NullMarked;
