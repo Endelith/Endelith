@@ -2,7 +2,6 @@ package xyz.endelith.server.network;
 
 import java.util.Objects;
 
-import org.jspecify.annotations.NullMarked;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,7 +21,6 @@ import xyz.endelith.server.network.netty.encoder.PacketLenghtEncoder;
 import xyz.endelith.server.network.netty.handler.PacketHandler;
 import xyz.endelith.server.network.netty.transport.NettyTransportType;
 
-@NullMarked
 public class NetworkManager extends ChannelInitializer<SocketChannel> {
    
     private static final Logger LOGGER = LoggerFactory.getLogger(NetworkManager.class);
@@ -44,9 +42,7 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
     public NetworkManager(MinecraftServerImpl server) {
         this.server = Objects.requireNonNull(server, "server");
 
-        NettyTransportType transport = server.configuration()
-                                             .transportSelector()
-                                             .transportType();
+        NettyTransportType transport = server.configuration().selector().transportType();
         if (!transport.isAvailable()) {
             NettyTransportType oldTransport = transport;
             transport = NettyTransportType.select();
@@ -72,8 +68,8 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
             throw new IllegalStateException("The network manager has already been started");
        
         ServerConfiguration configuration = server.configuration();
-        String address = configuration.serverAddress();
-        int port = configuration.serverPort();
+        String address = configuration.address();
+        int port = configuration.port();
 
         channel = bootstrap.bind(address, port).awaitUninterruptibly().channel();
         LOGGER.info("Listening on {}", this.channel.localAddress());

@@ -5,8 +5,8 @@ logback = "1.5.18"
 slf4j = "2.0.17"
 jspecify = "1.0.0"
 cosine = "1.0"
-simple-yaml = "1.8.4"
 adventure = "4.25.0-SNAPSHOT"
+okaeri-configs = "6.0.0-beta.27"
 
 [libraries]
 netty = { module = "io.netty:netty-all", version.ref = "netty" }
@@ -14,7 +14,9 @@ logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 jspecify = { module = "org.jspecify:jspecify", version.ref = "jspecify" }
 cosine = { module = "xyz.endelith.cosine:cosine", version.ref = "cosine"}
-simple-yaml = { group = "com.github.Carleslc.Simple-YAML", name = "Simple-Yaml", version.ref = "simple-yaml" }
+
+okaeri-configs-snakeyaml = { module = "eu.okaeri:okaeri-configs-yaml-snakeyaml", version.ref = "okaeri-configs"}
+okaeri-configs-serdes-common = { module = "eu.okaeri:okaeri-configs-serdes-commons", version.ref = "okaeri-configs"}
 
 adventure = { module = "net.kyori:adventure-api", version.ref = "adventure" }
 adventure-nbt = { module = "net.kyori:adventure-nbt", version.ref = "adventure" }
@@ -23,6 +25,10 @@ adventure-serializer-gson = { module = "net.kyori:adventure-text-serializer-gson
 adventure-serializer-plain = { module = "net.kyori:adventure-text-serializer-plain", version.ref = "adventure" }
 
 [bundles]
+okaeri-configs = [
+    "okaeri-configs-snakeyaml", "okaeri-configs-serdes-common"
+]
+
 adventure = [
     "adventure", "adventure-nbt", "adventure-minimessage", 
     "adventure-serializer-gson", "adventure-serializer-plain"

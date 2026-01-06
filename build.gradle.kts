@@ -6,8 +6,8 @@ subprojects {
     
     repositories {
         mavenLocal()
-        mavenCentral()
-        maven("https://jitpack.io")
+        mavenCentral() 
+        maven("https://storehouse.okaeri.eu/repository/maven-public/")
     }
 
     extensions.getByType<JavaPluginExtension>().apply { 
