@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import xyz.endelith.MinecraftServer;
+import xyz.endelith.server.configuration.ServerConfigurationImpl;
 import xyz.endelith.server.network.NetworkManager;
 
 public final class MinecraftServerImpl implements MinecraftServer {
@@ -15,15 +16,18 @@ public final class MinecraftServerImpl implements MinecraftServer {
 
     private static final int PROTOCOL_VERSION = 773;
  
+    private final ServerConfigurationImpl configuration;
     private final NetworkManager networkManager;
 
     private final Thread shutdownThread = createShutdownThread();
 
     public MinecraftServerImpl() {
+        this.configuration = new ServerConfigurationImpl();
         this.networkManager = new NetworkManager(this);
  
         try {
             Runtime.getRuntime().addShutdownHook(shutdownThread);
+            configuration.load();
             networkManager.bind();
         } catch (Throwable t) {
             LOGGER.error("an error occurred while starting the server", t);
@@ -48,6 +52,11 @@ public final class MinecraftServerImpl implements MinecraftServer {
     @Override
     public int protocolVersion() {
         return PROTOCOL_VERSION;
+    }
+
+    @Override
+    public ServerConfigurationImpl serverConfiguration() {
+        return configuration;
     }
 
     @Override

@@ -16,6 +16,7 @@ import io.netty.channel.MultiThreadIoEventLoopGroup;
 import io.netty.channel.nio.NioIoHandler;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import xyz.endelith.configuration.ServerConfiguration;
 import xyz.endelith.server.MinecraftServerImpl;
 import xyz.endelith.server.network.pipeline.decoder.PacketDecoder;
 import xyz.endelith.server.network.pipeline.decoder.PacketLenghtDecoder;
@@ -61,9 +62,9 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
         if (channel != null)
             throw new IllegalStateException("The network manager has already been started");
        
-//        ServerConfiguration configuration = server.serverConfiguration();
-        String address = "localhost";
-        int port = 25565;
+        ServerConfiguration configuration = server.serverConfiguration();
+        String address = configuration.serverAddress();
+        int port = configuration.serverPort();
 
         channel = bootstrap.bind(address, port).awaitUninterruptibly().channel();
         LOGGER.info("Listening on {}", this.channel.localAddress());
