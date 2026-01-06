@@ -7,6 +7,7 @@ subprojects {
     repositories {
         mavenLocal()
         mavenCentral()
+        maven("https://jitpack.io")
     }
 
     extensions.getByType<JavaPluginExtension>().apply { 

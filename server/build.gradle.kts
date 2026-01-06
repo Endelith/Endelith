@@ -8,6 +8,7 @@ dependencies {
     implementation(libs.netty)
     implementation(libs.logback)
     implementation(libs.cosine)
+    implementation(libs.simple.yaml)
 }
 
 application {
