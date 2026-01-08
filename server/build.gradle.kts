@@ -6,7 +6,8 @@ plugins {
 dependencies {
     implementation(project(":api"))
     implementation(libs.netty)
-    implementation(libs.jline)
+    implementation(libs.lmax)
+    runtimeOnly(libs.jline)
     implementation(libs.cosine)
     implementation(libs.bundles.log4j)
     implementation(libs.bundles.okaeri.configs)
