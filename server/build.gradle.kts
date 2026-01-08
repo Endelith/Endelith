@@ -6,8 +6,8 @@ plugins {
 dependencies {
     implementation(project(":api"))
     implementation(libs.netty)
-    implementation(libs.logback)
     implementation(libs.cosine)
+    implementation(libs.bundles.log4j)
     implementation(libs.bundles.okaeri.configs)
 }
 
