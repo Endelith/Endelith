@@ -21,7 +21,7 @@ public record ClientHandshakePacket(
 
     @Override
     public void handle(PlayerConnectionImpl connection) {
-        System.out.println(this.protocolVersion()); //TODO: Just for testing lol 
+        connection.handshakePacketHandler().handle(this);
     }
 
     public enum Intent {
