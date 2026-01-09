@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import xyz.endelith.configuration.ServerConfiguration;
 import xyz.endelith.cosine.transcoder.JsonTranscoder;
 import xyz.endelith.event.events.server.ServerListPingEvent;
 import xyz.endelith.server.network.PlayerConnectionImpl;
@@ -23,10 +24,10 @@ public final class StatusPacketHandler extends PacketHandler {
     }
 
     public void handle(ClientStatusRequestPacket packet) {
-        var configuration = server.configuration();
+        ServerConfiguration configuration = server.configuration();
 
         //TODO: online players and samples?
-        var baseStatus = new ServerListPing(
+        ServerListPing baseStatus = new ServerListPing(
             new ServerListPing.Version(
                 server.minecraftVersion(),
                 server.protocolVersion()
