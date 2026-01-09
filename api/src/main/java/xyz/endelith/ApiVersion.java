@@ -5,9 +5,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import org.jspecify.annotations.NullMarked;
-
-@NullMarked
 public enum ApiVersion {
 
     UNKNOWN("unknown", 000, ReleaseType.UNKNOWN),
