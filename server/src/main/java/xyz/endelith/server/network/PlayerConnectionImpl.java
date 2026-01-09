@@ -11,9 +11,10 @@ import xyz.endelith.network.PlayerConnection;
 import xyz.endelith.server.MinecraftServerImpl;
 import xyz.endelith.server.network.exception.NetworkException;
 import xyz.endelith.server.network.handler.HandshakePacketHandler;
+import xyz.endelith.server.network.handler.StatusPacketHandler;
 import xyz.endelith.server.network.packet.server.ServerPacket;
 
-public final class PlayerConnectionImpl implements PlayerConnection, Thread.UncaughtExceptionHandler {
+public class PlayerConnectionImpl implements PlayerConnection, Thread.UncaughtExceptionHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PlayerConnectionImpl.class);
 
@@ -23,15 +24,13 @@ public final class PlayerConnectionImpl implements PlayerConnection, Thread.Unca
     private final MinecraftServerImpl server;
 
     private final HandshakePacketHandler handshakePacketHandler;
-
-    public PlayerConnectionImpl(
-        Channel channel, 
-        MinecraftServerImpl server, 
-        HandshakePacketHandler handshakePacketHandler
-    ) {
+    private final StatusPacketHandler statusPacketHandler;
+    
+    public PlayerConnectionImpl(Channel channel, MinecraftServerImpl server) {
         this.channel = Objects.requireNonNull(channel, "channel");
         this.server = Objects.requireNonNull(server, "server");
-        this.handshakePacketHandler = Objects.requireNonNull(handshakePacketHandler, "handshake packet handler");
+        this.handshakePacketHandler = new HandshakePacketHandler(this);
+        this.statusPacketHandler = new StatusPacketHandler(this);
     }
 
     @Override
@@ -80,5 +79,9 @@ public final class PlayerConnectionImpl implements PlayerConnection, Thread.Unca
 
     public HandshakePacketHandler handshakePacketHandler() {
         return handshakePacketHandler;
+    }
+
+    public StatusPacketHandler statusPacketHandler() {
+        return statusPacketHandler;
     }
 }

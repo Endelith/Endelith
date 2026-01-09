@@ -24,12 +24,12 @@ public record ServerListPing(
         }
     }
 
-    public record Players(int maximumPlayers, int onlinePlayers, List<Sample> sample) {
+    public record Players(int maximumPlayers, int onlinePlayers, List<Sample> samples) {
     
         public Players {
             Objects.requireNonNull(maximumPlayers, "maximum players");
             Objects.requireNonNull(onlinePlayers, "online players");
-            sample = List.copyOf(Objects.requireNonNull(sample, "sample"));
+            samples = List.copyOf(Objects.requireNonNull(samples, "sample"));
         }
 
         public record Sample(String name, UUID uuid) {

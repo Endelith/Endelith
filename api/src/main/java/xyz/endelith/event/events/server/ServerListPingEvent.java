@@ -4,13 +4,14 @@ import java.util.Objects;
 
 import xyz.endelith.event.events.CancellableEvent;
 import xyz.endelith.network.PlayerConnection;
+import xyz.endelith.util.ping.ServerListPing;
 
 public final class ServerListPingEvent extends CancellableEvent { 
         
     private final PlayerConnection connection;
-    private ServerListPingEvent ping;
+    private ServerListPing ping;
 
-    public ServerListPingEvent(PlayerConnection connection, ServerListPingEvent ping) {
+    public ServerListPingEvent(PlayerConnection connection, ServerListPing ping) {
         this.connection = Objects.requireNonNull(connection, "connection");
         this.ping = Objects.requireNonNull(ping, "ping");
     }
@@ -19,11 +20,11 @@ public final class ServerListPingEvent extends CancellableEvent {
         return connection;
     }
 
-    public ServerListPingEvent getPing() {
+    public ServerListPing getPing() {
         return ping;
     }
 
-    public void setPing(ServerListPingEvent ping) {
+    public void setPing(ServerListPing ping) {
         this.ping = ping;
     }
 }

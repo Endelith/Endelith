@@ -7,7 +7,11 @@ import xyz.endelith.cosine.stream.StreamCodec;
 import xyz.endelith.server.network.ConnectionState;
 import xyz.endelith.server.network.packet.client.ClientPacket;
 import xyz.endelith.server.network.packet.client.handshake.ClientHandshakePacket;
+import xyz.endelith.server.network.packet.client.status.ClientStatusPingRequestPacket;
+import xyz.endelith.server.network.packet.client.status.ClientStatusRequestPacket;
 import xyz.endelith.server.network.packet.server.ServerPacket;
+import xyz.endelith.server.network.packet.server.status.ServerStatusPongResponsePacket;
+import xyz.endelith.server.network.packet.server.status.ServerStatusResponsePacket;
 
 public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistry {
 
@@ -36,7 +40,8 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
         protected ClientStatus() {
             super(
                 ConnectionState.STATUS,
-                register(null, null)
+                register(ClientStatusRequestPacket.class, ClientStatusRequestPacket.SERIALIZER),
+                register(ClientStatusPingRequestPacket.class, ClientStatusPingRequestPacket.SERIALIZER)
             );
         }
     }
@@ -70,10 +75,7 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
 
     final class ServerHandshake extends Server {
         protected ServerHandshake() {
-            super(
-                ConnectionState.HANDSHAKE,
-                register(null, null)
-            );
+            super(ConnectionState.HANDSHAKE);
         }
     }
 
@@ -81,7 +83,8 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
         protected ServerStatus() {
             super(
                 ConnectionState.STATUS,
-                register(null, null)
+                register(ServerStatusResponsePacket.class, ServerStatusResponsePacket.SERIALIZER),
+                register(ServerStatusPongResponsePacket.class, ServerStatusPongResponsePacket.SERIALIZER)
             );
         }
     }
