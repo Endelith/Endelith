@@ -24,7 +24,7 @@ public final class MinecraftServerImpl implements MinecraftServer {
     private final Thread shutdownThread = createShutdownThread();
 
     public MinecraftServerImpl() {
-        this.console = new EndelithConsole();
+        this.console = new EndelithConsole(this);
         this.eventManager = new EventManager();
         this.networkManager = new NetworkManager(this);
  
