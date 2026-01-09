@@ -34,5 +34,7 @@ bin/
 .DS_Store
 
 ### Endelith ###
+.command_history
 server.yml
 plugins
+logs
