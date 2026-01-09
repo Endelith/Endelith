@@ -10,8 +10,14 @@ import xyz.endelith.server.configuration.unparsed.UnparsedServerConfiguration;
 import xyz.endelith.server.network.netty.transport.NettyTransportSelector;
 
 public record ServerConfigurationImpl(
-    String address, int port, NettyTransportSelector selector,
-    int maximumPlayers, Component serverListDescription
+    String address,
+    int port,
+    NettyTransportSelector selector,
+    int maximumPlayers,
+    boolean transfersAllowed,
+    Component transfersNotAllowedMessage,
+    Component unsupportedVersionMessage,
+    Component serverListDescription
 ) implements ServerConfiguration {
 
     public ServerConfigurationImpl {
@@ -19,6 +25,8 @@ public record ServerConfigurationImpl(
         Objects.requireNonNull(port, "port");
         Objects.requireNonNull(selector, "selector");
         Objects.requireNonNull(maximumPlayers, "maximum players");
+        Objects.requireNonNull(transfersNotAllowedMessage, "transfers not allowed message");
+        Objects.requireNonNull(unsupportedVersionMessage, "unsupported version message");
         Objects.requireNonNull(serverListDescription, "server list description");
     }
 
@@ -26,7 +34,13 @@ public record ServerConfigurationImpl(
         UnparsedServerConfiguration unparsed = UnparsedServerConfiguration.create(); 
         TagResolver[] tagResolvers = ConfigurationPlaceholder.createTagResolvers();
         return new ServerConfigurationImpl(
-            unparsed.address(), unparsed.port(), unparsed.transport(), unparsed.maximumPlayers(),
+            unparsed.address(), 
+            unparsed.port(), 
+            unparsed.transport(), 
+            unparsed.maximumPlayers(),
+            unparsed.transfersAllowed(),
+            deserialize(unparsed.transfersNotAllowedMessage(), tagResolvers),
+            deserialize(unparsed.unsupportedVersionMessage(), tagResolvers),
             deserialize(unparsed.serverListDescription(), tagResolvers)
         );
     }
