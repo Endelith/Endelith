@@ -7,9 +7,11 @@ import xyz.endelith.cosine.stream.StreamCodec;
 import xyz.endelith.server.network.ConnectionState;
 import xyz.endelith.server.network.packet.client.ClientPacket;
 import xyz.endelith.server.network.packet.client.handshake.ClientHandshakePacket;
+import xyz.endelith.server.network.packet.client.login.ClientLoginStartPacket;
 import xyz.endelith.server.network.packet.client.status.ClientStatusPingRequestPacket;
 import xyz.endelith.server.network.packet.client.status.ClientStatusRequestPacket;
 import xyz.endelith.server.network.packet.server.ServerPacket;
+import xyz.endelith.server.network.packet.server.login.ServerLoginDisconnectPacket;
 import xyz.endelith.server.network.packet.server.status.ServerStatusPongResponsePacket;
 import xyz.endelith.server.network.packet.server.status.ServerStatusResponsePacket;
 
@@ -50,7 +52,7 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
         protected ClientLogin() {
             super(
                 ConnectionState.LOGIN,
-                register(null, null)
+                register(ClientLoginStartPacket.class, ClientLoginStartPacket.SERIALIZER)
             );
         }
     }
@@ -93,7 +95,7 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
         protected ServerLogin() {
             super(
                 ConnectionState.LOGIN,
-                register(null, null)
+                register(ServerLoginDisconnectPacket.class, ServerLoginDisconnectPacket.SERIALIZER)
             );
         }
     }

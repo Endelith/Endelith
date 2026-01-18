@@ -11,8 +11,10 @@ import xyz.endelith.network.PlayerConnection;
 import xyz.endelith.server.MinecraftServerImpl;
 import xyz.endelith.server.network.exception.NetworkException;
 import xyz.endelith.server.network.handler.HandshakePacketHandler;
+import xyz.endelith.server.network.handler.LoginPacketHandler;
 import xyz.endelith.server.network.handler.StatusPacketHandler;
 import xyz.endelith.server.network.packet.server.ServerPacket;
+import xyz.endelith.server.network.packet.server.login.ServerLoginDisconnectPacket;
 
 public class PlayerConnectionImpl implements PlayerConnection, Thread.UncaughtExceptionHandler {
 
@@ -25,12 +27,14 @@ public class PlayerConnectionImpl implements PlayerConnection, Thread.UncaughtEx
 
     private final HandshakePacketHandler handshakePacketHandler;
     private final StatusPacketHandler statusPacketHandler;
-    
+    private final LoginPacketHandler loginPacketHandler;
+
     public PlayerConnectionImpl(Channel channel, MinecraftServerImpl server) {
         this.channel = Objects.requireNonNull(channel, "channel");
         this.server = Objects.requireNonNull(server, "server");
         this.handshakePacketHandler = new HandshakePacketHandler(this);
         this.statusPacketHandler = new StatusPacketHandler(this);
+        this.loginPacketHandler = new LoginPacketHandler(this);
     }
 
     @Override
@@ -46,18 +50,23 @@ public class PlayerConnectionImpl implements PlayerConnection, Thread.UncaughtEx
 
     @Override
     public void disconnect(Component reason) {
-        return;
-        //switch (getState()) {
-        //    case CONFIGURATION -> throw new UnsupportedOperationException("Not implemented yet");
-        //    case LOGIN -> sendPacket(new ClientLoginDisconnectPacket(reason));
-        //    case PLAY -> throw new UnsupportedOperationException("Not implemented yet");
-        //    default -> throw new IllegalStateException("Unexpected state"); 
-        //}
+        switch (getState()) {
+            case CONFIGURATION -> throw new UnsupportedOperationException("Not implemented yet");
+            case LOGIN -> sendPacket(new ServerLoginDisconnectPacket(reason));
+            case PLAY -> throw new UnsupportedOperationException("Not implemented yet");
+            default -> throw new IllegalStateException("Unexpected state"); 
+        }
+
+        channel.close();
     }
  
     @Override
     public MinecraftServerImpl server() {
         return server;
+    }
+
+    public void handleDisconnection() {
+        //LOGGER.info("Disconnection {}", this);
     }
 
     public void sendPacket(ServerPacket packet) {
@@ -83,5 +92,9 @@ public class PlayerConnectionImpl implements PlayerConnection, Thread.UncaughtEx
 
     public StatusPacketHandler statusPacketHandler() {
         return statusPacketHandler;
+    }
+
+    public LoginPacketHandler loginPacketHandler() {
+        return loginPacketHandler;
     }
 }

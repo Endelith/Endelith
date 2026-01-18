@@ -11,7 +11,6 @@ import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
-import io.netty.channel.socket.nio.NioServerSocketChannel;
 import xyz.endelith.configuration.ServerConfiguration;
 import xyz.endelith.server.MinecraftServerImpl;
 import xyz.endelith.server.network.netty.decoder.PacketDecoder;
@@ -57,7 +56,7 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
 
         this.bootstrap = new ServerBootstrap()
             .group(bossGroup, workerGroup)
-            .channel(NioServerSocketChannel.class)
+            .channel(transport.getSocketChannelClass())
             .childOption(ChannelOption.TCP_NODELAY, true)
             .childOption(ChannelOption.SO_KEEPALIVE, true)
             .childHandler(this);   
