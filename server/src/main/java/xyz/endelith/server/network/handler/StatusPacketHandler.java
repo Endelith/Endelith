@@ -5,9 +5,9 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import xyz.endelith.configuration.ServerConfiguration;
 import xyz.endelith.cosine.transcoder.JsonTranscoder;
 import xyz.endelith.event.events.server.ServerListPingEvent;
+import xyz.endelith.server.configuration.ServerConfigurationImpl;
 import xyz.endelith.server.network.PlayerConnectionImpl;
 import xyz.endelith.server.network.packet.client.status.ClientStatusPingRequestPacket;
 import xyz.endelith.server.network.packet.client.status.ClientStatusRequestPacket;
@@ -24,7 +24,7 @@ public final class StatusPacketHandler extends PacketHandler {
     }
 
     public void handle(ClientStatusRequestPacket packet) {
-        ServerConfiguration configuration = server.configuration();
+        ServerConfigurationImpl configuration = server.configuration();
 
         //TODO: online players and samples?
         ServerListPing baseStatus = new ServerListPing(
@@ -54,7 +54,7 @@ public final class StatusPacketHandler extends PacketHandler {
             return;
         }
 
-        ServerListPing finalStatus = event.getPing();
+        ServerListPing finalStatus = event.getServerListPing();
 
         String json = ServerStatusResponsePacket.SERVER_LIST_PING_CODEC
             .encode(JsonTranscoder.INSTANCE, finalStatus)

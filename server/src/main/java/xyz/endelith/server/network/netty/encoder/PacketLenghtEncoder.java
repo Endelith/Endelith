@@ -2,15 +2,12 @@ package xyz.endelith.server.network.netty.encoder;
 
 import java.util.Objects;
 
-import org.jspecify.annotations.NullMarked;
-
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
 import xyz.endelith.cosine.stream.StreamCodec;
 import xyz.endelith.server.network.PlayerConnectionImpl;
 
-@NullMarked
 public class PacketLenghtEncoder extends MessageToByteEncoder<ByteBuf> {
 
     private final PlayerConnectionImpl connection;
@@ -27,6 +24,6 @@ public class PacketLenghtEncoder extends MessageToByteEncoder<ByteBuf> {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-        this.connection.uncaughtException(Thread.currentThread(), cause);
+        connection.uncaughtException(Thread.currentThread(), cause);
     }
 }

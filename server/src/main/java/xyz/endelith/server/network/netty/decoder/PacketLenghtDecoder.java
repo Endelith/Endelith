@@ -11,7 +11,6 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 import xyz.endelith.cosine.stream.StreamCodec;
 import xyz.endelith.server.network.PlayerConnectionImpl;
 
-@NullMarked
 public class PacketLenghtDecoder extends ByteToMessageDecoder {
 
     private final PlayerConnectionImpl connection;
@@ -38,6 +37,6 @@ public class PacketLenghtDecoder extends ByteToMessageDecoder {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-        this.connection.uncaughtException(Thread.currentThread(), cause);
+        connection.uncaughtException(Thread.currentThread(), cause);
     }
 }

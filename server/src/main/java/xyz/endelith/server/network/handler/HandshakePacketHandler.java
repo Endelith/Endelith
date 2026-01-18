@@ -1,5 +1,6 @@
 package xyz.endelith.server.network.handler;
 
+import xyz.endelith.server.configuration.ServerConfigurationImpl;
 import xyz.endelith.server.network.ConnectionState;
 import xyz.endelith.server.network.PlayerConnectionImpl;
 import xyz.endelith.server.network.packet.client.handshake.ClientHandshakePacket;
@@ -16,7 +17,7 @@ public final class HandshakePacketHandler extends PacketHandler {
             case STATUS -> connection.setState(ConnectionState.STATUS);
             case LOGIN, TRANSFER -> {
                 connection.setState(ConnectionState.LOGIN);
-                var configuration = server.configuration();
+                ServerConfigurationImpl configuration = server.configuration();
 
                 if (packet.intent() == Intent.TRANSFER) {
                     if (!configuration.transfersAllowed()) {

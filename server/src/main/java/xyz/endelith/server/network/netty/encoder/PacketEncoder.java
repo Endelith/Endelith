@@ -12,7 +12,6 @@ import xyz.endelith.server.network.PlayerConnectionImpl;
 import xyz.endelith.server.network.packet.PacketParser;
 import xyz.endelith.server.network.packet.server.ServerPacket;
 
-@NullMarked
 public class PacketEncoder extends MessageToByteEncoder<ServerPacket>{
 
     private final PlayerConnectionImpl connection;
@@ -33,6 +32,6 @@ public class PacketEncoder extends MessageToByteEncoder<ServerPacket>{
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-        this.connection.uncaughtException(Thread.currentThread(), cause);
+        connection.uncaughtException(Thread.currentThread(), cause);
     }
 }
