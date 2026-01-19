@@ -5,8 +5,6 @@
 
 I'm too lazy to write a readme right now I'll add more explanation soon
 
-> [!IMPORTANT]
-> Jet was unarchived and started development again, so this project is no longer relevant; therefore, the project has been archived.
-
 # Credits
 [Jet](https://github.com/Hypejet/Jet) Thanks for this wonderful project 💙
+[Minestom](https://github.com/Minestom/Minestom) Thanks for this wonderful project 🧡 
