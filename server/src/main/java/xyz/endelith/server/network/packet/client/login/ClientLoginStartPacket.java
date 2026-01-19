@@ -14,6 +14,11 @@ public record ClientLoginStartPacket(String username, UUID uuid) implements Clie
         ClientLoginStartPacket::new
     );
 
+    public ClientLoginStartPacket {
+        if (username.length() > 16)
+            throw new IllegalArgumentException("Username is not allowed to be longer than 16 characters");
+    }
+
     @Override
     public void handle(PlayerConnectionImpl connection) {
         connection.loginPacketHandler().handle(this);

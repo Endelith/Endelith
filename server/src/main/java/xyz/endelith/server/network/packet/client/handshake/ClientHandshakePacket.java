@@ -19,6 +19,17 @@ public record ClientHandshakePacket(
         ClientHandshakePacket::new
     );
 
+    public ClientHandshakePacket {
+        if (serverAddress.length() > maxHandshakeLength()) {
+            throw new IllegalArgumentException("Server address too long: " + serverAddress.length());
+        }
+    }
+
+    private static int maxHandshakeLength() {
+        //TODO: Bungeecord?
+        return 255;
+    }
+
     @Override
     public void handle(PlayerConnectionImpl connection) {
         connection.handshakePacketHandler().handle(this);
