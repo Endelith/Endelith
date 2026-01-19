@@ -25,12 +25,14 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
     private static final Logger LOGGER = LoggerFactory.getLogger(NetworkManager.class);
 
     public static final String LENGTH_DECODER  = "length-decoder";
+    public static final String COMPRESSOR_DECODER = "compressor-decoder";
     public static final String CIPHER_DECODER  = "cipher-decoder";
     public static final String PACKET_DECODER  = "packet-decoder";
     public static final String PACKET_HANDLER  = "packet-handler";
     public static final String PACKET_ENCODER  = "packet-encoder";
     public static final String CIPHER_ENCODER  = "cipher-encoder";
-    public static final String LENGTH_ENCODER  = "length-encoder";
+    public static final String COMPRESSOR_ENCODER = "compressor-encoder";
+    public static final String LENGTH_ENCODER  = "length-encoder"; 
  
     private final MinecraftServerImpl server;
     private final ServerBootstrap bootstrap;

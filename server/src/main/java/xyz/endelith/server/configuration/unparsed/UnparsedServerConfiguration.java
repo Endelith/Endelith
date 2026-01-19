@@ -56,7 +56,16 @@ public final class UnparsedServerConfiguration extends OkaeriConfig {
     private String serverListDescription = "<dark_green>An Endelith server</dark_green>";
 
     @CustomKey("online-mode")
+    @Comment("Whether the server should verify players using Mojang's authentication servers.")
     private boolean onlineMode = true;
+
+    @CustomKey("compression-threshold")
+    @Comment("A packet length, since which packets are compressed.")
+    private int compressionThreshold = 256;
+
+    @CustomKey("compression-level")
+    @Comment("The compression level to use.")
+    private int compressionLevel = -1;
 
     public String address() {
         return address;
@@ -92,6 +101,14 @@ public final class UnparsedServerConfiguration extends OkaeriConfig {
 
     public boolean onlineMode() {
         return onlineMode;
+    }
+
+    public int compressionThreshold() {
+        return compressionThreshold;
+    }
+
+    public int compressionLevel() {
+        return compressionLevel;
     }
 
     public static UnparsedServerConfiguration create() {

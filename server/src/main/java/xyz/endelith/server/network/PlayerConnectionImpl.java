@@ -1,9 +1,6 @@
 package xyz.endelith.server.network;
 
-import static xyz.endelith.server.network.NetworkManager.CIPHER_DECODER;
-import static xyz.endelith.server.network.NetworkManager.CIPHER_ENCODER;
-import static xyz.endelith.server.network.NetworkManager.LENGTH_DECODER;
-import static xyz.endelith.server.network.NetworkManager.LENGTH_ENCODER;
+import static xyz.endelith.server.network.NetworkManager.*;
 
 import java.net.SocketAddress;
 import java.nio.charset.StandardCharsets;
@@ -17,10 +14,12 @@ import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.velocitypowered.natives.compression.VelocityCompressor;
 import com.velocitypowered.natives.encryption.VelocityCipherFactory;
 import com.velocitypowered.natives.util.Natives;
 
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelPipeline;
 import net.kyori.adventure.text.Component;
 import xyz.endelith.network.PlayerConnection;
 import xyz.endelith.server.MinecraftServerImpl;
@@ -29,9 +28,12 @@ import xyz.endelith.server.network.handler.HandshakePacketHandler;
 import xyz.endelith.server.network.handler.LoginPacketHandler;
 import xyz.endelith.server.network.handler.StatusPacketHandler;
 import xyz.endelith.server.network.netty.decoder.CipherDecoder;
+import xyz.endelith.server.network.netty.decoder.CompressionDecoder;
 import xyz.endelith.server.network.netty.encoder.CipherEncoder;
+import xyz.endelith.server.network.netty.encoder.CompressionEncoder;
 import xyz.endelith.server.network.packet.server.ServerPacket;
 import xyz.endelith.server.network.packet.server.login.ServerLoginDisconnectPacket;
+import xyz.endelith.server.network.packet.server.login.ServerLoginSetCompressionPacket;
 import xyz.endelith.server.network.packet.server.login.ServerLoginSuccessPacket;
 import xyz.endelith.util.profile.GameProfile;;
 
@@ -126,10 +128,31 @@ public class PlayerConnectionImpl implements PlayerConnection, Thread.UncaughtEx
             profile = new GameProfile(offlineUUID, username);
         }
 
+        setupCompression();
         sendPacket(new ServerLoginSuccessPacket(profile));
-        //TODO: Player object?
+        //TODO: Player object? 
     }
- 
+
+    private void setupCompression() {
+        int threshold = server.configuration().compressionThreshold();
+        if (threshold < 0) return;
+    
+        VelocityCompressor compressor =
+            Natives.compress.get().create(
+                server.configuration().compressionLevel()
+            );
+    
+        sendPacket(new ServerLoginSetCompressionPacket(threshold));
+    
+        channel.pipeline()
+            .addAfter(LENGTH_DECODER, COMPRESSOR_DECODER,
+                new CompressionDecoder(this, compressor)
+            )
+            .addAfter(LENGTH_ENCODER, COMPRESSOR_ENCODER,
+                new CompressionEncoder(this, compressor)
+            );
+    }
+
     public void setUsername(String username) {
         this.username = username;
     }

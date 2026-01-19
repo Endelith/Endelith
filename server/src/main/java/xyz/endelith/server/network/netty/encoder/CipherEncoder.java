@@ -29,6 +29,11 @@ public final class CipherEncoder extends MessageToMessageEncoder<ByteBuf> {
     }
 
     @Override
+    public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
+        cipher.close();
+    }
+
+    @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
         connection.uncaughtException(Thread.currentThread(), cause);
     }

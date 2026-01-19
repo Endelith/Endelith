@@ -14,6 +14,7 @@ import xyz.endelith.server.network.packet.client.status.ClientStatusRequestPacke
 import xyz.endelith.server.network.packet.server.ServerPacket;
 import xyz.endelith.server.network.packet.server.login.ServerLoginDisconnectPacket;
 import xyz.endelith.server.network.packet.server.login.ServerLoginEncryptionRequestPacket;
+import xyz.endelith.server.network.packet.server.login.ServerLoginSetCompressionPacket;
 import xyz.endelith.server.network.packet.server.login.ServerLoginSuccessPacket;
 import xyz.endelith.server.network.packet.server.status.ServerStatusPongResponsePacket;
 import xyz.endelith.server.network.packet.server.status.ServerStatusResponsePacket;
@@ -101,7 +102,8 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
                 ConnectionState.LOGIN,
                 register(ServerLoginDisconnectPacket.class, ServerLoginDisconnectPacket.SERIALIZER),
                 register(ServerLoginEncryptionRequestPacket.class, ServerLoginEncryptionRequestPacket.SERIALIZER),
-                register(ServerLoginSuccessPacket.class, ServerLoginSuccessPacket.SERIALIZER)
+                register(ServerLoginSuccessPacket.class, ServerLoginSuccessPacket.SERIALIZER),
+                register(ServerLoginSetCompressionPacket.class, ServerLoginSetCompressionPacket.SERIALIZER)
             );
         }
     }
