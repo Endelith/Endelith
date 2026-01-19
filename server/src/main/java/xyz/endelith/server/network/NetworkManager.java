@@ -11,7 +11,6 @@ import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
-import io.netty.channel.socket.nio.NioServerSocketChannel;
 import xyz.endelith.configuration.ServerConfiguration;
 import xyz.endelith.server.MinecraftServerImpl;
 import xyz.endelith.server.network.netty.decoder.PacketDecoder;
@@ -24,13 +23,17 @@ import xyz.endelith.server.network.netty.transport.NettyTransportType;
 public class NetworkManager extends ChannelInitializer<SocketChannel> {
    
     private static final Logger LOGGER = LoggerFactory.getLogger(NetworkManager.class);
- 
-    private static final String LENGTH_DECODER = "length-decoder";
-    private static final String PACKET_DECODER = "packet-decoder";
-    private static final String PACKET_HANDLER = "packet-handler";
-    private static final String PACKET_ENCODER = "packet-encoder";
-    private static final String LENGTH_ENCODER = "length-encoder";
 
+    public static final String LENGTH_DECODER  = "length-decoder";
+    public static final String COMPRESSOR_DECODER = "compressor-decoder";
+    public static final String CIPHER_DECODER  = "cipher-decoder";
+    public static final String PACKET_DECODER  = "packet-decoder";
+    public static final String PACKET_HANDLER  = "packet-handler";
+    public static final String PACKET_ENCODER  = "packet-encoder";
+    public static final String CIPHER_ENCODER  = "cipher-encoder";
+    public static final String COMPRESSOR_ENCODER = "compressor-encoder";
+    public static final String LENGTH_ENCODER  = "length-encoder"; 
+ 
     private final MinecraftServerImpl server;
     private final ServerBootstrap bootstrap;
 
@@ -57,7 +60,7 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
 
         this.bootstrap = new ServerBootstrap()
             .group(bossGroup, workerGroup)
-            .channel(NioServerSocketChannel.class)
+            .channel(transport.getSocketChannelClass())
             .childOption(ChannelOption.TCP_NODELAY, true)
             .childOption(ChannelOption.SO_KEEPALIVE, true)
             .childHandler(this);   

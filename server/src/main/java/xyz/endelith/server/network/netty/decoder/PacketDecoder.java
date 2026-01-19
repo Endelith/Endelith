@@ -3,8 +3,6 @@ package xyz.endelith.server.network.netty.decoder;
 import java.util.List;
 import java.util.Objects;
 
-import org.jspecify.annotations.NullMarked;
-
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
@@ -13,7 +11,6 @@ import xyz.endelith.server.network.PlayerConnectionImpl;
 import xyz.endelith.server.network.packet.PacketParser;
 import xyz.endelith.server.network.packet.client.ClientPacket;
 
-@NullMarked
 public final class PacketDecoder extends ByteToMessageDecoder {
 
     private final PlayerConnectionImpl connection;
@@ -42,6 +39,6 @@ public final class PacketDecoder extends ByteToMessageDecoder {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-        this.connection.uncaughtException(Thread.currentThread(), cause);
+        connection.uncaughtException(Thread.currentThread(), cause);
     }
 }

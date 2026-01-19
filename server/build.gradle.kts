@@ -15,6 +15,7 @@ dependencies {
     implementation(libs.bundles.log4j)
     implementation(libs.bundles.okaeri.configs)
     implementation(libs.terminal.console.appender)
+    implementation(libs.velocity.native)
 }
 
 application {

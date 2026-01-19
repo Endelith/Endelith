@@ -8,6 +8,7 @@ subprojects {
         mavenLocal()
         mavenCentral() 
         maven("https://storehouse.okaeri.eu/repository/maven-public/")
+        maven("https://repo.papermc.io/repository/maven-public/")
     }
 
     extensions.getByType<JavaPluginExtension>().apply { 

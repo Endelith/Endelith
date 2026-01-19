@@ -1,5 +1,8 @@
 package xyz.endelith.server;
 
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,12 +19,14 @@ public final class MinecraftServerImpl implements MinecraftServer {
     
     private static final String BRAND_NAME = "Endelith";
     
-    private final ServerConfigurationImpl configuration = ServerConfigurationImpl.create();
+    private final ServerConfigurationImpl configuration = ServerConfigurationImpl.create(); 
     private final EndelithConsole console;
     private final NetworkManager networkManager;
     private final EventManager eventManager;
 
     private final Thread shutdownThread = createShutdownThread();
+
+    private KeyPair keyPair;
 
     public MinecraftServerImpl() {
         this.console = new EndelithConsole(this);
@@ -30,6 +35,14 @@ public final class MinecraftServerImpl implements MinecraftServer {
  
         try {
             Runtime.getRuntime().addShutdownHook(shutdownThread);
+          
+            if (configuration.onlineMode()) {
+                LOGGER.info("Generating RSA key pair for authentication");
+                KeyPairGenerator generator = KeyPairGenerator.getInstance("RSA");
+                generator.initialize(1024);
+                this.keyPair = generator.generateKeyPair();
+            }
+
             networkManager.bind();
             console.start();
         } catch (Throwable t) {
@@ -74,6 +87,10 @@ public final class MinecraftServerImpl implements MinecraftServer {
         } catch (IllegalThreadStateException exception) {
             // The shutdown has already been scheduled
         }
+    }
+
+    public KeyPair keyPair() {
+        return keyPair;
     }
 
     private Thread createShutdownThread() {

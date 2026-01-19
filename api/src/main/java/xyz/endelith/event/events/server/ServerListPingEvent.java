@@ -9,22 +9,22 @@ import xyz.endelith.util.ping.ServerListPing;
 public final class ServerListPingEvent extends CancellableEvent { 
         
     private final PlayerConnection connection;
-    private ServerListPing ping;
+    private ServerListPing serverListPing;
 
-    public ServerListPingEvent(PlayerConnection connection, ServerListPing ping) {
+    public ServerListPingEvent(PlayerConnection connection, ServerListPing serverListPing) {
         this.connection = Objects.requireNonNull(connection, "connection");
-        this.ping = Objects.requireNonNull(ping, "ping");
+        this.serverListPing = Objects.requireNonNull(serverListPing, "server list ping");
     }
 
     public PlayerConnection connection() {
         return connection;
     }
 
-    public ServerListPing getPing() {
-        return ping;
+    public ServerListPing getServerListPing() {
+        return serverListPing;
     }
 
-    public void setPing(ServerListPing ping) {
-        this.ping = ping;
+    public void setServerListPing(ServerListPing serverListPing) {
+        this.serverListPing = serverListPing;
     }
 }

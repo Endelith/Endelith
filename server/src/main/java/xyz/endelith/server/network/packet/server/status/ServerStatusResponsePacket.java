@@ -5,7 +5,7 @@ import org.jspecify.annotations.Nullable;
 import xyz.endelith.cosine.codec.Codec;
 import xyz.endelith.cosine.codec.StructCodec;
 import xyz.endelith.cosine.stream.StreamCodec;
-import xyz.endelith.server.codec.component.JsonComponent;
+import xyz.endelith.server.codec.component.JsonComponentCodec;
 import xyz.endelith.server.network.packet.server.ServerPacket;
 import xyz.endelith.util.ping.ServerListPing;
 import xyz.endelith.util.ping.ServerListPing.Favicon;
@@ -45,7 +45,7 @@ public record ServerStatusResponsePacket(String json) implements ServerPacket {
     public static final Codec<ServerListPing> SERVER_LIST_PING_CODEC = StructCodec.of(
         "version", VERSION_CODEC, ServerListPing::version,
         "players", PLAYERS_CODEC, ServerListPing::players,
-        "description", JsonComponent.STRING_CODEC, ServerListPing::description,
+        "description", JsonComponentCodec.STRING_CODEC, ServerListPing::description,
         "favicon", FAVICON_CODEC.optional(), ServerListPing::favicon,
         "enforcesSecureChat", Codec.BOOLEAN, ServerListPing::enforcesSecureChat,
         ServerListPing::new
