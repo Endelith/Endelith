@@ -2,8 +2,6 @@ package xyz.endelith.server.network.netty.encoder;
 
 import java.util.Objects;
 
-import org.jspecify.annotations.NullMarked;
-
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;

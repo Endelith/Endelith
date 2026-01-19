@@ -55,6 +55,9 @@ public final class UnparsedServerConfiguration extends OkaeriConfig {
     @Comment("The description displayed in the Minecraft server list.")
     private String serverListDescription = "<dark_green>An Endelith server</dark_green>";
 
+    @CustomKey("online-mode")
+    private boolean onlineMode = true;
+
     public String address() {
         return address;
     }
@@ -85,6 +88,10 @@ public final class UnparsedServerConfiguration extends OkaeriConfig {
 
     public String serverListDescription() {
         return serverListDescription;
+    }
+
+    public boolean onlineMode() {
+        return onlineMode;
     }
 
     public static UnparsedServerConfiguration create() {

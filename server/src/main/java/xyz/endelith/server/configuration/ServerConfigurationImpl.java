@@ -17,7 +17,8 @@ public record ServerConfigurationImpl(
     boolean transfersAllowed,
     Component transfersNotAllowedMessage,
     Component unsupportedVersionMessage,
-    Component serverListDescription
+    Component serverListDescription,
+    boolean onlineMode
 ) implements ServerConfiguration {
 
     public ServerConfigurationImpl {
@@ -41,7 +42,8 @@ public record ServerConfigurationImpl(
             unparsed.transfersAllowed(),
             deserialize(unparsed.transfersNotAllowedMessage(), tagResolvers),
             deserialize(unparsed.unsupportedVersionMessage(), tagResolvers),
-            deserialize(unparsed.serverListDescription(), tagResolvers)
+            deserialize(unparsed.serverListDescription(), tagResolvers),
+            unparsed.onlineMode()
         );
     }
 

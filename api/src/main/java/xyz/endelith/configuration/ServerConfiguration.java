@@ -7,4 +7,5 @@ public interface ServerConfiguration {
     int port();
     int maximumPlayers();
     Component serverListDescription();
+    boolean onlineMode();
 }

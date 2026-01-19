@@ -10,9 +10,11 @@ import xyz.endelith.cosine.codec.Codec;
 import xyz.endelith.cosine.stream.StreamCodec;
 import xyz.endelith.cosine.transcoder.Transcoder;
 
-public final class JsonComponent {
+public final class JsonComponentCodec {
 
     private static final JSONComponentSerializer SERIALIZER = JSONComponentSerializer.json();
+
+    private JsonComponentCodec() {}
 
     public static final StreamCodec<Component> STREAM_CODEC = new StreamCodec<Component>() {
 
