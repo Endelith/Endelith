@@ -19,7 +19,6 @@ import com.velocitypowered.natives.encryption.VelocityCipherFactory;
 import com.velocitypowered.natives.util.Natives;
 
 import io.netty.channel.Channel;
-import io.netty.channel.ChannelPipeline;
 import net.kyori.adventure.text.Component;
 import xyz.endelith.network.PlayerConnection;
 import xyz.endelith.server.MinecraftServerImpl;
@@ -121,13 +120,6 @@ public class PlayerConnectionImpl implements PlayerConnection, Thread.UncaughtEx
     }
     
     public void initPlayer(GameProfile profile) {
-        if (profile == null) {
-            UUID offlineUUID = UUID.nameUUIDFromBytes(
-                ("OfflinePlayer:" + username).getBytes(StandardCharsets.UTF_8)
-            );
-            profile = new GameProfile(offlineUUID, username);
-        }
-
         setupCompression();
         sendPacket(new ServerLoginSuccessPacket(profile));
         //TODO: Player object? 
