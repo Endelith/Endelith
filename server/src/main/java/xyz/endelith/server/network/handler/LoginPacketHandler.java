@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 
 import net.kyori.adventure.text.Component;
 import xyz.endelith.event.events.player.PlayerPreLoginEvent;
+import xyz.endelith.server.network.ConnectionState;
 import xyz.endelith.server.network.PlayerConnectionImpl;
 import xyz.endelith.server.network.packet.client.login.ClientLoginAcknowledgedPacket;
 import xyz.endelith.server.network.packet.client.login.ClientLoginEncryptionResponsePacket;
@@ -88,7 +89,7 @@ public final class LoginPacketHandler extends PacketHandler {
     }
 
     public void handle(ClientLoginAcknowledgedPacket packet) {
-
+        connection.setState(ConnectionState.CONFIGURATION);
     }
 
     private void firePreLoginEvent(GameProfile initialProfile) { 

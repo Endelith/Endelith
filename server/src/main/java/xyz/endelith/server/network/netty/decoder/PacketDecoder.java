@@ -31,7 +31,9 @@ public final class PacketDecoder extends ByteToMessageDecoder {
         try {
             int packetId = StreamCodec.VAR_INT.read(in);
             ClientPacket packet = parser.parse(connection.getState(), packetId, in);
-            out.add(packet);
+            if (packet != null) { //TODO: revert back (remove null check)
+                out.add(packet);
+            }
         } catch (IndexOutOfBoundsException e) { 
             in.resetReaderIndex();
         }

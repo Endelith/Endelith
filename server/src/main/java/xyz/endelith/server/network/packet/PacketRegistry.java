@@ -14,6 +14,8 @@ import xyz.endelith.server.network.packet.client.login.ClientLoginStartPacket;
 import xyz.endelith.server.network.packet.client.status.ClientStatusPingRequestPacket;
 import xyz.endelith.server.network.packet.client.status.ClientStatusRequestPacket;
 import xyz.endelith.server.network.packet.server.ServerPacket;
+import xyz.endelith.server.network.packet.server.configuration.ServerConfigurationFinishPacket;
+import xyz.endelith.server.network.packet.server.configuration.ServerConfigurationRegistryDataPacket;
 import xyz.endelith.server.network.packet.server.login.ServerLoginDisconnectPacket;
 import xyz.endelith.server.network.packet.server.login.ServerLoginEncryptionRequestPacket;
 import xyz.endelith.server.network.packet.server.login.ServerLoginPluginRequestPacket;
@@ -22,7 +24,11 @@ import xyz.endelith.server.network.packet.server.login.ServerLoginSuccessPacket;
 import xyz.endelith.server.network.packet.server.status.ServerStatusPongResponsePacket;
 import xyz.endelith.server.network.packet.server.status.ServerStatusResponsePacket;
 
+@SuppressWarnings("unchecked")
 public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistry {
+    
+    @SuppressWarnings("rawtypes")
+    final static AbstractRegistry.Entry SKIP = new AbstractRegistry.Entry<>(null, null); //TODO: temporarily added to help ADHD
 
     T create(int packetId, ByteBuf buf);
 
@@ -70,8 +76,7 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
     final class ClientConfiguration extends Client {
         protected ClientConfiguration() {
             super(
-                ConnectionState.CONFIGURATION,
-                register(null, null)
+                ConnectionState.CONFIGURATION
             );
         }
     }
@@ -79,8 +84,7 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
     final class ClientPlay extends Client {
         protected ClientPlay() {
             super(
-                ConnectionState.PLAY,
-                register(null, null)
+                ConnectionState.PLAY
             );
         }
     }
@@ -118,7 +122,14 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
         protected ServerConfiguration() {
             super(
                 ConnectionState.CONFIGURATION,
-                register(null, null)
+                SKIP, //Cookie request
+                SKIP, //Plugin message
+                SKIP, //Disconnect
+                register(ServerConfigurationFinishPacket.class, ServerConfigurationFinishPacket.SERIALIZER),
+                SKIP, //Keep alive
+                SKIP, //ping
+                SKIP, //Reset Chat
+                register(ServerConfigurationRegistryDataPacket.class, ServerConfigurationRegistryDataPacket.SERIALIZER)
             );
         }
     }
@@ -126,8 +137,7 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
     final class ServerPlay extends Server {
         protected ServerPlay() {
             super(
-                ConnectionState.PLAY,
-                register(null, null)
+                ConnectionState.PLAY
             );
         }
     }
@@ -138,7 +148,7 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
         private final ConnectionSide side;
         private final PacketInfo<? extends T>[] packets;
 
-        @SuppressWarnings("unchecked")
+        //TODO: i hate when doing this 
         @SafeVarargs
         protected AbstractRegistry(
                 ConnectionState state,
@@ -151,19 +161,51 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
 
             for (int id = 0; id < entries.length; id++) {
                 Entry<? extends T> e = entries[id];
-                if (e != null) {
-                    packets[id] = new PacketInfo<>(
-                            (Class<T>) e.type,
-                            id,
-                            (StreamCodec<T>) e.codec
-                    );
+                if (e == null || e.type == null || e.codec == null) {
+                    packets[id] = null;
+                    continue;
                 }
+            
+                packets[id] = new PacketInfo<>(
+                    (Class<T>) e.type,
+                    id,
+                    (StreamCodec<T>) e.codec
+                );
             }
         }
 
+//        @SuppressWarnings("unchecked")
+//        @SafeVarargs
+//        protected AbstractRegistry(
+//                ConnectionState state,
+//                ConnectionSide side,
+//                Entry<? extends T>... entries
+//        ) {
+//            this.state = state;
+//            this.side = side;
+//            this.packets = (PacketInfo<? extends T>[]) new PacketInfo[entries.length];
+//
+//            for (int id = 0; id < entries.length; id++) {
+//                Entry<? extends T> e = entries[id];
+//                if (e != null) {
+//                    packets[id] = new PacketInfo<>(
+//                            (Class<T>) e.type,
+//                            id,
+//                            (StreamCodec<T>) e.codec
+//                    );
+//                }
+//            }
+//        }
+
         @Override
         public T create(int packetId, ByteBuf buf) {
-            return byId(packetId).codec.read(buf);
+            PacketInfo<? extends T> info = packets[packetId];
+
+            if (info == null) {
+                return null;
+            }
+        
+            return cast(info).codec.read(buf);
         }
 
         @Override
@@ -190,7 +232,6 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
             );
         }
 
-        @SuppressWarnings("unchecked")
         private PacketInfo<T> cast(PacketInfo<? extends T> info) {
             return (PacketInfo<T>) info;
         }
