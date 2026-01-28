@@ -10,6 +10,7 @@ adventure = "4.25.0-SNAPSHOT"
 okaeri-configs = "6.0.0-beta.27"
 terminal-console-appender = "1.3.0"
 velocity-native = "3.3.0-SNAPSHOT"
+cosine = "2.0"
 
 [libraries]
 netty = { module = "io.netty:netty-all", version.ref = "netty" }
@@ -19,6 +20,7 @@ slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 jspecify = { module = "org.jspecify:jspecify", version.ref = "jspecify" }
 terminal-console-appender = { module = "net.minecrell:terminalconsoleappender", version.ref = "terminal-console-appender" }
 velocity-native = { module = "com.velocitypowered:velocity-native", version.ref = "velocity-native" }
+cosine = { module = "com.github.Endelith:cosine", version.ref = "cosine" }
 
 okaeri-configs-snakeyaml = { module = "eu.okaeri:okaeri-configs-yaml-snakeyaml", version.ref = "okaeri-configs" }
 okaeri-configs-serdes-common = { module = "eu.okaeri:okaeri-configs-serdes-commons", version.ref = "okaeri-configs" }

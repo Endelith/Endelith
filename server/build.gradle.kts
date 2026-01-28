@@ -15,6 +15,7 @@ dependencies {
     implementation(libs.bundles.okaeri.configs)
     implementation(libs.terminal.console.appender)
     implementation(libs.velocity.native)
+    implementation(libs.cosine)
 }
 
 application {

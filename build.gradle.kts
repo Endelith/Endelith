@@ -8,6 +8,7 @@ subprojects {
     repositories {
         mavenLocal()
         mavenCentral()
+        maven("https://www.jitpack.io")
         maven("https://repo.papermc.io/repository/maven-public/")
         maven("https://storehouse.okaeri.eu/repository/maven-public/")
     }
