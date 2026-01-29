@@ -22,6 +22,16 @@ application {
     mainClass.set("xyz.endelith.server.MinecraftServerImpl")
 }
 
+val generatedDir = "src/generated/java"
+
+sourceSets {
+    main {
+        java {
+            srcDir(generatedDir)
+        }
+    }
+}
+
 tasks.shadowJar {
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
     transform(Log4j2PluginsCacheFileTransformer::class.java)

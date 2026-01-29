@@ -20,6 +20,41 @@ publishing {
     }
 }
 
+val generatedDir = "src/generated/java"
+
+sourceSets {
+    main {
+        java {
+            srcDir(generatedDir)
+        }
+    }
+}
+
+val dataProject = project(":data")
+val sourceSets = dataProject.extensions.getByName("sourceSets") as SourceSetContainer
+
+tasks.register<JavaExec>("generateSources") {
+    workingDir(rootDir.resolve("test-server").apply { mkdirs() })
+
+    mainClass.set("xyz.endelith.data.GeneratorMain")
+    classpath = sourceSets["main"].runtimeClasspath
+
+    args(
+        "--apiSourceFolder=${
+            project(":api").projectDir
+                .resolve(generatedDir).absolutePath
+        }",
+        "--serverSourceFolder=${
+            project(":server").projectDir
+                .resolve(generatedDir).absolutePath
+        }",
+        "--serverResourceFolder=${
+            project(":server").projectDir
+                .resolve("src/main/resources/data/").absolutePath
+        }"
+    )
+}
+
 tasks {
     jar {
         manifest.attributes("Automatic-Module-Name" to "xyz.endelith.api")

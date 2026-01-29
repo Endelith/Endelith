@@ -38,3 +38,5 @@ bin/
 server.yml
 plugins
 logs
+test-server
+*/src/generated
