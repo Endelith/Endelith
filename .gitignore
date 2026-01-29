@@ -39,4 +39,5 @@ server.yml
 plugins
 logs
 test-server
-*/src/generated
+server/src/main/resources/data/
+**/src/generated/
