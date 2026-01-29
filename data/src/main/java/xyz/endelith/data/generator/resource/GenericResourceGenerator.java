@@ -68,7 +68,8 @@ public record GenericResourceGenerator(
                 }
             }
 
-            Path outputFile = outputFolder.resolve(name + ".json");
+            var fileName = name.substring(name.lastIndexOf('/') + 1);
+            var outputFile = outputFolder.resolve(fileName + ".json");
             writeJson(result, outputFile.toString());
         } catch (URISyntaxException | IOException e) {
             throw new RuntimeException("Failed to generate resource: " + name, e);
