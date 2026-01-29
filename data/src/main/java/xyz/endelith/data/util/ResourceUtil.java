@@ -8,45 +8,35 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
 import java.util.jar.JarFile;
 
-//https://github.com/Minestom/MinestomDataGenerator/blob/master/DataGenerator/src/main/java/net/minestom/utils/ResourceUtils.java
 public final class ResourceUtil {
 
     private ResourceUtil() {}
 
-    /**
-     * Get a resource listing from within a jar file
-     * @param clazz The class to use the {@link ClassLoader} of
-     * @param path The path within the classpath to list resources from
-     * @return An array containing all the path of all resources within the specified directory
-     * @throws URISyntaxException
-     * @throws IOException
-     */
-    public static String[] getResourceListing(Class clazz, String path) throws URISyntaxException, IOException {
-        var dirURL = clazz.getClassLoader().getResource(path);
+    public static String[] getResourceListing(
+            Class<?> clazz,
+            String path
+    ) throws URISyntaxException, IOException {
+        var dirUrl = clazz.getClassLoader().getResource(path);
 
-        // list use File#list in case path is just a regular file
-        if (dirURL != null && dirURL.getProtocol().equals("file")) {
-            return new File(dirURL.toURI()).list();
+        if (dirUrl != null && dirUrl.getProtocol().equals("file")) {
+            return new File(dirUrl.toURI()).list();
         }
 
-        if (dirURL == null) {
-            var me = clazz.getName().replace(".", "/")+".class";
-            dirURL = clazz.getClassLoader().getResource(me);
+        if (dirUrl == null) {
+            var me = clazz.getName().replace(".", "/") + ".class";
+            dirUrl = clazz.getClassLoader().getResource(me);
         }
 
-        // dirURL should not be null at this point
-        assert dirURL != null;
+        assert dirUrl != null;
 
-        if (dirURL.getProtocol().equals("jar")) {
-            // strip out jar file from dirURL
-            var jarPath = dirURL.getPath().substring(5, dirURL.getPath().indexOf("!"));
+        if (dirUrl.getProtocol().equals("jar")) {
+            var jarPath = dirUrl.getPath().substring(5, dirUrl.getPath().indexOf("!"));
 
             try (var jar = new JarFile(URLDecoder.decode(jarPath, StandardCharsets.UTF_8))) {
-                // get all files within the jar
                 var entries = jar.entries();
-                var result = new HashSet<>();
+                var result = new HashSet<String>();
 
-                while(entries.hasMoreElements()) {
+                while (entries.hasMoreElements()) {
                     var name = entries.nextElement().getName();
                     if (name.startsWith(path)) {
                         var entry = name.substring(path.length());
@@ -58,11 +48,10 @@ public final class ResourceUtil {
                     }
                 }
 
-                return result.toArray(new String[result.size()]);
+                return result.toArray(new String[0]);
             }
         }
 
-        throw new UnsupportedOperationException("Unable to list files for URL " + dirURL);
+        throw new UnsupportedOperationException("Unable to list files for URL " + dirUrl);
     }
-
 }

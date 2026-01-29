@@ -1,12 +1,12 @@
 package xyz.endelith.data.generator.resource;
 
+import com.google.gson.JsonObject;
 import java.nio.file.Path;
 import java.util.Objects;
-import com.google.gson.JsonObject;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 public record GameEventGenerator(
-    Path outputFolder
+        Path outputFolder
 ) implements ResourceGenerator {
 
     public GameEventGenerator { 

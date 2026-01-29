@@ -1,5 +1,8 @@
 package xyz.endelith.data.generator.resource;
 
+import com.google.gson.JsonObject;
+import com.mojang.serialization.Dynamic;
+import com.mojang.serialization.JsonOps;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
@@ -7,9 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
-import com.google.gson.JsonObject;
-import com.mojang.serialization.Dynamic;
-import com.mojang.serialization.JsonOps;
 import net.minecraft.nbt.NbtOps;
 import net.minecraft.nbt.SnbtPrinterTagVisitor;
 import net.minecraft.nbt.Tag;
@@ -17,10 +17,10 @@ import net.minecraft.server.MinecraftServer;
 import xyz.endelith.data.util.ResourceUtil;
 
 public record GenericResourceGenerator(
-    String name, 
-    List<String> exclusions, 
-    boolean snbt, 
-    Path outputFolder
+        String name,
+        List<String> exclusions,
+        boolean snbt,
+        Path outputFolder
 ) implements ResourceGenerator {
 
     public GenericResourceGenerator {
@@ -39,8 +39,8 @@ public record GenericResourceGenerator(
 
         try {
             var files = ResourceUtil.getResourceListing(
-                MinecraftServer.class, 
-                String.format("data/minecraft/%s/", name)
+                    MinecraftServer.class,
+                    String.format("data/minecraft/%s/", name)
             );
 
             for (String fileName : files) {
@@ -65,13 +65,13 @@ public record GenericResourceGenerator(
                 if (snbt) {
                     Tag tag = Dynamic.convert(JsonOps.INSTANCE, NbtOps.INSTANCE, result);
                     new SnbtPrinterTagVisitor("    ", 0, new ArrayList<>()).visit(tag);
-                } 
+                }
             }
 
             Path outputFile = outputFolder.resolve(name + ".json");
             writeJson(result, outputFile.toString());
         } catch (URISyntaxException | IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Failed to generate resource: " + name, e);
         }
     }
 }

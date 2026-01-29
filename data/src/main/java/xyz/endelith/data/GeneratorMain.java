@@ -15,36 +15,33 @@ public final class GeneratorMain {
 
     public static void main(String[] args) {
         OptionParser optionParser = new OptionParser();
-
-        OptionSpec<File> apiSourceFolderOption = 
+    
+        final OptionSpec<File> apiSourceFolderOption =
                 optionParser.accepts("apiSourceFolder")
                             .withRequiredArg()
                             .ofType(File.class);
-
-        OptionSpec<File> serverSourceFolderOption = 
+    
+        final OptionSpec<File> serverSourceFolderOption =
                 optionParser.accepts("serverSourceFolder")
                             .withRequiredArg()
                             .ofType(File.class);
     
-        OptionSpec<File> serverResourceFolderOption = 
+        final OptionSpec<File> serverResourceFolderOption =
                 optionParser.accepts("serverResourceFolder")
                             .withRequiredArg()
                             .ofType(File.class);
     
-        OptionSet optionSet = optionParser.parse(args);
-        
-        File apiSourceFolder = optionSet.valueOf(apiSourceFolderOption);
-        File serverSourceFolder = optionSet.valueOf(serverSourceFolderOption);
-        File serverResourceFolder = optionSet.valueOf(serverResourceFolderOption);
+        final OptionSet optionSet = optionParser.parse(args);
     
         SharedConstants.tryDetectVersion();
         Bootstrap.bootStrap();
         Bootstrap.validate();
-
+    
         GeneratorMain generator = new GeneratorMain();
-        generator.apiSourceGenerate(apiSourceFolder.toPath());
-        generator.serverSourceGenerate(serverSourceFolder.toPath());
-        generator.serverResourceGenerate(serverResourceFolder.toPath()); 
+    
+        generator.apiSourceGenerate(optionSet.valueOf(apiSourceFolderOption).toPath()); 
+        generator.serverSourceGenerate(optionSet.valueOf(serverSourceFolderOption).toPath()); 
+        generator.serverResourceGenerate(optionSet.valueOf(serverResourceFolderOption).toPath());
     }
 
     public void apiSourceGenerate(Path apiSourceFolder) {
