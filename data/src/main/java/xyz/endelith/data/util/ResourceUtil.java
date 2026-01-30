@@ -13,8 +13,8 @@ public final class ResourceUtil {
     private ResourceUtil() {}
 
     public static String[] getResourceListing(
-            Class<?> clazz,
-            String path
+        Class<?> clazz,
+        String path
     ) throws URISyntaxException, IOException {
         var dirUrl = clazz.getClassLoader().getResource(path);
 

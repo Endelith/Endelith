@@ -30,7 +30,7 @@ public enum NettyTransportType {
     }
 
     public EventLoopGroup createEventLoop() {
-        return eventLoopSupplier.get();
+        return this.eventLoopSupplier.get();
     }
 
     public Class<? extends ServerSocketChannel> getSocketChannelClass() {
