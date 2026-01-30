@@ -5,9 +5,7 @@ import java.nio.file.Path;
 import java.util.Objects;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-public record GameEventGenerator(
-        Path outputFolder
-) implements ResourceGenerator {
+public record GameEventGenerator(Path outputFolder) implements ResourceGenerator {
 
     public GameEventGenerator { 
         Objects.requireNonNull(outputFolder, "output folder");
@@ -15,7 +13,7 @@ public record GameEventGenerator(
 
     @Override
     public void generate() {
-        ensureDirectory(outputFolder);
+        ensureDirectory(this.outputFolder);
         
         JsonObject gameEvents = new JsonObject();
         var registry = BuiltInRegistries.GAME_EVENT;

@@ -14,7 +14,7 @@ public final class MinecraftServerImpl implements MinecraftServer {
 
     private final ServerConfigurationImpl configuration = ServerConfigurationImpl.create();  
     private final NetworkManager networkManager;
-    private final Thread shutdownThread = this.createShutdownThread();
+    private final Thread shutdownThread = createShutdownThread();
 
     public MinecraftServerImpl() {
         this.networkManager = new NetworkManager(this);

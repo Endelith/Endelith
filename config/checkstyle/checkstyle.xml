@@ -327,7 +327,11 @@
         <property name="lineWrappingIndentation" value="4"/>
         <property name="arrayInitIndent" value="4"/>
     </module>
-
+    <module name="RequireThis">
+        <property name="validateOnlyOverlapping" value="false"/>
+        <property name="checkFields" value="true"/>
+        <property name="checkMethods" value="false"/>
+    </module>
     <module name="AbbreviationAsWordInName">
       <property name="ignoreFinal" value="false"/>
       <property name="allowedAbbreviationLength" value="0"/>

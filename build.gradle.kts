@@ -22,6 +22,6 @@ subprojects {
     }
 
     tasks.withType<Checkstyle>().configureEach {
-        exclude( "**/generated/**")
+        exclude("**/generated/**")
     }
 }
