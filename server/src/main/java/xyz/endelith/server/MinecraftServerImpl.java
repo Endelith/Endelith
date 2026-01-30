@@ -3,6 +3,7 @@ package xyz.endelith.server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.endelith.MinecraftServer;
+import xyz.endelith.server.configuration.ServerConfigurationImpl;
 
 public final class MinecraftServerImpl implements MinecraftServer {
 
@@ -10,6 +11,8 @@ public final class MinecraftServerImpl implements MinecraftServer {
 
     private static final String BRAND_NAME = "Endelith"; 
 
+    private final ServerConfigurationImpl configuration = ServerConfigurationImpl.create(); 
+    
     private final Thread shutdownThread = this.createShutdownThread();
 
     public MinecraftServerImpl() {
