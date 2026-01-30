@@ -66,7 +66,7 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
             throw new IllegalStateException("The network manager has already been started");
         }
 
-        ServerConfiguration configuration = server.configuration();
+        ServerConfiguration configuration = this.server.configuration();
         String address = configuration.address();
         int port = configuration.port();
 
@@ -79,7 +79,7 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
         var connection = new PlayerConnectionImpl(ch, server);
         var pipeline = ch.pipeline();
 
-        //     pipeline.addFirst(PACKET_ENCODER, new PacketEncoder(connection));
+        // pipeline.addFirst(PACKET_ENCODER, new PacketEncoder(connection));
         // pipeline.addBefore(PACKET_ENCODER, LENGTH_ENCODER, new PacketLenghtEncoder(connection));
         
         pipeline.addFirst(LENGTH_DECODER, new PacketLenghtDecoder());
