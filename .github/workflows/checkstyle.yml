@@ -15,4 +15,4 @@ jobs:
           reporter: github-pr-review
           level: warning
           fail_level: any
-          checkstyle_config: ./config/checkstyle.xml
+          checkstyle_config: ./config/checkstyle/checkstyle.xml
