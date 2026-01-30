@@ -1,6 +1,7 @@
 package xyz.endelith.server.network.packet.client.handshake;
 
 import xyz.endelith.cosine.stream.StreamCodec;
+import xyz.endelith.server.network.PlayerConnectionImpl;
 import xyz.endelith.server.network.packet.client.ClientPacket;
  
 public record ClientHandshakePacket(
@@ -19,12 +20,21 @@ public record ClientHandshakePacket(
     );
 
     public ClientHandshakePacket {
-        System.out.println(protocolVersion);
-        System.out.println(serverAddress);
+        if (serverAddress.length() > maxHandshakeLength()) {
+            throw new IllegalArgumentException(String.format(
+                "Server address too long: %s",
+                serverAddress.length()
+            ));
+        }
+    }
+
+    private static int maxHandshakeLength() {
+        // TODO: Bungeecord?
+        return 255;
     }
 
     @Override
-    public void handle() {
+    public void handle(PlayerConnectionImpl connection) {
         System.out.println("I got handshake packet");
     }
 

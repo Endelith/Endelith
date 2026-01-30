@@ -13,6 +13,6 @@ public enum NettyTransportSelector {
     }
 
     public NettyTransportType transportType() {
-        return transportType;
+        return this.transportType;
     }
 }

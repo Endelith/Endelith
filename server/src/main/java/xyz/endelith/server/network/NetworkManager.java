@@ -4,6 +4,7 @@ import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
+import io.netty.channel.ChannelPipeline;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import java.util.Objects;
@@ -13,21 +14,24 @@ import xyz.endelith.configuration.ServerConfiguration;
 import xyz.endelith.server.MinecraftServerImpl;
 import xyz.endelith.server.network.netty.decoder.PacketDecoder;
 import xyz.endelith.server.network.netty.decoder.PacketLenghtDecoder;
+import xyz.endelith.server.network.netty.encoder.PacketEncoder;
+import xyz.endelith.server.network.netty.encoder.PacketLenghtEncoder;
+import xyz.endelith.server.network.netty.handler.PacketHandler;
 import xyz.endelith.server.network.netty.transport.NettyTransportType;
 
-public class NetworkManager extends ChannelInitializer<SocketChannel> {
+public final class NetworkManager extends ChannelInitializer<SocketChannel> {
    
     private static final Logger LOGGER = LoggerFactory.getLogger(NetworkManager.class);
 
-    public static final String LENGTH_DECODER  = "length-decoder";
+    public static final String LENGTH_DECODER = "length-decoder";
     public static final String COMPRESSOR_DECODER = "compressor-decoder";
-    public static final String CIPHER_DECODER  = "cipher-decoder";
-    public static final String PACKET_DECODER  = "packet-decoder";
-    public static final String PACKET_HANDLER  = "packet-handler";
-    public static final String PACKET_ENCODER  = "packet-encoder";
-    public static final String CIPHER_ENCODER  = "cipher-encoder";
+    public static final String CIPHER_DECODER = "cipher-decoder";
+    public static final String PACKET_DECODER = "packet-decoder";
+    public static final String PACKET_HANDLER = "packet-handler";
+    public static final String PACKET_ENCODER = "packet-encoder";
+    public static final String CIPHER_ENCODER = "cipher-encoder";
     public static final String COMPRESSOR_ENCODER = "compressor-encoder";
-    public static final String LENGTH_ENCODER  = "length-encoder"; 
+    public static final String LENGTH_ENCODER = "length-encoder"; 
  
     private final MinecraftServerImpl server;
     private final ServerBootstrap bootstrap;
@@ -54,7 +58,7 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
         this.workerGroup = transport.createEventLoop();
 
         this.bootstrap = new ServerBootstrap()
-            .group(bossGroup, workerGroup)
+            .group(this.bossGroup, this.workerGroup)
             .channel(transport.getSocketChannelClass())
             .childOption(ChannelOption.TCP_NODELAY, true)
             .childOption(ChannelOption.SO_KEEPALIVE, true)
@@ -76,15 +80,15 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
  
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
-        var connection = new PlayerConnectionImpl(ch, server);
-        var pipeline = ch.pipeline();
+        PlayerConnectionImpl connection = new PlayerConnectionImpl(ch, this.server);
+        ChannelPipeline pipeline = ch.pipeline();
 
-        // pipeline.addFirst(PACKET_ENCODER, new PacketEncoder(connection));
-        // pipeline.addBefore(PACKET_ENCODER, LENGTH_ENCODER, new PacketLenghtEncoder(connection));
+        pipeline.addFirst(PACKET_ENCODER, new PacketEncoder(connection));
+        pipeline.addBefore(PACKET_ENCODER, LENGTH_ENCODER, new PacketLenghtEncoder(connection));
         
-        pipeline.addFirst(LENGTH_DECODER, new PacketLenghtDecoder());
+        pipeline.addFirst(LENGTH_DECODER, new PacketLenghtDecoder(connection));
         pipeline.addAfter(LENGTH_DECODER, PACKET_DECODER, new PacketDecoder(connection));
-        // pipeline.addAfter(PACKET_DECODER, PACKET_HANDLER, new PacketHandler(connection)); 
+        pipeline.addAfter(PACKET_DECODER, PACKET_HANDLER, new PacketHandler(connection)); 
     }
  
     public void shutdown() {

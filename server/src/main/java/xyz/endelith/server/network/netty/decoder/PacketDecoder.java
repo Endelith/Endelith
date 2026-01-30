@@ -31,15 +31,26 @@ public final class PacketDecoder extends ByteToMessageDecoder {
 
         try {
             int packetId = StreamCodec.VAR_INT.read(in);
-            ClientPacket packet = parser.parse(connection.getState(), packetId, in);
+            
+            ClientPacket packet = this.parser.parse(
+                this.connection.getState(), 
+                packetId, 
+                in
+            );
+
             out.add(packet);
         } catch (IndexOutOfBoundsException ignored) {
             in.resetReaderIndex();
         } catch (Exception e) {
             throw new CorruptedFrameException(String.format(
                 "Failed to decode packet (state = %s))", 
-                connection.getState()
+                this.connection.getState()
             ));
         }
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
+        this.connection.uncaughtException(Thread.currentThread(), cause);
     }
 }
