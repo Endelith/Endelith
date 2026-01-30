@@ -20,4 +20,8 @@ subprojects {
     extensions.getByType<JavaPluginExtension>().apply { 
         toolchain.languageVersion.set(JavaLanguageVersion.of(25))
     }
+
+    tasks.withType<Checkstyle>().configureEach {
+        exclude( "**/generated/**")
+    }
 }

@@ -19,14 +19,14 @@ public record MinecraftVersionGenerator(Path outputFolder) implements CodeGenera
 
     @Override
     public void generate() {
-        ensureDirectory(outputFolder);
+        ensureDirectory(this.outputFolder);
         
         WorldVersion version = SharedConstants.getCurrentVersion();
         TypeSpec typeSpec = TypeSpec.classBuilder("MinecraftVersion")
                 .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
                         .addMethod(MethodSpec.constructorBuilder()
                         .addModifiers(Modifier.PRIVATE)
-                        .addJavadoc(generateJavadoc())
+                        .addJavadoc(this.generateJavadoc())
                         .build())
                 .addField(FieldSpec.builder(String.class, "VERSION_NAME")
                         .addModifiers(Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
