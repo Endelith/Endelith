@@ -3,6 +3,7 @@ package xyz.endelith.server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.endelith.MinecraftServer;
+import xyz.endelith.event.EventManager;
 import xyz.endelith.server.configuration.ServerConfigurationImpl;
 import xyz.endelith.server.network.NetworkManager;
 
@@ -12,11 +13,13 @@ public final class MinecraftServerImpl implements MinecraftServer {
 
     private static final String BRAND_NAME = "Endelith"; 
 
-    private final ServerConfigurationImpl configuration = ServerConfigurationImpl.create();  
+    private final ServerConfigurationImpl configuration = ServerConfigurationImpl.create();   
     private final NetworkManager networkManager;
+    private final EventManager eventManager;
     private final Thread shutdownThread = createShutdownThread();
 
     public MinecraftServerImpl() {
+        this.eventManager = new EventManager();
         this.networkManager = new NetworkManager(this);
 
         try {
@@ -40,6 +43,11 @@ public final class MinecraftServerImpl implements MinecraftServer {
     @Override
     public ServerConfigurationImpl configuration() {
         return this.configuration;
+    }
+
+    @Override
+    public EventManager eventManager() {
+        return this.eventManager;
     }
 
     @Override
