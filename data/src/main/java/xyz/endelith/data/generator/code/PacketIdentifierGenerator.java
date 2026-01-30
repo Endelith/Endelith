@@ -20,10 +20,10 @@ import net.minecraft.network.protocol.cookie.CookiePacketTypes;
 import net.minecraft.network.protocol.ping.PingPacketTypes;
 
 public record PacketIdentifierGenerator(
-        String className,
-        DetailsProvider detailsProvider,
-        Class<?> keyDefinitionClass,
-        Path outputFolder
+    String className,
+    DetailsProvider detailsProvider,
+    Class<?> keyDefinitionClass,
+    Path outputFolder
 ) implements CodeGenerator {
 
     public PacketIdentifierGenerator {
@@ -38,52 +38,56 @@ public record PacketIdentifierGenerator(
         ensureDirectory(this.outputFolder());
 
         TypeSpec.Builder builder =
-                TypeSpec.classBuilder(this.className)
-                        .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
-                        .addMethod(
-                                MethodSpec.constructorBuilder()
-                                        .addModifiers(Modifier.PRIVATE)
-                                        .build()
-                        )
-                        .addJavadoc(this.generateJavadoc());
+            TypeSpec.classBuilder(this.className)
+                .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
+                .addMethod(
+                    MethodSpec.constructorBuilder()
+                        .addModifiers(Modifier.PRIVATE)
+                        .build()
+                )
+                .addJavadoc(this.generateJavadoc());
 
         Map<String, String> fieldNames = this.createFieldNames();
 
         this.detailsProvider
-                .details()
-                .listPackets(
-                        (type, identifier) -> {
-                            String id = type.id().toString();
-                            String fieldName = fieldNames.get(id);
+            .details()
+            .listPackets(
+                (type, identifier) -> {
+                    String id = type.id().toString();
+                    String fieldName = fieldNames.get(id);
 
-                            if (fieldName == null) {
-                                throw new IllegalStateException(
-                                        "No field name was specified for packet " + id
-                                );
-                            }
+                    if (fieldName == null) {
+                        throw new IllegalStateException(
+                            "No field name was specified for packet " + id
+                        );
+                    }
 
-                            builder.addField(
-                                    FieldSpec.builder(int.class, fieldName)
-                                            .addModifiers(
-                                                    Modifier.PUBLIC,
-                                                    Modifier.STATIC,
-                                                    Modifier.FINAL
-                                            )
-                                            .initializer(String.valueOf(identifier))
-                                            .addJavadoc(
-                                                    CodeBlock.of(
-                                                            "An identifier of $S packet.",
-                                                            id
-                                                    )
-                                            )
-                                            .build()
-                            );
-                        }
-                );
+                    builder.addField(
+                        FieldSpec.builder(int.class, fieldName)
+                            .addModifiers(
+                                Modifier.PUBLIC,
+                                Modifier.STATIC,
+                                Modifier.FINAL
+                            )
+                            .initializer(String.valueOf(identifier))
+                            .addJavadoc(
+                                CodeBlock.of(
+                                    "An identifier of $S packet.",
+                                    id
+                                )
+                            )
+                            .build()
+                    );
+                }
+            );
 
-        writeFiles(JavaFile.builder("xyz.endelith.server.network.packet.identifer", builder.build())
-                .indent("    ")
-                .build());
+        writeFiles(JavaFile.builder(
+                "xyz.endelith.server.network.packet.identifer",
+                builder.build()
+            )
+            .indent("    ")
+            .build()
+        );
     }
 
     private Map<String, String> createFieldNames() {
@@ -96,8 +100,8 @@ public record PacketIdentifierGenerator(
     }
 
     private void extractPacketFieldNames(
-            Class<?> clazz,
-            Map<String, String> fieldNameMap
+        Class<?> clazz,
+        Map<String, String> fieldNameMap
     ) {
         ProtocolInfo.Details details = this.detailsProvider.details();
 

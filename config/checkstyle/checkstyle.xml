@@ -443,6 +443,10 @@
     </module>
     <module name="CommentsIndentation">
       <property name="tokens" value="SINGLE_LINE_COMMENT, BLOCK_COMMENT_BEGIN"/>
+   </module>
+   <module name="RequireThis">
+      <property name="checkFields" value="true"/>
+      <property name="checkMethods" value="true"/>
     </module>
     <!-- https://checkstyle.org/filters/suppressionxpathfilter.html -->
     <module name="SuppressionXpathFilter">
@@ -463,5 +467,5 @@
       <!-- The check is suppressed in the next line of code after the comment -->
       <property name="influenceFormat" value="1"/>
     </module>
-  </module>
+   </module>
 </module>

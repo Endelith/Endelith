@@ -17,10 +17,10 @@ import net.minecraft.server.MinecraftServer;
 import xyz.endelith.data.util.ResourceUtil;
 
 public record GenericResourceGenerator(
-        String name,
-        List<String> exclusions,
-        boolean snbt,
-        Path outputFolder
+    String name,
+    List<String> exclusions,
+    boolean snbt,
+    Path outputFolder
 ) implements ResourceGenerator {
 
     public GenericResourceGenerator {
@@ -39,14 +39,14 @@ public record GenericResourceGenerator(
 
         try {
             var files = ResourceUtil.getResourceListing(
-                    MinecraftServer.class,
-                    String.format("data/minecraft/%s/", name)
+                MinecraftServer.class,
+                String.format("data/minecraft/%s/", name)
             );
 
             for (String fileName : files) {
                 var file = MinecraftServer.class
-                        .getClassLoader()
-                        .getResourceAsStream(String.format("data/minecraft/%s/", name) + fileName);
+                    .getClassLoader()
+                    .getResourceAsStream(String.format("data/minecraft/%s/", name) + fileName);
 
                 var scanner = new Scanner(file);
                 var content = new StringBuilder();

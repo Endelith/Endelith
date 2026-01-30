@@ -1,7 +1,5 @@
 package xyz.endelith.server.network;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
@@ -9,6 +7,8 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import java.util.Objects;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import xyz.endelith.configuration.ServerConfiguration;
 import xyz.endelith.server.MinecraftServerImpl;
 import xyz.endelith.server.network.netty.decoder.PacketDecoder;
@@ -45,8 +45,8 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
             NettyTransportType oldTransport = transport;
             transport = NettyTransportType.select();
             LOGGER.warn(
-                    "The netty transport specified - {} - is not available, falling back to {}...",
-                    oldTransport, transport
+                "The netty transport specified - {} - is not available, falling back to {}...",
+                oldTransport, transport
             );
         }
 
@@ -62,14 +62,15 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
     }
 
     public void bind() {
-        if (channel != null)
+        if (this.channel != null) {
             throw new IllegalStateException("The network manager has already been started");
-       
+        }
+
         ServerConfiguration configuration = server.configuration();
         String address = configuration.address();
         int port = configuration.port();
 
-        channel = bootstrap.bind(address, port).awaitUninterruptibly().channel();
+        this.channel = this.bootstrap.bind(address, port).awaitUninterruptibly().channel();
         LOGGER.info("Listening on {}", this.channel.localAddress());
     }
  
@@ -78,19 +79,22 @@ public class NetworkManager extends ChannelInitializer<SocketChannel> {
         var connection = new PlayerConnectionImpl(ch, server);
         var pipeline = ch.pipeline();
 
-//        pipeline.addFirst(PACKET_ENCODER, new PacketEncoder(connection));
-//        pipeline.addBefore(PACKET_ENCODER, LENGTH_ENCODER, new PacketLenghtEncoder(connection));
+        //     pipeline.addFirst(PACKET_ENCODER, new PacketEncoder(connection));
+        // pipeline.addBefore(PACKET_ENCODER, LENGTH_ENCODER, new PacketLenghtEncoder(connection));
         
         pipeline.addFirst(LENGTH_DECODER, new PacketLenghtDecoder());
         pipeline.addAfter(LENGTH_DECODER, PACKET_DECODER, new PacketDecoder(connection));
-//        pipeline.addAfter(PACKET_DECODER, PACKET_HANDLER, new PacketHandler(connection)); 
+        // pipeline.addAfter(PACKET_DECODER, PACKET_HANDLER, new PacketHandler(connection)); 
     }
  
     public void shutdown() {
-        if (channel == null) return;
-        channel.close().awaitUninterruptibly();
-        bossGroup.shutdownGracefully();
-        workerGroup.shutdownGracefully();
-        channel = null;
+        if (this.channel == null) {
+            return;
+        }
+
+        this.channel.close().awaitUninterruptibly();
+        this.bossGroup.shutdownGracefully();
+        this.workerGroup.shutdownGracefully();
+        this.channel = null;
     }
 }

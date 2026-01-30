@@ -18,9 +18,9 @@ import java.util.stream.Stream;
 import javax.lang.model.element.Modifier;
 
 public record GenericKeyGenerator(
-        String resourceName,
-        Path serverResourceFolder,
-        Path outputFolder
+    String resourceName,
+    Path serverResourceFolder,
+    Path outputFolder
 ) implements CodeGenerator {
 
     public GenericKeyGenerator {

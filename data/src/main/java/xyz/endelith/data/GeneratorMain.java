@@ -67,27 +67,27 @@ public final class GeneratorMain {
 
     public void apiSourceGenerate(Path serverResourceFolder, Path apiSourceFolder) {
         generateKeys(
-                serverResourceFolder,
-                apiSourceFolder,
-                "biome",
-                "chat_type",
-                "trim_pattern",
-                "trim_material",
-                "wolf_variant",
-                "pig_variant",
-                "frog_variant",
-                "cat_variant",
-                "chicken_variant",
-                "cow_variant",
-                "damage_type",
-                "jukebox_song",
-                "instrument",
-                "wolf_sound_variant",
-                "painting_variant",
-                "dimension_type",
-                "banner_pattern",
-                "enchantment",
-                "dialog"
+            serverResourceFolder,
+            apiSourceFolder,
+            "biome",
+            "chat_type",
+            "trim_pattern",
+            "trim_material",
+            "wolf_variant",
+            "pig_variant",
+            "frog_variant",
+            "cat_variant",
+            "chicken_variant",
+            "cow_variant",
+            "damage_type",
+            "jukebox_song",
+            "instrument",
+            "wolf_sound_variant",
+            "painting_variant",
+            "dimension_type",
+            "banner_pattern",
+            "enchantment",
+            "dialog"
         );
     }
 
@@ -96,66 +96,66 @@ public final class GeneratorMain {
 
         // Packet Identifiers
         new PacketIdentifierGenerator(
-                "ClientHandshakePackets",
-                HandshakeProtocols.SERVERBOUND_TEMPLATE,
-                HandshakePacketTypes.class,
-                serverSourceFolder
+            "ClientHandshakePackets",
+            HandshakeProtocols.SERVERBOUND_TEMPLATE,
+            HandshakePacketTypes.class,
+            serverSourceFolder
         ).generate();
 
         new PacketIdentifierGenerator(
-                "ServerStatusPackets",
-                StatusProtocols.CLIENTBOUND_TEMPLATE,
-                StatusPacketTypes.class,
-                serverSourceFolder
+            "ServerStatusPackets",
+            StatusProtocols.CLIENTBOUND_TEMPLATE,
+            StatusPacketTypes.class,
+            serverSourceFolder
         ).generate();
 
         new PacketIdentifierGenerator(
-                "ClientStatusPackets",
-                StatusProtocols.SERVERBOUND_TEMPLATE,
-                StatusPacketTypes.class,
-                serverSourceFolder
+            "ClientStatusPackets",
+            StatusProtocols.SERVERBOUND_TEMPLATE,
+            StatusPacketTypes.class,
+            serverSourceFolder
         ).generate();
 
         new PacketIdentifierGenerator(
-                "ServerLoginPackets",
-                LoginProtocols.CLIENTBOUND_TEMPLATE,
-                LoginPacketTypes.class,
-                serverSourceFolder
+            "ServerLoginPackets",
+            LoginProtocols.CLIENTBOUND_TEMPLATE,
+            LoginPacketTypes.class,
+            serverSourceFolder
         ).generate();
 
         new PacketIdentifierGenerator(
-                "ClientLoginPackets",
-                LoginProtocols.SERVERBOUND_TEMPLATE,
-                LoginPacketTypes.class,
-                serverSourceFolder
+            "ClientLoginPackets",
+            LoginProtocols.SERVERBOUND_TEMPLATE,
+            LoginPacketTypes.class,
+            serverSourceFolder
         ).generate();
 
         new PacketIdentifierGenerator(
-                "ServerConfigurationPackets",
-                ConfigurationProtocols.CLIENTBOUND_TEMPLATE,
-                ConfigurationPacketTypes.class,
-                serverSourceFolder
+            "ServerConfigurationPackets",
+            ConfigurationProtocols.CLIENTBOUND_TEMPLATE,
+            ConfigurationPacketTypes.class,
+            serverSourceFolder
         ).generate();
 
         new PacketIdentifierGenerator(
-                "ClientConfigurationPackets",
-                ConfigurationProtocols.SERVERBOUND_TEMPLATE,
-                ConfigurationPacketTypes.class,
-                serverSourceFolder
+            "ClientConfigurationPackets",
+            ConfigurationProtocols.SERVERBOUND_TEMPLATE,
+            ConfigurationPacketTypes.class,
+            serverSourceFolder
         ).generate();
 
         new PacketIdentifierGenerator(
-                "ServerPlayPackets",
-                GameProtocols.CLIENTBOUND_TEMPLATE,
-                GamePacketTypes.class,
-                serverSourceFolder
+            "ServerPlayPackets",
+            GameProtocols.CLIENTBOUND_TEMPLATE,
+            GamePacketTypes.class,
+            serverSourceFolder
         ).generate();
 
         new PacketIdentifierGenerator(
-                "ClientPlayPackets",
-                GameProtocols.SERVERBOUND_TEMPLATE,
-                GamePacketTypes.class,
-                serverSourceFolder
+            "ClientPlayPackets",
+            GameProtocols.SERVERBOUND_TEMPLATE,
+            GamePacketTypes.class,
+            serverSourceFolder
         ).generate();
     }
 
@@ -165,26 +165,26 @@ public final class GeneratorMain {
 
         // Data driven registries
         generateResources(
-                serverResourceFolder,
-                "worldgen/biome",
-                "chat_type",
-                "trim_pattern",
-                "trim_material",
-                "wolf_variant",
-                "pig_variant",
-                "frog_variant",
-                "cat_variant",
-                "chicken_variant",
-                "cow_variant",
-                "damage_type",
-                "jukebox_song",
-                "instrument",
-                "wolf_sound_variant",
-                "painting_variant",
-                "dimension_type",
-                "banner_pattern",
-                "enchantment",
-                "dialog"
+            serverResourceFolder,
+            "worldgen/biome",
+            "chat_type",
+            "trim_pattern",
+            "trim_material",
+            "wolf_variant",
+            "pig_variant",
+            "frog_variant",
+            "cat_variant",
+            "chicken_variant",
+            "cow_variant",
+            "damage_type",
+            "jukebox_song",
+            "instrument",
+            "wolf_sound_variant",
+            "painting_variant",
+            "dimension_type",
+            "banner_pattern",
+            "enchantment",
+            "dialog"
         );
     }
 
@@ -195,9 +195,9 @@ public final class GeneratorMain {
     ) {
         for (String resource : resources) {
             new GenericKeyGenerator(
-                    resource,
-                    serverResourceFolder,
-                    apiSourceFolder
+                resource,
+                serverResourceFolder,
+                apiSourceFolder
             ).generate();
         }
     }
@@ -208,8 +208,8 @@ public final class GeneratorMain {
     ) {
         for (String resource : resources) {
             new GenericResourceGenerator(
-                    resource,
-                    serverResourceFolder
+                resource,
+                serverResourceFolder
             ).generate();
         }
     }
