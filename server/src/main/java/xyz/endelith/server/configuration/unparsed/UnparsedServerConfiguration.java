@@ -47,8 +47,7 @@ public final class UnparsedServerConfiguration extends OkaeriConfig {
             + "with an unsupported version."
     )
     @CustomKey("unsupported-version-message")
-    private String unsupportedVersionMessage =
-        createDefaultUnsupportedVersionMessage();
+    private String unsupportedVersionMessage = createDefaultUnsupportedVersionMessage();
 
     @CustomKey("maximum-players")
     @Comments({

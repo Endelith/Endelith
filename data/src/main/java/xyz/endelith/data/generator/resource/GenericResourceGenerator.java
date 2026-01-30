@@ -40,13 +40,14 @@ public record GenericResourceGenerator(
         try {
             var files = ResourceUtil.getResourceListing(
                 MinecraftServer.class,
-                String.format("data/minecraft/%s/", name)
+                String.format("data/minecraft/%s/", this.name)
             );
 
             for (String fileName : files) {
                 var file = MinecraftServer.class
                     .getClassLoader()
-                    .getResourceAsStream(String.format("data/minecraft/%s/", name) + fileName);
+                    .getResourceAsStream(
+                        String.format("data/minecraft/%s/", this.name) + fileName);
 
                 var scanner = new Scanner(file);
                 var content = new StringBuilder();
@@ -58,21 +59,21 @@ public record GenericResourceGenerator(
                 if (content.length() > 0 && fileName.endsWith(".json")) {
                     var key = "minecraft:" + fileName.substring(0, fileName.length() - 5);
                     var jsonObject = GSON.fromJson(content.toString(), JsonObject.class);
-                    exclusions.forEach(jsonObject::remove);
+                    this.exclusions.forEach(jsonObject::remove);
                     result.add(key, jsonObject);
                 }
 
-                if (snbt) {
+                if (this.snbt) {
                     Tag tag = Dynamic.convert(JsonOps.INSTANCE, NbtOps.INSTANCE, result);
                     new SnbtPrinterTagVisitor("    ", 0, new ArrayList<>()).visit(tag);
                 }
             }
 
-            var fileName = name.substring(name.lastIndexOf('/') + 1);
-            var outputFile = outputFolder.resolve(fileName + ".json");
+            var fileName = this.name.substring(this.name.lastIndexOf('/') + 1);
+            var outputFile = this.outputFolder.resolve(fileName + ".json");
             writeJson(result, outputFile.toString());
         } catch (URISyntaxException | IOException e) {
-            throw new RuntimeException("Failed to generate resource: " + name, e);
+            throw new RuntimeException("Failed to generate resource: " + this.name, e);
         }
     }
 }
