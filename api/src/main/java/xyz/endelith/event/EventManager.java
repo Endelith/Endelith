@@ -45,6 +45,9 @@ public final class EventManager {
     }
 
     public <E extends Event> void unsubscribe(Class<E> eventClass, EventHandler<E> handler) {
+        Objects.requireNonNull(eventClass, "event class");
+        Objects.requireNonNull(handler, "handler");
+
         var orderMap = this.handlers.get(eventClass);
         if (orderMap != null) {
             for (var list : orderMap.values()) {
@@ -54,6 +57,8 @@ public final class EventManager {
     }
 
     public void call(Event event) {
+        Objects.requireNonNull(event, "event");
+
         var orderMap = this.handlers.get(event.getClass());
         if (orderMap == null) {
             return;
