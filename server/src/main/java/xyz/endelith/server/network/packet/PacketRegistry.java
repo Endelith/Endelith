@@ -7,8 +7,14 @@ import xyz.endelith.cosine.stream.StreamCodec;
 import xyz.endelith.server.network.ConnectionState;
 import xyz.endelith.server.network.packet.client.ClientPacket;
 import xyz.endelith.server.network.packet.client.handshake.ClientHandshakePacket;
+import xyz.endelith.server.network.packet.client.status.ClientStatusPingRequestPacket;
+import xyz.endelith.server.network.packet.client.status.ClientStatusRequestPacket;
 import xyz.endelith.server.network.packet.identifer.ClientHandshakePackets;
+import xyz.endelith.server.network.packet.identifer.ClientStatusPackets;
+import xyz.endelith.server.network.packet.identifer.ServerStatusPackets;
 import xyz.endelith.server.network.packet.server.ServerPacket;
+import xyz.endelith.server.network.packet.server.status.ServerStatusPongResponsePacket;
+import xyz.endelith.server.network.packet.server.status.ServerStatusResponsePacket;
 
 public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistry {
 
@@ -37,7 +43,19 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
 
     final class ClientStatus extends Client {
         protected ClientStatus() {
-            super(ConnectionState.STATUS);
+            super(
+                ConnectionState.STATUS,
+                entry(
+                    ClientStatusPackets.SERVERBOUND_STATUS_REQUEST, 
+                    ClientStatusRequestPacket.class,
+                    ClientStatusRequestPacket.STREAM_CODEC
+                ),
+                entry(
+                    ClientStatusPackets.SERVERBOUND_PING_REQUEST, 
+                    ClientStatusPingRequestPacket.class,
+                    ClientStatusPingRequestPacket.STREAM_CODEC
+                )
+            );
         }
     }
 
@@ -67,7 +85,19 @@ public sealed interface PacketRegistry<T> permits PacketRegistry.AbstractRegistr
 
     final class ServerStatus extends Server {
         protected ServerStatus() {
-            super(ConnectionState.STATUS);
+            super(
+                ConnectionState.STATUS,
+                entry(
+                    ServerStatusPackets.CLIENTBOUND_STATUS_RESPONSE,
+                    ServerStatusResponsePacket.class, 
+                    ServerStatusResponsePacket.STREAM_CODEC
+                ),
+                entry(
+                    ServerStatusPackets.CLIENTBOUND_PONG_RESPONSE,
+                    ServerStatusPongResponsePacket.class,
+                    ServerStatusPongResponsePacket.STREAM_CODEC
+                )
+            );
         }
     }
 
