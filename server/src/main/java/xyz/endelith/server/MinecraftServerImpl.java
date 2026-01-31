@@ -41,6 +41,16 @@ public final class MinecraftServerImpl implements MinecraftServer {
     }
 
     @Override
+    public String minecraftVersion() {
+        return MinecraftVersion.VERSION_NAME;
+    }
+
+    @Override
+    public int protocolVersion() {
+        return MinecraftVersion.PROTOCOL_VERSION;
+    }
+
+    @Override
     public ServerConfigurationImpl configuration() {
         return this.configuration;
     }

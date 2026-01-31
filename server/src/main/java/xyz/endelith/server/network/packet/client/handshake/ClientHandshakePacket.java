@@ -35,7 +35,7 @@ public record ClientHandshakePacket(
 
     @Override
     public void handle(PlayerConnectionImpl connection) {
-        System.out.println("I got handshake packet");
+        connection.handshakePacketHandler().handle(this);
     }
 
     public enum Intent {

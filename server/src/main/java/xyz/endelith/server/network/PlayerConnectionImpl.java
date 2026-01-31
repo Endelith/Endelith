@@ -10,6 +10,8 @@ import org.slf4j.LoggerFactory;
 import xyz.endelith.network.PlayerConnection;
 import xyz.endelith.server.MinecraftServerImpl;
 import xyz.endelith.server.network.exception.NetworkException;
+import xyz.endelith.server.network.handler.HandshakePacketHandler;
+import xyz.endelith.server.network.handler.StatusPacketHandler;
 import xyz.endelith.server.network.packet.server.ServerPacket;
 
 public final class PlayerConnectionImpl implements PlayerConnection, UncaughtExceptionHandler {
@@ -20,10 +22,14 @@ public final class PlayerConnectionImpl implements PlayerConnection, UncaughtExc
 
     private final Channel channel;
     private final MinecraftServerImpl server;
+    private final HandshakePacketHandler handshakePacketHandler;
+    private final StatusPacketHandler statusPacketHandler;
 
     public PlayerConnectionImpl(Channel channel, MinecraftServerImpl server) {
         this.channel = Objects.requireNonNull(channel, "channel");
         this.server = Objects.requireNonNull(server, "server");
+        this.handshakePacketHandler = new HandshakePacketHandler(this);
+        this.statusPacketHandler = new StatusPacketHandler(this);
     }
 
     @Override
@@ -81,5 +87,13 @@ public final class PlayerConnectionImpl implements PlayerConnection, UncaughtExc
 
     public void setState(ConnectionState state) {
         this.state = Objects.requireNonNull(state, "connection state");
+    }
+
+    public HandshakePacketHandler handshakePacketHandler() {
+        return this.handshakePacketHandler;
+    }
+
+    public StatusPacketHandler statusPacketHandler() {
+        return this.statusPacketHandler;
     }
 }
