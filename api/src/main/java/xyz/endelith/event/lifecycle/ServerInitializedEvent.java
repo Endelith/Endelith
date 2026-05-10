@@ -1,9 +1,12 @@
 package xyz.endelith.event.lifecycle;
 
+import java.util.Objects;
 import xyz.endelith.MinecraftServer;
 import xyz.endelith.event.Event;
 
-public interface ServerInitializedEvent extends Event {
+public record ServerInitializedEvent(MinecraftServer server) implements Event {
 
-    MinecraftServer server();
+    public ServerInitializedEvent {
+        Objects.requireNonNull(server, "server");
+    }
 }

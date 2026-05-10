@@ -3,10 +3,10 @@ package xyz.endelith.server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.endelith.MinecraftServer;
+import xyz.endelith.event.lifecycle.ServerInitializedEvent;
+import xyz.endelith.event.lifecycle.ServerReadyEvent;
+import xyz.endelith.event.lifecycle.ServerShutdownEvent;
 import xyz.endelith.server.event.EventManagerImpl;
-import xyz.endelith.server.event.lifecycle.ServerInitializedEventImpl;
-import xyz.endelith.server.event.lifecycle.ServerReadyEventImpl;
-import xyz.endelith.server.event.lifecycle.ServerShutdownEventImpl;
 
 public final class MinecraftServerImpl implements MinecraftServer {
 
@@ -23,8 +23,8 @@ public final class MinecraftServerImpl implements MinecraftServer {
     public MinecraftServerImpl() {
         try {
             Runtime.getRuntime().addShutdownHook(this.shutdownThread);
-            this.eventManager.call(new ServerInitializedEventImpl(this));
-            this.eventManager.call(new ServerReadyEventImpl(this));
+            this.eventManager.call(new ServerInitializedEvent(this));
+            this.eventManager.call(new ServerReadyEvent(this));
         } catch (Throwable t) {
             LOGGER.error("an error occurred while starting the server", t);
             shutdown();
@@ -69,7 +69,7 @@ public final class MinecraftServerImpl implements MinecraftServer {
             .name("Shutdown Thread")
             .unstarted(() -> {
                 LOGGER.info("Shutting down the server...");
-                this.eventManager.call(new ServerShutdownEventImpl());
+                this.eventManager.call(new ServerShutdownEvent());
                 LOGGER.info("Successfully shut down the server");
             });
     }
