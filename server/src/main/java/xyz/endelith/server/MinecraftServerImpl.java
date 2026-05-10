@@ -3,6 +3,10 @@ package xyz.endelith.server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.endelith.MinecraftServer;
+import xyz.endelith.server.event.EventManagerImpl;
+import xyz.endelith.server.event.lifecycle.ServerInitializedEventImpl;
+import xyz.endelith.server.event.lifecycle.ServerReadyEventImpl;
+import xyz.endelith.server.event.lifecycle.ServerShutdownEventImpl;
 
 public final class MinecraftServerImpl implements MinecraftServer {
 
@@ -14,10 +18,13 @@ public final class MinecraftServerImpl implements MinecraftServer {
     public static final int PROTOCOL_VERSION = 775;
 
     private final Thread shutdownThread = createShutdownThread();
+    private final EventManagerImpl eventManager = new EventManagerImpl();
 
     public MinecraftServerImpl() {
         try {
             Runtime.getRuntime().addShutdownHook(this.shutdownThread);
+            this.eventManager.call(new ServerInitializedEventImpl(this));
+            this.eventManager.call(new ServerReadyEventImpl(this));
         } catch (Throwable t) {
             LOGGER.error("an error occurred while starting the server", t);
             shutdown();
@@ -44,6 +51,11 @@ public final class MinecraftServerImpl implements MinecraftServer {
     }
 
     @Override
+    public EventManagerImpl eventManager() {
+        return this.eventManager;
+    }
+
+    @Override
     public void shutdown() {
         try {
             this.shutdownThread.start();
@@ -57,6 +69,7 @@ public final class MinecraftServerImpl implements MinecraftServer {
             .name("Shutdown Thread")
             .unstarted(() -> {
                 LOGGER.info("Shutting down the server...");
+                this.eventManager.call(new ServerShutdownEventImpl());
                 LOGGER.info("Successfully shut down the server");
             });
     }

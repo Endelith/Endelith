@@ -1,6 +1,6 @@
 package xyz.endelith.event.lifecycle;
 
-import com.sun.jdi.event.Event;
+import xyz.endelith.event.Event;
 
 public interface ServerShutdownEvent extends Event {
 }
