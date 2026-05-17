@@ -3,11 +3,11 @@
 > [!WARNING]
 > Endelith is still under development and it is not recommended to use it by normal servers yet.
 
-Endelith is a server written from scratch and is fully customizable we offer a plugin API.
+Endelith is a server written from scratch and is fully customizable and we offer a plugin API.
 
 # Why Endelith?
 
-You may have heard of [Minestom](https://github.com/Minestom/minestom), a highly customizable server framework. However, unlike Bukkit style platforms you need to write code to build your server you can't simply install plugins like you can in Bukkit.
+You may have heard of [Minestom](https://github.com/Minestom/minestom), a highly customizable server library. However, unlike Bukkit style platforms you need to write code to build your server you can't simply install plugins like you can in Bukkit.
 
 Endelith aims to bridge this gap: a fully customizable server that anyone can easily use to build servers especially without being tied to Mojang codebase.
 
