@@ -14,6 +14,7 @@ maven-resolver = "2.0.17"
 cosine = "2.7"
 guava = "33.5.0-jre"
 javax-inject = "1"
+configurate = "4.2.0"
 
 [libraries]
 netty = { module = "io.netty:netty-all", version.ref = "netty" }
@@ -25,11 +26,9 @@ velocity-native = { module = "com.velocitypowered:velocity-native", version.ref 
 cosine = { module = "com.github.Endelith:cosine", version.ref = "cosine" }
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
 javax-inject = { module = "javax.inject:javax.inject", version.ref = "javax-inject" }
+configurate = { module = "org.spongepowered:configurate-yaml", version.ref = "configurate" }
 
 slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
-
-jshepherd-core = { module = "de.bsommerfeld.jshepherd:core", version.ref = "jshepherd" }
-jshepherd-toml = { module = "de.bsommerfeld.jshepherd:toml", version.ref = "jshepherd" }
 
 maven-resolver-api = { module = "org.apache.maven.resolver:maven-resolver-api", version.ref = "maven-resolver" }
 maven-resolver-supplier-mvn3 = { module = "org.apache.maven.resolver:maven-resolver-supplier-mvn3", version.ref = "maven-resolver" }
@@ -47,10 +46,6 @@ adventure-serializer-plain = { module = "net.kyori:adventure-text-serializer-pla
 [bundles]
 log4j = [
     "log4j", "log4j-core", "log4j-slf4j-impl"
-]
-
-jshepherd = [
-    "jshepherd-core", "jshepherd-toml"
 ]
 
 adventure = [
