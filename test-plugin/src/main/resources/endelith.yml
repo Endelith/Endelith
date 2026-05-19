@@ -1,0 +1,8 @@
+name: TestPlugin
+version: 1.0
+description: "Best plugin ever!"
+main-class: xyz.endelith.testplugin.TestPlugin
+loader-class: "xyz.endelith.testplugin.LoaderExample"
+authors:
+  - SnowyQuest
+  - Endelith Team Members

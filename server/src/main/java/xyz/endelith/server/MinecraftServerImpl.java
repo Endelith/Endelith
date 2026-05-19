@@ -3,6 +3,7 @@ package xyz.endelith.server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.endelith.MinecraftServer;
+import xyz.endelith.server.plugin.PluginManagerImpl;
 
 public final class MinecraftServerImpl implements MinecraftServer {
 
@@ -13,11 +14,16 @@ public final class MinecraftServerImpl implements MinecraftServer {
     public static final String MINECRAFT_VERSION = "26.1.2";
     public static final int PROTOCOL_VERSION = 775;
 
+    private final PluginManagerImpl pluginManager;
+
     private final Thread shutdownThread = createShutdownThread();
 
     public MinecraftServerImpl() {
+        this.pluginManager = new PluginManagerImpl(this);
+
         try {
             Runtime.getRuntime().addShutdownHook(this.shutdownThread);
+            this.pluginManager.enablePlugins();
         } catch (Throwable t) {
             LOGGER.error("an error occurred while starting the server", t);
             shutdown();
@@ -44,6 +50,11 @@ public final class MinecraftServerImpl implements MinecraftServer {
     }
 
     @Override
+    public PluginManagerImpl pluginManager() {
+        return this.pluginManager;
+    }
+
+    @Override
     public void shutdown() {
         try {
             this.shutdownThread.start();
@@ -57,6 +68,7 @@ public final class MinecraftServerImpl implements MinecraftServer {
             .name("Shutdown Thread")
             .unstarted(() -> {
                 LOGGER.info("Shutting down the server...");
+                this.pluginManager.disablePlugins();
                 LOGGER.info("Successfully shut down the server");
             });
     }

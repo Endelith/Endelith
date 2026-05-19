@@ -11,10 +11,11 @@ dependencies {
     implementation(libs.disruptor)
     implementation(libs.jline)
     implementation(libs.bundles.log4j)
-    implementation(libs.bundles.jshepherd)
     implementation(libs.terminal.console.appender)
     implementation(libs.velocity.native)
+    implementation(libs.javax.inject)
     implementation(libs.cosine)
+    implementation(libs.configurate)
 }
 
 application {
