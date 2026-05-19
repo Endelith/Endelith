@@ -10,7 +10,7 @@ public abstract class Plugin {
     private MinecraftServer server;
     private PluginMetadata metadata;
     private Path dataDirectory;
-    private Path source;
+    private Path sourceFile;
     private Logger logger;
     private boolean enabled;
 
@@ -26,8 +26,8 @@ public abstract class Plugin {
         return this.dataDirectory;
     }
 
-    public Path source() {
-        return this.source;
+    public Path sourceFile() {
+        return this.sourceFile;
     }
 
     public Logger logger() {
