@@ -11,7 +11,8 @@ public final class PluginInjector {
 
     private static final Field SERVER = field("server");
     private static final Field METADATA = field("metadata");
-    private static final Field DATA_FOLDER = field("dataFolder");
+    private static final Field DATA_DIRECTORY = field("dataDirectory");
+    private static final Field SOURCE = field("source");
     private static final Field LOGGER = field("logger");
 
     private PluginInjector() {
@@ -31,12 +32,14 @@ public final class PluginInjector {
             Plugin plugin,
             MinecraftServer server,
             PluginMetadata metadata,
-            Path dataFolder,
+            Path dataDirectory,
+            Path source,
             Logger logger
     ) throws IllegalAccessException {
         set(plugin, SERVER, server);
         set(plugin, METADATA, metadata);
-        set(plugin, DATA_FOLDER, dataFolder);
+        set(plugin, DATA_DIRECTORY, dataDirectory);
+        set(plugin, SOURCE, source);
         set(plugin, LOGGER, logger);
     }
 

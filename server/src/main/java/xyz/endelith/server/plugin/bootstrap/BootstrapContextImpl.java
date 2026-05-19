@@ -10,12 +10,12 @@ public record BootstrapContextImpl(
         PluginMetadata metadata,
         Path dataDirectory,
         Logger logger,
-        Path pluginSource
+        Path source
 ) implements BootstrapContext {
     public BootstrapContextImpl {
         Objects.requireNonNull(metadata, "metadata");
         Objects.requireNonNull(dataDirectory, "data directory");
         Objects.requireNonNull(logger, "logger");
-        Objects.requireNonNull(pluginSource, "plugin source");
+        Objects.requireNonNull(source, "source");
     }
 }

@@ -12,5 +12,5 @@ public interface PluginProviderContext {
 
     Logger logger();
 
-    Path pluginSource();
+    Path source();
 }
