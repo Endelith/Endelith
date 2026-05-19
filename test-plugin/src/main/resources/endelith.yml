@@ -5,4 +5,4 @@ main-class: xyz.endelith.testplugin.TestPlugin
 loader-class: "xyz.endelith.testplugin.LoaderExample"
 authors:
   - SnowyQuest
-  - Endelith Team
+  - Endelith Team Members

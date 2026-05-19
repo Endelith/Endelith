@@ -43,6 +43,8 @@ public final class PluginManagerImpl implements PluginManager {
         this.pluginsDirectory = new File("plugins").getAbsoluteFile();
         this.pluginsDirectory.mkdirs();
         this.loadOrderResolver = new LoadOrderResolver(this);
+        preloadPlugins();
+        bootstrapPlugins();
     }
 
     @Override
@@ -55,7 +57,7 @@ public final class PluginManagerImpl implements PluginManager {
         return List.copyOf(this.pluginMap.values());
     }
 
-    public void preloadPlugins() {
+    private void preloadPlugins() {
         Collection<File> plugins = listPluginFiles(this.pluginsDirectory, new String[] {"jar"}, false);
         LOGGER.info("Found {} server plugins...", plugins.size());
 
@@ -128,7 +130,7 @@ public final class PluginManagerImpl implements PluginManager {
         }
     }
 
-    public void bootstrapPlugins() {
+    private void bootstrapPlugins() {
         this.loadOrderResolver.loadOrder().forEach(plugin -> {
             try {
                 plugin.bootstrap(new BootstrapContextImpl());

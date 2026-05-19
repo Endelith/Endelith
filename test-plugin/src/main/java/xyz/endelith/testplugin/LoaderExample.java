@@ -6,7 +6,7 @@ import xyz.endelith.plugin.loader.PluginLoader;
 public final class LoaderExample implements PluginLoader {
 
     @Override
-    public void classloader(PluginClasspathBuilder builder) {
+    public void classloader(PluginClasspathBuilder classpathBuilder) {
 
     }
 }

@@ -23,8 +23,6 @@ public final class MinecraftServerImpl implements MinecraftServer {
 
         try {
             Runtime.getRuntime().addShutdownHook(this.shutdownThread);
-            this.pluginManager.preloadPlugins();
-            this.pluginManager.bootstrapPlugins();
             this.pluginManager.enablePlugins();
         } catch (Throwable t) {
             LOGGER.error("an error occurred while starting the server", t);
