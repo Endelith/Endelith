@@ -18,8 +18,11 @@ import org.slf4j.LoggerFactory;
 import org.spongepowered.configurate.ConfigurateException;
 import xyz.endelith.plugin.Plugin;
 import xyz.endelith.plugin.PluginManager;
+import xyz.endelith.plugin.loader.PluginLoader;
+import xyz.endelith.plugin.loader.library.LibraryLoadingException;
 import xyz.endelith.server.MinecraftServerImpl;
 import xyz.endelith.server.plugin.bootstrap.BootstrapContextImpl;
+import xyz.endelith.server.plugin.classpath.PluginClasspathBuilderImpl;
 import xyz.endelith.server.plugin.inject.PluginInjector;
 import xyz.endelith.server.plugin.loader.CircularDependencyException;
 import xyz.endelith.server.plugin.loader.LoadOrderResolver;
@@ -79,11 +82,12 @@ public final class PluginManagerImpl implements PluginManager {
                         return;
                     }
 
+                    Path dataDirectory = this.pluginsDirectory.toPath().resolve(metadata.name());
                     PluginInjector.inject(
                             plugin,
                             this.server,
                             metadata,
-                            new File(this.pluginsDirectory, metadata.name()).toPath(),
+                            dataDirectory,
                             file.toPath(),
                             LoggerFactory.getLogger(metadata.name())
                     );
@@ -98,6 +102,10 @@ public final class PluginManagerImpl implements PluginManager {
                 LOGGER.atError()
                         .setCause(ex)
                         .log("Cannot load plugin {}, failed to inject required objects", file.getName());
+            } catch (LibraryLoadingException ex) {
+                LOGGER.atError()
+                        .setCause(ex)
+                        .log("Cannot load plugin {}, because plugin loader failed", file.getName());
             } catch (IOException ex) {
                 LOGGER.atError()
                         .setCause(ex)
@@ -164,6 +172,8 @@ public final class PluginManagerImpl implements PluginManager {
     }
 
     private Plugin createPluginInstance(PluginClassLoader classLoader, PluginMetadataImpl metadata) {
+        runPluginLoader(classLoader, metadata);
+
         String mainClass = metadata.mainClass();
 
         try {
@@ -179,6 +189,27 @@ public final class PluginManagerImpl implements PluginManager {
                     .setCause(ex)
                     .log("Failed to create an instance of {}", mainClass);
             return null;
+        }
+    }
+
+    private void runPluginLoader(PluginClassLoader classLoader, PluginMetadataImpl metadata) {
+        String loaderClassName = metadata.loader();
+        if (loaderClassName == null || loaderClassName.isBlank()) {
+            return;
+        }
+
+        try {
+            Class<?> loaderClass = classLoader.loadClass(loaderClassName);
+            if (!PluginLoader.class.isAssignableFrom(loaderClass)) {
+                throw new IllegalArgumentException(loaderClass + " does not implement PluginLoader");
+            }
+
+            PluginLoader pluginLoader = (PluginLoader) loaderClass.getConstructor().newInstance();
+            pluginLoader.classloader(new PluginClasspathBuilderImpl(classLoader));
+        } catch (ReflectiveOperationException | IllegalArgumentException ex) {
+            throw new LibraryLoadingException("Failed to initialize plugin loader " + loaderClassName, ex);
+        } catch (Exception ex) {
+            throw new LibraryLoadingException("Failed to initialize plugin loader " + loaderClassName, ex);
         }
     }
 
