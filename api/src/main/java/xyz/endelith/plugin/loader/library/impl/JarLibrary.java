@@ -7,10 +7,12 @@ import xyz.endelith.plugin.loader.library.ClasspathLibrary;
 import xyz.endelith.plugin.loader.library.LibraryLoadingException;
 import xyz.endelith.plugin.loader.library.LibraryStore;
 
-public record JarLibrary(Path path) implements ClasspathLibrary {
+public final class JarLibrary implements ClasspathLibrary {
 
-    public JarLibrary {
-        Objects.requireNonNull(path, "path");
+    private final Path path;
+
+    public JarLibrary(Path path) {
+        this.path = Objects.requireNonNull(path, "path");
     }
 
     @Override

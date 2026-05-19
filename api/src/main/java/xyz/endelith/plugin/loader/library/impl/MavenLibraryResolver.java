@@ -32,10 +32,10 @@ public final class MavenLibraryResolver implements ClasspathLibrary {
     public static final String MAVEN_CENTRAL_DEFAULT_MIRROR = defaultMavenCentralMirror();
 
     private static final List<String> MAVEN_CENTRAL_URLS = List.of(
-        "https://repo1.maven.org/maven2",
-        "http://repo1.maven.org/maven2",
-        "https://repo.maven.apache.org/maven2",
-        "http://repo.maven.apache.org/maven2"
+            "https://repo1.maven.org/maven2",
+            "http://repo1.maven.org/maven2",
+            "https://repo.maven.apache.org/maven2",
+            "http://repo.maven.apache.org/maven2"
     );
 
     private final RepositorySystem repository;
@@ -51,8 +51,8 @@ public final class MavenLibraryResolver implements ClasspathLibrary {
             @Override
             public void transferInitiated(TransferEvent event) throws TransferCancelledException {
                 LOGGER.info(
-                    "Downloading {}",
-                    event.getResource().getRepositoryUrl() + event.getResource().getResourceName()
+                        "Downloading {}",
+                        event.getResource().getRepositoryUrl() + event.getResource().getResourceName()
                 );
             }
         };
@@ -75,12 +75,12 @@ public final class MavenLibraryResolver implements ClasspathLibrary {
     public void addRepository(RemoteRepository remoteRepository) {
         if (MAVEN_CENTRAL_URLS.stream().anyMatch(remoteRepository.getUrl()::startsWith)) {
             LOGGER.warn(
-                "Use of Maven Central as a CDN is against the Maven Central Terms of Service. "
-                    + "Use MavenLibraryResolver.MAVEN_CENTRAL_DEFAULT_MIRROR instead.",
-                new RuntimeException(String.format(
-                    "Plugin used Maven Central for library resolution (%s)",
-                    remoteRepository
-                ))
+                    "Use of Maven Central as a CDN is against the Maven Central Terms of Service. "
+                            + "Use MavenLibraryResolver.MAVEN_CENTRAL_DEFAULT_MIRROR instead.",
+                    new RuntimeException(String.format(
+                            "Plugin used Maven Central for library resolution (%s)",
+                            remoteRepository
+                    ))
             );
         }
 
@@ -94,15 +94,15 @@ public final class MavenLibraryResolver implements ClasspathLibrary {
         DependencyResult result;
         try {
             result = this.repository.resolveDependencies(
-                this.session,
-                new DependencyRequest(
-                    new CollectRequest(
-                        (Dependency) null,
-                        this.dependencies,
-                        repos
-                    ),
-                    null
-                )
+                    this.session,
+                    new DependencyRequest(
+                            new CollectRequest(
+                                    (Dependency) null,
+                                    this.dependencies,
+                                    repos
+                            ),
+                            null
+                    )
             );
         } catch (DependencyResolutionException ex) {
             throw new LibraryLoadingException("Error resolving libraries", ex);
