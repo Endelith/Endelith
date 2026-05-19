@@ -3,6 +3,7 @@ package xyz.endelith.server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.endelith.MinecraftServer;
+import xyz.endelith.server.plugin.PluginManagerImpl;
 
 public final class MinecraftServerImpl implements MinecraftServer {
 
@@ -41,6 +42,12 @@ public final class MinecraftServerImpl implements MinecraftServer {
     @Override
     public int protocolVersion() {
         return PROTOCOL_VERSION;
+    }
+
+    @Override
+    public PluginManagerImpl pluginManager() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'pluginManager'");
     }
 
     @Override

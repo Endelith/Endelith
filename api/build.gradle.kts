@@ -3,8 +3,9 @@ plugins {
 }
 
 dependencies {
-    api(libs.slf4j)   
+    api(libs.slf4j)
     api(libs.guava)
+    api(libs.bundles.maven.resolver)
     api(libs.bundles.adventure)
     api(libs.jetbrains.annotations)
 }

@@ -14,6 +14,7 @@ dependencies {
     implementation(libs.bundles.jshepherd)
     implementation(libs.terminal.console.appender)
     implementation(libs.velocity.native)
+    implementation(libs.javax.inject)
     implementation(libs.cosine)
 }
 
