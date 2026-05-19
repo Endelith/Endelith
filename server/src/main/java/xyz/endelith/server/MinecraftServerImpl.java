@@ -3,6 +3,8 @@ package xyz.endelith.server;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.endelith.MinecraftServer;
+import xyz.endelith.plugin.bootstrap.BootstrapContext;
+import xyz.endelith.server.event.EventManagerImpl;
 import xyz.endelith.server.plugin.PluginManagerImpl;
 
 public final class MinecraftServerImpl implements MinecraftServer {
@@ -14,9 +16,12 @@ public final class MinecraftServerImpl implements MinecraftServer {
     public static final String MINECRAFT_VERSION = "26.1.2";
     public static final int PROTOCOL_VERSION = 775;
 
-    private final PluginManagerImpl pluginManager;
-
     private final Thread shutdownThread = createShutdownThread();
+
+    private final EventManagerImpl<MinecraftServer> eventManager = new EventManagerImpl<>();
+    private final EventManagerImpl<BootstrapContext> bootstrapEventManager = new EventManagerImpl<>();
+
+    private final PluginManagerImpl pluginManager;
 
     public MinecraftServerImpl() {
         this.pluginManager = new PluginManagerImpl(this);
@@ -47,6 +52,15 @@ public final class MinecraftServerImpl implements MinecraftServer {
     @Override
     public int protocolVersion() {
         return PROTOCOL_VERSION;
+    }
+
+    @Override
+    public EventManagerImpl<MinecraftServer> eventManager() {
+        return this.eventManager;
+    }
+
+    public EventManagerImpl<BootstrapContext> bootstrapEventManager() {
+        return this.bootstrapEventManager;
     }
 
     @Override

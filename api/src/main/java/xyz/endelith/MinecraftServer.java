@@ -1,8 +1,10 @@
 package xyz.endelith;
 
+import xyz.endelith.event.EventManager;
+import xyz.endelith.event.EventOwner;
 import xyz.endelith.plugin.PluginManager;
 
-public interface MinecraftServer {
+public interface MinecraftServer extends EventOwner {
 
     String brandName();
 
@@ -11,6 +13,9 @@ public interface MinecraftServer {
     int protocolVersion();
 
     PluginManager pluginManager();
+
+    @Override
+    EventManager<MinecraftServer> eventManager();
 
     void shutdown();
 }

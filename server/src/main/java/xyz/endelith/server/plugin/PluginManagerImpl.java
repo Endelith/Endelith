@@ -133,7 +133,7 @@ public final class PluginManagerImpl implements PluginManager {
     private void bootstrapPlugins() {
         this.loadOrderResolver.loadOrder().forEach(plugin -> {
             try {
-                plugin.bootstrap(new BootstrapContextImpl());
+                plugin.bootstrap(new BootstrapContextImpl(this.server.bootstrapEventManager()));
             } catch (Throwable t) {
                 plugin.logger().atError()
                         .setCause(t)

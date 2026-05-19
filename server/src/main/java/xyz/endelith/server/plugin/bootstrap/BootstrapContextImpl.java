@@ -1,8 +1,19 @@
 package xyz.endelith.server.plugin.bootstrap;
 
+import java.util.Objects;
 import xyz.endelith.plugin.bootstrap.BootstrapContext;
+import xyz.endelith.server.event.EventManagerImpl;
 
-public record BootstrapContextImpl() implements BootstrapContext {
+public final class BootstrapContextImpl implements BootstrapContext {
 
-    // TODO: Event node
+    private final EventManagerImpl<BootstrapContext> eventManager;
+
+    public BootstrapContextImpl(EventManagerImpl<BootstrapContext> eventManager) {
+        this.eventManager = Objects.requireNonNull(eventManager, "event manager");
+    }
+
+    @Override
+    public EventManagerImpl<BootstrapContext> eventManager() {
+        return this.eventManager;
+    }
 }
