@@ -123,15 +123,10 @@ public final class PluginManagerImpl implements PluginManager {
     public void bootstrapPlugins() {
         this.loadOrderResolver.loadOrder().forEach(plugin -> {
             try {
-                plugin.bootstrap(new BootstrapContextImpl(
-                        plugin.metadata(),
-                        plugin.dataDirectory(),
-                        plugin.logger(),
-                        plugin.source()
-                ));
-            } catch (Throwable ex) {
+                plugin.bootstrap(new BootstrapContextImpl());
+            } catch (Throwable t) {
                 plugin.logger().atError()
-                        .setCause(ex)
+                        .setCause(t)
                         .log("Failed to bootstrap {}", plugin.metadata().name());
             }
         });

@@ -1,4 +1,6 @@
 package xyz.endelith.plugin.bootstrap;
 
-public interface BootstrapContext extends PluginProviderContext {
+public interface BootstrapContext {
+
+    // TODO: Event node
 }
