@@ -15,8 +15,8 @@ public final class PluginClassLoader extends URLClassLoader {
 
     public PluginClassLoader(File pluginSource) throws IOException {
         super(
-            new URL[] {pluginSource.toURI().toURL()},
-            MinecraftServerImpl.class.getClassLoader()
+                new URL[] {pluginSource.toURI().toURL()},
+                MinecraftServerImpl.class.getClassLoader()
         );
     }
 

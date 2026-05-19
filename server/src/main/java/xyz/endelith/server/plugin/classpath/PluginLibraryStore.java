@@ -12,7 +12,7 @@ public final class PluginLibraryStore implements LibraryStore {
     private final PluginClassLoader classLoader;
 
     public PluginLibraryStore(PluginClassLoader classLoader) {
-        this.classLoader = Objects.requireNonNull(classLoader, "classLoader");
+        this.classLoader = Objects.requireNonNull(classLoader, "class loader");
     }
 
     @Override

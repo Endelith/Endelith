@@ -193,7 +193,7 @@ public final class PluginManagerImpl implements PluginManager {
     }
 
     private void runPluginLoader(PluginClassLoader classLoader, PluginMetadataImpl metadata) {
-        String loaderClassName = metadata.loader();
+        String loaderClassName = metadata.loaderClass();
         if (loaderClassName == null || loaderClassName.isBlank()) {
             return;
         }

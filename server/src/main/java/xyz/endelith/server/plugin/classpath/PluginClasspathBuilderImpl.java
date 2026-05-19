@@ -10,12 +10,12 @@ public final class PluginClasspathBuilderImpl implements PluginClasspathBuilder 
     private final PluginLibraryStore libraryStore;
 
     public PluginClasspathBuilderImpl(PluginClassLoader classLoader) {
-        this.libraryStore = new PluginLibraryStore(Objects.requireNonNull(classLoader, "classLoader"));
+        this.libraryStore = new PluginLibraryStore(Objects.requireNonNull(classLoader, "class loader"));
     }
 
     @Override
     public PluginClasspathBuilder addLibrary(ClasspathLibrary classpathLibrary) {
-        Objects.requireNonNull(classpathLibrary, "classpathLibrary").register(this.libraryStore);
+        Objects.requireNonNull(classpathLibrary, "classpath library").register(this.libraryStore);
         return this;
     }
 }

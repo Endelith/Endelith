@@ -17,13 +17,13 @@ import xyz.endelith.plugin.PluginMetadata;
 
 public final class PluginMetadataImpl implements PluginMetadata {
 
-    private static final Pattern PLUGIN_NAME_PATTERN = Pattern.compile("^[a-zA-Z0-9]+(?:[-_][a-zA-Z0-9]+)*$");
+    private static final Pattern PLUGIN_NAME_PATTERN = Pattern.compile("[a-zA-Z0-9_]+");
 
     private final String mainClass;
     private final String name;
     private final String version;
     private final @Nullable String description;
-    private final @Nullable String loader;
+    private final @Nullable String loaderClass;
     private final Collection<String> authors;
     private final Collection<Dependency> dependencies;
 
@@ -42,7 +42,7 @@ public final class PluginMetadataImpl implements PluginMetadata {
         );
         this.version = Objects.requireNonNull(node.node("version").getString(), "version cannot be null");
         this.description = node.node("description").getString();
-        this.loader = node.node("loader").getString();
+        this.loaderClass = node.node("loader-class").getString();
         this.authors = node.node("authors").getList(String.class, List.of());
         this.dependencies = node.node("dependencies").getList(Dependency.class, List.of());
     }
@@ -68,8 +68,8 @@ public final class PluginMetadataImpl implements PluginMetadata {
     }
 
     @Override
-    public @Nullable String loader() {
-        return this.loader;
+    public @Nullable String loaderClass() {
+        return this.loaderClass;
     }
 
     @Override

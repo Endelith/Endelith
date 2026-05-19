@@ -8,16 +8,14 @@ public interface PluginMetadata {
 
     String mainClass();
 
-    @Pattern("^[a-zA-Z0-9]+(?:[-_][a-zA-Z0-9]+)*$")
+    @Pattern("[a-zA-Z0-9_]+")
     String name();
 
     String version();
 
-    @Nullable
-    String description();
+    @Nullable String description();
 
-    @Nullable
-    String loader();
+    @Nullable String loaderClass();
 
     Collection<String> authors();
 
@@ -25,7 +23,7 @@ public interface PluginMetadata {
 
     interface Dependency {
 
-        @Pattern("^[a-zA-Z0-9]+(?:[-_][a-zA-Z0-9]+)*$")
+        @Pattern("[a-zA-Z0-9_]+")
         String name();
 
         boolean required();
