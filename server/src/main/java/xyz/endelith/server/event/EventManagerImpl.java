@@ -38,7 +38,7 @@ public final class EventManagerImpl<O extends EventOwner> implements EventManage
 
         CopyOnWriteArrayList<RegisteredHandler<?>> registeredHandlers = this.handlers.computeIfAbsent(
                 key,
-                ignored -> new CopyOnWriteArrayList<>()
+                _ -> new CopyOnWriteArrayList<>()
         );
 
         registeredHandlers.add(new RegisteredHandler<>(order, handler));
