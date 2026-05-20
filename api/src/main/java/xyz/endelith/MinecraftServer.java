@@ -2,7 +2,7 @@ package xyz.endelith;
 
 import xyz.endelith.plugin.PluginManager;
 
-public interface MinecraftServer {
+public interface MinecraftServer  {
 
     String brandName();
 

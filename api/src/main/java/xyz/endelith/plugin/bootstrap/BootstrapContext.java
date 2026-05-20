@@ -1,6 +1,10 @@
 package xyz.endelith.plugin.bootstrap;
 
-public interface BootstrapContext {
+import xyz.endelith.event.EventManager;
+import xyz.endelith.event.EventOwner;
 
-    // TODO: Event node
+public interface BootstrapContext extends EventOwner {
+
+    @Override
+    EventManager<BootstrapContext> eventManager();
 }
