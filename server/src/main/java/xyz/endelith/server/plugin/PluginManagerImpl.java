@@ -87,6 +87,7 @@ public final class PluginManagerImpl implements PluginManager {
                     Path dataDirectory = this.pluginsDirectory.toPath().resolve(metadata.name());
                     PluginInjector.inject(
                             plugin,
+                            this.server.pluginEventManager(),
                             this.server,
                             metadata,
                             dataDirectory,

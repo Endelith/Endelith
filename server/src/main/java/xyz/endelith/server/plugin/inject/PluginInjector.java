@@ -6,9 +6,11 @@ import org.slf4j.Logger;
 import xyz.endelith.MinecraftServer;
 import xyz.endelith.plugin.Plugin;
 import xyz.endelith.plugin.PluginMetadata;
+import xyz.endelith.server.event.EventManagerImpl;
 
 public final class PluginInjector {
 
+    private static final Field EVENT_MANAGER = field("eventManager");
     private static final Field SERVER = field("server");
     private static final Field METADATA = field("metadata");
     private static final Field DATA_DIRECTORY = field("dataDirectory");
@@ -30,12 +32,14 @@ public final class PluginInjector {
 
     public static void inject(
             Plugin plugin,
+            EventManagerImpl<Plugin> eventManager,
             MinecraftServer server,
             PluginMetadata metadata,
             Path dataDirectory,
             Path sourceFile,
             Logger logger
     ) throws IllegalAccessException {
+        set(plugin, EVENT_MANAGER, eventManager);
         set(plugin, SERVER, server);
         set(plugin, METADATA, metadata);
         set(plugin, DATA_DIRECTORY, dataDirectory);
