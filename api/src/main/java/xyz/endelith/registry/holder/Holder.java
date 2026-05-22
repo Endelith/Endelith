@@ -1,8 +1,8 @@
 package xyz.endelith.registry.holder;
 
 import java.util.Objects;
-import org.jetbrains.annotations.Nullable;
 import net.kyori.adventure.key.Key;
+import org.jetbrains.annotations.Nullable;
 import xyz.endelith.registry.MinecraftRegistry;
 
 public interface Holder<V> {

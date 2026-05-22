@@ -1,7 +1,7 @@
 package xyz.endelith.registry;
 
-import java.util.Map;
 import com.google.common.collect.Multimap;
+import java.util.Map;
 import net.kyori.adventure.key.Key;
 import xyz.endelith.registry.reference.RegistryReference;
 
