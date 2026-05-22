@@ -1,0 +1,27 @@
+package xyz.endelith.registry.event;
+
+import java.util.Objects;
+import org.jetbrains.annotations.Nullable;
+import net.kyori.adventure.key.Key;
+import xyz.endelith.event.Event;
+import xyz.endelith.registry.feature.KnownPack;
+import xyz.endelith.registry.reference.RegistryReference;
+
+public record RegistryInitializeEvent<V>(
+    RegistryReference<V> reference,
+    RegistryAccess<V> access
+) implements Event {
+
+    public RegistryInitializeEvent {
+        Objects.requireNonNull(reference, "reference");
+        Objects.requireNonNull(access, "access");;
+    }
+
+    public void register(Key key, V value, @Nullable KnownPack pack) {
+        this.access.register(key, value, pack);
+    }
+
+    public interface RegistryAccess<V> {
+        void register(Key key, V value, @Nullable KnownPack pack);
+    }
+}
