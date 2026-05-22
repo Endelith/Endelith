@@ -1,7 +1,11 @@
 package xyz.endelith.testplugin;
 
+import net.kyori.adventure.key.Key;
+import xyz.endelith.entity.variant.cat.CatVariant;
 import xyz.endelith.plugin.Plugin;
 import xyz.endelith.plugin.bootstrap.BootstrapContext;
+import xyz.endelith.registry.event.RegistryEvents;
+import xyz.endelith.registry.reference.RegistryReference;
 
 public final class TestPlugin extends Plugin {
 
@@ -9,6 +13,22 @@ public final class TestPlugin extends Plugin {
     public void bootstrap(BootstrapContext context) {
         logger().info("Welcome! The plugin is currently in the bootstrap step.");
         logger().info("You can register commands and modify registries here!");
+
+        context.eventManager().listen(
+                RegistryEvents.initialize(RegistryReference.CAT_VARIANT),
+                event -> {
+                    event.register(
+                            Key.key("endelith", "ash_gray"),
+                            new CatVariant(
+                                Key.key("endelith", "textures/entity/cat/ash_gray"),
+                                Key.key("endelith", "textures/entity/cat/ash_gray_baby")
+                            ),
+                            null
+                    );
+                }
+        );
+
+        logger().info("If you try to access registries in here you got: {}", server().registryManager());
     }
 
     @Override

@@ -1,0 +1,101 @@
+[
+  {
+    "key": "minecraft:black",
+    "value": "{asset_id:\"minecraft:entity/cat/cat_black\",baby_asset_id:\"minecraft:entity/cat/cat_black_baby\",spawn_conditions:[{priority:0}]}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:all_black",
+    "value": "{asset_id:\"minecraft:entity/cat/cat_all_black\",baby_asset_id:\"minecraft:entity/cat/cat_all_black_baby\",spawn_conditions:[{condition:{type:\"minecraft:structure\",structures:\"#minecraft:cats_spawn_as_black\"},priority:1},{condition:{type:\"minecraft:moon_brightness\",range:{min:0.9f}},priority:0}]}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:calico",
+    "value": "{asset_id:\"minecraft:entity/cat/cat_calico\",baby_asset_id:\"minecraft:entity/cat/cat_calico_baby\",spawn_conditions:[{priority:0}]}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:jellie",
+    "value": "{asset_id:\"minecraft:entity/cat/cat_jellie\",baby_asset_id:\"minecraft:entity/cat/cat_jellie_baby\",spawn_conditions:[{priority:0}]}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:tabby",
+    "value": "{asset_id:\"minecraft:entity/cat/cat_tabby\",baby_asset_id:\"minecraft:entity/cat/cat_tabby_baby\",spawn_conditions:[{priority:0}]}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:ragdoll",
+    "value": "{asset_id:\"minecraft:entity/cat/cat_ragdoll\",baby_asset_id:\"minecraft:entity/cat/cat_ragdoll_baby\",spawn_conditions:[{priority:0}]}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:siamese",
+    "value": "{asset_id:\"minecraft:entity/cat/cat_siamese\",baby_asset_id:\"minecraft:entity/cat/cat_siamese_baby\",spawn_conditions:[{priority:0}]}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:persian",
+    "value": "{asset_id:\"minecraft:entity/cat/cat_persian\",baby_asset_id:\"minecraft:entity/cat/cat_persian_baby\",spawn_conditions:[{priority:0}]}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:british_shorthair",
+    "value": "{asset_id:\"minecraft:entity/cat/cat_british_shorthair\",baby_asset_id:\"minecraft:entity/cat/cat_british_shorthair_baby\",spawn_conditions:[{priority:0}]}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:white",
+    "value": "{asset_id:\"minecraft:entity/cat/cat_white\",baby_asset_id:\"minecraft:entity/cat/cat_white_baby\",spawn_conditions:[{priority:0}]}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:red",
+    "value": "{asset_id:\"minecraft:entity/cat/cat_red\",baby_asset_id:\"minecraft:entity/cat/cat_red_baby\",spawn_conditions:[{priority:0}]}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  }
+]

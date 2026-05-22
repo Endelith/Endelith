@@ -23,6 +23,7 @@ import xyz.endelith.registry.feature.KnownPack;
 import xyz.endelith.registry.reference.RegistryReference;
 import xyz.endelith.server.network.NetworkManager;
 import xyz.endelith.server.registry.MinecraftRegistryImpl.RegistrationInfo;
+import xyz.endelith.server.registry.codec.entity.variant.cat.CatVariantCodec;
 import xyz.endelith.server.util.data.DataUtil;
 
 public final class RegistryManagerImpl implements RegistryManager {
@@ -37,6 +38,12 @@ public final class RegistryManagerImpl implements RegistryManager {
         this.networkManager = networkManager;
 
         this.registries = new RegistryMapBuilder(eventManager, this.tagsLock)
+            .dataDriven(
+                    RegistryReference.CAT_VARIANT,
+                    Key.key("cat_variant"),
+                    "registries/cat_variants.json",
+                    CatVariantCodec.CODEC
+            )
             .build();
     }
 

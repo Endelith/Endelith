@@ -1,8 +1,11 @@
 package xyz.endelith.registry.reference;
 
 import java.util.Objects;
+import xyz.endelith.entity.variant.cat.CatVariant;
 
 public final class RegistryReference<V> {
+
+    public static final RegistryReference<CatVariant> CAT_VARIANT = create("cat_variant");
 
     private final String name;
 
