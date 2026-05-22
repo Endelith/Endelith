@@ -9,6 +9,7 @@ import xyz.endelith.server.configuration.ServerConfigurationImpl;
 import xyz.endelith.server.event.EventManagerImpl;
 import xyz.endelith.server.network.NetworkManager;
 import xyz.endelith.server.plugin.PluginManagerImpl;
+import xyz.endelith.server.registry.RegistryManagerImpl;
 
 public final class MinecraftServerImpl implements MinecraftServer {
 
@@ -27,10 +28,12 @@ public final class MinecraftServerImpl implements MinecraftServer {
     private final ServerConfigurationImpl configuration = ServerConfigurationImpl.create();
 
     private final PluginManagerImpl pluginManager;
+    private final RegistryManagerImpl registryManager;
     private final NetworkManager networkManager;
 
     public MinecraftServerImpl() {
         this.pluginManager = new PluginManagerImpl(this);
+        this.registryManager = new RegistryManagerImpl(this.bootstrapEventManager, null);
         this.networkManager = new NetworkManager(this);
 
         try {
@@ -63,13 +66,18 @@ public final class MinecraftServerImpl implements MinecraftServer {
     }
 
     @Override
+    public ServerConfigurationImpl configuration() {
+        return this.configuration;
+    }
+
+    @Override
     public PluginManagerImpl pluginManager() {
         return this.pluginManager;
     }
 
     @Override
-    public ServerConfigurationImpl configuration() {
-        return this.configuration;
+    public RegistryManagerImpl registryManager() {
+        return this.registryManager;
     }
 
     @Override

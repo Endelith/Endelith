@@ -2,6 +2,7 @@ package xyz.endelith;
 
 import xyz.endelith.configuration.ServerConfiguration;
 import xyz.endelith.plugin.PluginManager;
+import xyz.endelith.registry.RegistryManager;
 
 public interface MinecraftServer  {
 
@@ -11,9 +12,11 @@ public interface MinecraftServer  {
 
     int protocolVersion();
 
+    ServerConfiguration configuration();
+
     PluginManager pluginManager();
 
-    ServerConfiguration configuration();
+    RegistryManager registryManager();
 
     void shutdown();
 }
