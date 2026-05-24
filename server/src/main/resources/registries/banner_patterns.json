@@ -1,0 +1,515 @@
+[
+  {
+    "key": "minecraft:border",
+    "value": "{asset_id:\"minecraft:border\",translation_key:\"block.minecraft.banner.border\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:square_bottom_right",
+    "value": "{asset_id:\"minecraft:square_bottom_right\",translation_key:\"block.minecraft.banner.square_bottom_right\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:stripe_right",
+    "value": "{asset_id:\"minecraft:stripe_right\",translation_key:\"block.minecraft.banner.stripe_right\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:rhombus",
+    "value": "{asset_id:\"minecraft:rhombus\",translation_key:\"block.minecraft.banner.rhombus\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:flow",
+    "value": "{asset_id:\"minecraft:flow\",translation_key:\"block.minecraft.banner.flow\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:pattern_item/flow"
+    ]
+  },
+  {
+    "key": "minecraft:triangles_top",
+    "value": "{asset_id:\"minecraft:triangles_top\",translation_key:\"block.minecraft.banner.triangles_top\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:gradient",
+    "value": "{asset_id:\"minecraft:gradient\",translation_key:\"block.minecraft.banner.gradient\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:globe",
+    "value": "{asset_id:\"minecraft:globe\",translation_key:\"block.minecraft.banner.globe\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:pattern_item/globe"
+    ]
+  },
+  {
+    "key": "minecraft:stripe_bottom",
+    "value": "{asset_id:\"minecraft:stripe_bottom\",translation_key:\"block.minecraft.banner.stripe_bottom\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:mojang",
+    "value": "{asset_id:\"minecraft:mojang\",translation_key:\"block.minecraft.banner.mojang\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:pattern_item/mojang"
+    ]
+  },
+  {
+    "key": "minecraft:stripe_middle",
+    "value": "{asset_id:\"minecraft:stripe_middle\",translation_key:\"block.minecraft.banner.stripe_middle\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:flower",
+    "value": "{asset_id:\"minecraft:flower\",translation_key:\"block.minecraft.banner.flower\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:pattern_item/flower"
+    ]
+  },
+  {
+    "key": "minecraft:diagonal_up_right",
+    "value": "{asset_id:\"minecraft:diagonal_up_right\",translation_key:\"block.minecraft.banner.diagonal_up_right\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:circle",
+    "value": "{asset_id:\"minecraft:circle\",translation_key:\"block.minecraft.banner.circle\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:half_horizontal",
+    "value": "{asset_id:\"minecraft:half_horizontal\",translation_key:\"block.minecraft.banner.half_horizontal\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:triangle_bottom",
+    "value": "{asset_id:\"minecraft:triangle_bottom\",translation_key:\"block.minecraft.banner.triangle_bottom\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:bricks",
+    "value": "{asset_id:\"minecraft:bricks\",translation_key:\"block.minecraft.banner.bricks\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:pattern_item/field_masoned"
+    ]
+  },
+  {
+    "key": "minecraft:curly_border",
+    "value": "{asset_id:\"minecraft:curly_border\",translation_key:\"block.minecraft.banner.curly_border\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:pattern_item/bordure_indented"
+    ]
+  },
+  {
+    "key": "minecraft:piglin",
+    "value": "{asset_id:\"minecraft:piglin\",translation_key:\"block.minecraft.banner.piglin\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:pattern_item/piglin"
+    ]
+  },
+  {
+    "key": "minecraft:base",
+    "value": "{asset_id:\"minecraft:base\",translation_key:\"block.minecraft.banner.base\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:stripe_center",
+    "value": "{asset_id:\"minecraft:stripe_center\",translation_key:\"block.minecraft.banner.stripe_center\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:square_bottom_left",
+    "value": "{asset_id:\"minecraft:square_bottom_left\",translation_key:\"block.minecraft.banner.square_bottom_left\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:square_top_right",
+    "value": "{asset_id:\"minecraft:square_top_right\",translation_key:\"block.minecraft.banner.square_top_right\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:stripe_downright",
+    "value": "{asset_id:\"minecraft:stripe_downright\",translation_key:\"block.minecraft.banner.stripe_downright\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:guster",
+    "value": "{asset_id:\"minecraft:guster\",translation_key:\"block.minecraft.banner.guster\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:pattern_item/guster"
+    ]
+  },
+  {
+    "key": "minecraft:gradient_up",
+    "value": "{asset_id:\"minecraft:gradient_up\",translation_key:\"block.minecraft.banner.gradient_up\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:diagonal_right",
+    "value": "{asset_id:\"minecraft:diagonal_right\",translation_key:\"block.minecraft.banner.diagonal_right\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:half_vertical_right",
+    "value": "{asset_id:\"minecraft:half_vertical_right\",translation_key:\"block.minecraft.banner.half_vertical_right\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:small_stripes",
+    "value": "{asset_id:\"minecraft:small_stripes\",translation_key:\"block.minecraft.banner.small_stripes\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:diagonal_left",
+    "value": "{asset_id:\"minecraft:diagonal_left\",translation_key:\"block.minecraft.banner.diagonal_left\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:cross",
+    "value": "{asset_id:\"minecraft:cross\",translation_key:\"block.minecraft.banner.cross\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:stripe_downleft",
+    "value": "{asset_id:\"minecraft:stripe_downleft\",translation_key:\"block.minecraft.banner.stripe_downleft\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:skull",
+    "value": "{asset_id:\"minecraft:skull\",translation_key:\"block.minecraft.banner.skull\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:pattern_item/skull"
+    ]
+  },
+  {
+    "key": "minecraft:triangle_top",
+    "value": "{asset_id:\"minecraft:triangle_top\",translation_key:\"block.minecraft.banner.triangle_top\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:half_vertical",
+    "value": "{asset_id:\"minecraft:half_vertical\",translation_key:\"block.minecraft.banner.half_vertical\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:diagonal_up_left",
+    "value": "{asset_id:\"minecraft:diagonal_up_left\",translation_key:\"block.minecraft.banner.diagonal_up_left\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:stripe_top",
+    "value": "{asset_id:\"minecraft:stripe_top\",translation_key:\"block.minecraft.banner.stripe_top\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:square_top_left",
+    "value": "{asset_id:\"minecraft:square_top_left\",translation_key:\"block.minecraft.banner.square_top_left\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:half_horizontal_bottom",
+    "value": "{asset_id:\"minecraft:half_horizontal_bottom\",translation_key:\"block.minecraft.banner.half_horizontal_bottom\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:creeper",
+    "value": "{asset_id:\"minecraft:creeper\",translation_key:\"block.minecraft.banner.creeper\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:pattern_item/creeper"
+    ]
+  },
+  {
+    "key": "minecraft:stripe_left",
+    "value": "{asset_id:\"minecraft:stripe_left\",translation_key:\"block.minecraft.banner.stripe_left\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:triangles_bottom",
+    "value": "{asset_id:\"minecraft:triangles_bottom\",translation_key:\"block.minecraft.banner.triangles_bottom\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  },
+  {
+    "key": "minecraft:straight_cross",
+    "value": "{asset_id:\"minecraft:straight_cross\",translation_key:\"block.minecraft.banner.straight_cross\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_item_required"
+    ]
+  }
+]

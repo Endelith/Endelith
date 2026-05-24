@@ -1,0 +1,191 @@
+[
+  {
+    "key": "minecraft:stal",
+    "value": "{comparator_output:8,description:{translate:\"jukebox_song.minecraft.stal\"},length_in_seconds:150.0f,sound_event:\"minecraft:music_disc.stal\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:precipice",
+    "value": "{comparator_output:13,description:{translate:\"jukebox_song.minecraft.precipice\"},length_in_seconds:299.0f,sound_event:\"minecraft:music_disc.precipice\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:strad",
+    "value": "{comparator_output:9,description:{translate:\"jukebox_song.minecraft.strad\"},length_in_seconds:188.0f,sound_event:\"minecraft:music_disc.strad\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:creator_music_box",
+    "value": "{comparator_output:11,description:{translate:\"jukebox_song.minecraft.creator_music_box\"},length_in_seconds:73.0f,sound_event:\"minecraft:music_disc.creator_music_box\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:13",
+    "value": "{comparator_output:1,description:{translate:\"jukebox_song.minecraft.13\"},length_in_seconds:178.0f,sound_event:\"minecraft:music_disc.13\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:relic",
+    "value": "{comparator_output:14,description:{translate:\"jukebox_song.minecraft.relic\"},length_in_seconds:218.0f,sound_event:\"minecraft:music_disc.relic\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:far",
+    "value": "{comparator_output:5,description:{translate:\"jukebox_song.minecraft.far\"},length_in_seconds:174.0f,sound_event:\"minecraft:music_disc.far\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:blocks",
+    "value": "{comparator_output:3,description:{translate:\"jukebox_song.minecraft.blocks\"},length_in_seconds:345.0f,sound_event:\"minecraft:music_disc.blocks\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:5",
+    "value": "{comparator_output:15,description:{translate:\"jukebox_song.minecraft.5\"},length_in_seconds:178.0f,sound_event:\"minecraft:music_disc.5\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:lava_chicken",
+    "value": "{comparator_output:9,description:{translate:\"jukebox_song.minecraft.lava_chicken\"},length_in_seconds:134.0f,sound_event:\"minecraft:music_disc.lava_chicken\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:otherside",
+    "value": "{comparator_output:14,description:{translate:\"jukebox_song.minecraft.otherside\"},length_in_seconds:195.0f,sound_event:\"minecraft:music_disc.otherside\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:tears",
+    "value": "{comparator_output:10,description:{translate:\"jukebox_song.minecraft.tears\"},length_in_seconds:175.0f,sound_event:\"minecraft:music_disc.tears\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:mellohi",
+    "value": "{comparator_output:7,description:{translate:\"jukebox_song.minecraft.mellohi\"},length_in_seconds:96.0f,sound_event:\"minecraft:music_disc.mellohi\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:mall",
+    "value": "{comparator_output:6,description:{translate:\"jukebox_song.minecraft.mall\"},length_in_seconds:197.0f,sound_event:\"minecraft:music_disc.mall\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:pigstep",
+    "value": "{comparator_output:13,description:{translate:\"jukebox_song.minecraft.pigstep\"},length_in_seconds:149.0f,sound_event:\"minecraft:music_disc.pigstep\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:creator",
+    "value": "{comparator_output:12,description:{translate:\"jukebox_song.minecraft.creator\"},length_in_seconds:176.0f,sound_event:\"minecraft:music_disc.creator\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:chirp",
+    "value": "{comparator_output:4,description:{translate:\"jukebox_song.minecraft.chirp\"},length_in_seconds:185.0f,sound_event:\"minecraft:music_disc.chirp\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:ward",
+    "value": "{comparator_output:10,description:{translate:\"jukebox_song.minecraft.ward\"},length_in_seconds:251.0f,sound_event:\"minecraft:music_disc.ward\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:wait",
+    "value": "{comparator_output:12,description:{translate:\"jukebox_song.minecraft.wait\"},length_in_seconds:238.0f,sound_event:\"minecraft:music_disc.wait\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:cat",
+    "value": "{comparator_output:2,description:{translate:\"jukebox_song.minecraft.cat\"},length_in_seconds:185.0f,sound_event:\"minecraft:music_disc.cat\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:11",
+    "value": "{comparator_output:11,description:{translate:\"jukebox_song.minecraft.11\"},length_in_seconds:71.0f,sound_event:\"minecraft:music_disc.11\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  }
+]

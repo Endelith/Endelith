@@ -1,0 +1,20 @@
+[
+  {
+    "key": "minecraft:the_end",
+    "value": "{}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:overworld",
+    "value": "{}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  }
+]

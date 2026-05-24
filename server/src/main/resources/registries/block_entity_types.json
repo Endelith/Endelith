@@ -1,0 +1,296 @@
+[
+  {
+    "key": "minecraft:furnace",
+    "value": [
+      "minecraft:furnace"
+    ]
+  },
+  {
+    "key": "minecraft:chest",
+    "value": [
+      "minecraft:chest"
+    ]
+  },
+  {
+    "key": "minecraft:trapped_chest",
+    "value": [
+      "minecraft:trapped_chest"
+    ]
+  },
+  {
+    "key": "minecraft:ender_chest",
+    "value": [
+      "minecraft:ender_chest"
+    ]
+  },
+  {
+    "key": "minecraft:jukebox",
+    "value": [
+      "minecraft:jukebox"
+    ]
+  },
+  {
+    "key": "minecraft:dispenser",
+    "value": [
+      "minecraft:dispenser"
+    ]
+  },
+  {
+    "key": "minecraft:dropper",
+    "value": [
+      "minecraft:dropper"
+    ]
+  },
+  {
+    "key": "minecraft:sign",
+    "value": [
+      "minecraft:sign"
+    ]
+  },
+  {
+    "key": "minecraft:hanging_sign",
+    "value": [
+      "minecraft:hanging_sign"
+    ]
+  },
+  {
+    "key": "minecraft:mob_spawner",
+    "value": [
+      "minecraft:mob_spawner"
+    ]
+  },
+  {
+    "key": "minecraft:creaking_heart",
+    "value": [
+      "minecraft:creaking_heart"
+    ]
+  },
+  {
+    "key": "minecraft:piston",
+    "value": [
+      "minecraft:piston"
+    ]
+  },
+  {
+    "key": "minecraft:brewing_stand",
+    "value": [
+      "minecraft:brewing_stand"
+    ]
+  },
+  {
+    "key": "minecraft:enchanting_table",
+    "value": [
+      "minecraft:enchanting_table"
+    ]
+  },
+  {
+    "key": "minecraft:end_portal",
+    "value": [
+      "minecraft:end_portal"
+    ]
+  },
+  {
+    "key": "minecraft:beacon",
+    "value": [
+      "minecraft:beacon"
+    ]
+  },
+  {
+    "key": "minecraft:skull",
+    "value": [
+      "minecraft:skull"
+    ]
+  },
+  {
+    "key": "minecraft:daylight_detector",
+    "value": [
+      "minecraft:daylight_detector"
+    ]
+  },
+  {
+    "key": "minecraft:hopper",
+    "value": [
+      "minecraft:hopper"
+    ]
+  },
+  {
+    "key": "minecraft:comparator",
+    "value": [
+      "minecraft:comparator"
+    ]
+  },
+  {
+    "key": "minecraft:banner",
+    "value": [
+      "minecraft:banner"
+    ]
+  },
+  {
+    "key": "minecraft:structure_block",
+    "value": [
+      "minecraft:structure_block"
+    ]
+  },
+  {
+    "key": "minecraft:end_gateway",
+    "value": [
+      "minecraft:end_gateway"
+    ]
+  },
+  {
+    "key": "minecraft:command_block",
+    "value": [
+      "minecraft:command_block"
+    ]
+  },
+  {
+    "key": "minecraft:shulker_box",
+    "value": [
+      "minecraft:shulker_box"
+    ]
+  },
+  {
+    "key": "minecraft:bed",
+    "value": [
+      "minecraft:bed"
+    ]
+  },
+  {
+    "key": "minecraft:conduit",
+    "value": [
+      "minecraft:conduit"
+    ]
+  },
+  {
+    "key": "minecraft:barrel",
+    "value": [
+      "minecraft:barrel"
+    ]
+  },
+  {
+    "key": "minecraft:smoker",
+    "value": [
+      "minecraft:smoker"
+    ]
+  },
+  {
+    "key": "minecraft:blast_furnace",
+    "value": [
+      "minecraft:blast_furnace"
+    ]
+  },
+  {
+    "key": "minecraft:lectern",
+    "value": [
+      "minecraft:lectern"
+    ]
+  },
+  {
+    "key": "minecraft:bell",
+    "value": [
+      "minecraft:bell"
+    ]
+  },
+  {
+    "key": "minecraft:jigsaw",
+    "value": [
+      "minecraft:jigsaw"
+    ]
+  },
+  {
+    "key": "minecraft:campfire",
+    "value": [
+      "minecraft:campfire"
+    ]
+  },
+  {
+    "key": "minecraft:beehive",
+    "value": [
+      "minecraft:beehive"
+    ]
+  },
+  {
+    "key": "minecraft:sculk_sensor",
+    "value": [
+      "minecraft:sculk_sensor"
+    ]
+  },
+  {
+    "key": "minecraft:calibrated_sculk_sensor",
+    "value": [
+      "minecraft:calibrated_sculk_sensor"
+    ]
+  },
+  {
+    "key": "minecraft:sculk_catalyst",
+    "value": [
+      "minecraft:sculk_catalyst"
+    ]
+  },
+  {
+    "key": "minecraft:sculk_shrieker",
+    "value": [
+      "minecraft:sculk_shrieker"
+    ]
+  },
+  {
+    "key": "minecraft:chiseled_bookshelf",
+    "value": [
+      "minecraft:chiseled_bookshelf"
+    ]
+  },
+  {
+    "key": "minecraft:shelf",
+    "value": [
+      "minecraft:shelf"
+    ]
+  },
+  {
+    "key": "minecraft:brushable_block",
+    "value": [
+      "minecraft:brushable_block"
+    ]
+  },
+  {
+    "key": "minecraft:decorated_pot",
+    "value": [
+      "minecraft:decorated_pot"
+    ]
+  },
+  {
+    "key": "minecraft:crafter",
+    "value": [
+      "minecraft:crafter"
+    ]
+  },
+  {
+    "key": "minecraft:trial_spawner",
+    "value": [
+      "minecraft:trial_spawner"
+    ]
+  },
+  {
+    "key": "minecraft:vault",
+    "value": [
+      "minecraft:vault"
+    ]
+  },
+  {
+    "key": "minecraft:test_block",
+    "value": [
+      "minecraft:test_block"
+    ]
+  },
+  {
+    "key": "minecraft:test_instance_block",
+    "value": [
+      "minecraft:test_instance_block"
+    ]
+  },
+  {
+    "key": "minecraft:copper_golem_statue",
+    "value": [
+      "minecraft:copper_golem_statue"
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "key": "minecraft:moody",
+    "value": "{ambient_sound:\"minecraft:entity.cow_moody.ambient\",death_sound:\"minecraft:entity.cow_moody.death\",hurt_sound:\"minecraft:entity.cow_moody.hurt\",step_sound:\"minecraft:entity.cow_moody.step\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:classic",
+    "value": "{ambient_sound:\"minecraft:entity.cow.ambient\",death_sound:\"minecraft:entity.cow.death\",hurt_sound:\"minecraft:entity.cow.hurt\",step_sound:\"minecraft:entity.cow.step\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  }
+]

@@ -1,0 +1,746 @@
+[
+  {
+    "key": "minecraft:wither",
+    "value": "{exhaustion:0.0f,message_id:\"wither\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:bypasses_wolf_armor",
+      "minecraft:no_knockback",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:wither_skull",
+    "value": "{exhaustion:0.1f,message_id:\"witherSkull\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:always_kills_armor_stands",
+      "minecraft:is_projectile",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:mace_smash",
+    "value": "{exhaustion:0.1f,message_id:\"mace_smash\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_break_armor_stand",
+      "minecraft:is_player_attack",
+      "minecraft:mace_smash",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:trident",
+    "value": "{exhaustion:0.1f,message_id:\"trident\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:always_kills_armor_stands",
+      "minecraft:is_projectile",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:on_fire",
+    "value": "{effects:\"burning\",exhaustion:0.0f,message_id:\"onFire\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:burns_armor_stands",
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:is_fire",
+      "minecraft:no_knockback",
+      "minecraft:panic_causes",
+      "minecraft:panic_environmental_causes"
+    ]
+  },
+  {
+    "key": "minecraft:campfire",
+    "value": "{effects:\"burning\",exhaustion:0.1f,message_id:\"inFire\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:burn_from_stepping",
+      "minecraft:bypasses_shield",
+      "minecraft:ignites_armor_stands",
+      "minecraft:is_fire",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:falling_stalactite",
+    "value": "{exhaustion:0.1f,message_id:\"fallingStalactite\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_shield",
+      "minecraft:damages_helmet"
+    ]
+  },
+  {
+    "key": "minecraft:fireball",
+    "value": "{effects:\"burning\",exhaustion:0.1f,message_id:\"fireball\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:always_kills_armor_stands",
+      "minecraft:is_fire",
+      "minecraft:is_projectile",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:spit",
+    "value": "{exhaustion:0.1f,message_id:\"mob\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:sting",
+    "value": "{exhaustion:0.1f,message_id:\"sting\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:spear",
+    "value": "{exhaustion:0.1f,message_id:\"spear\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_break_armor_stand",
+      "minecraft:is_player_attack",
+      "minecraft:no_knockback",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:in_fire",
+    "value": "{effects:\"burning\",exhaustion:0.1f,message_id:\"inFire\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_shield",
+      "minecraft:ignites_armor_stands",
+      "minecraft:is_fire",
+      "minecraft:no_knockback",
+      "minecraft:panic_causes",
+      "minecraft:panic_environmental_causes"
+    ]
+  },
+  {
+    "key": "minecraft:arrow",
+    "value": "{exhaustion:0.1f,message_id:\"arrow\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:always_kills_armor_stands",
+      "minecraft:is_projectile",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:hot_floor",
+    "value": "{effects:\"burning\",exhaustion:0.1f,message_id:\"hotFloor\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:burn_from_stepping",
+      "minecraft:bypasses_shield",
+      "minecraft:is_fire",
+      "minecraft:no_knockback",
+      "minecraft:panic_causes",
+      "minecraft:panic_environmental_causes"
+    ]
+  },
+  {
+    "key": "minecraft:drown",
+    "value": "{effects:\"drowning\",exhaustion:0.0f,message_id:\"drown\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:bypasses_wolf_armor",
+      "minecraft:is_drowning",
+      "minecraft:no_impact",
+      "minecraft:no_knockback",
+      "minecraft:wither_immune_to"
+    ]
+  },
+  {
+    "key": "minecraft:generic_kill",
+    "value": "{exhaustion:0.0f,message_id:\"genericKill\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_invulnerability",
+      "minecraft:bypasses_resistance",
+      "minecraft:bypasses_shield",
+      "minecraft:bypasses_wolf_armor",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:dragon_breath",
+    "value": "{exhaustion:0.0f,message_id:\"dragonBreath\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:no_knockback",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:lava",
+    "value": "{effects:\"burning\",exhaustion:0.1f,message_id:\"lava\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_shield",
+      "minecraft:is_fire",
+      "minecraft:no_knockback",
+      "minecraft:panic_causes",
+      "minecraft:panic_environmental_causes"
+    ]
+  },
+  {
+    "key": "minecraft:fly_into_wall",
+    "value": "{exhaustion:0.0f,message_id:\"flyIntoWall\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:player_attack",
+    "value": "{exhaustion:0.1f,message_id:\"player\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_break_armor_stand",
+      "minecraft:is_player_attack",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:freeze",
+    "value": "{effects:\"freezing\",exhaustion:0.0f,message_id:\"freeze\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:bypasses_wolf_armor",
+      "minecraft:is_freezing",
+      "minecraft:no_knockback",
+      "minecraft:panic_causes",
+      "minecraft:panic_environmental_causes"
+    ]
+  },
+  {
+    "key": "minecraft:falling_anvil",
+    "value": "{exhaustion:0.1f,message_id:\"anvil\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_shield",
+      "minecraft:damages_helmet"
+    ]
+  },
+  {
+    "key": "minecraft:sweet_berry_bush",
+    "value": "{effects:\"poking\",exhaustion:0.1f,message_id:\"sweetBerryBush\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_shield",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:fireworks",
+    "value": "{exhaustion:0.1f,message_id:\"fireworks\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:always_hurts_ender_dragons",
+      "minecraft:avoids_guardian_thorns",
+      "minecraft:is_explosion",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:stalagmite",
+    "value": "{exhaustion:0.0f,message_id:\"stalagmite\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:is_fall",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:generic",
+    "value": "{exhaustion:0.0f,message_id:\"generic\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:sonic_boom",
+    "value": "{exhaustion:0.0f,message_id:\"sonic_boom\",scaling:\"always\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_enchantments",
+      "minecraft:bypasses_shield",
+      "minecraft:panic_causes",
+      "minecraft:witch_resistant_to"
+    ]
+  },
+  {
+    "key": "minecraft:dry_out",
+    "value": "{exhaustion:0.1f,message_id:\"dryout\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_shield",
+      "minecraft:bypasses_wolf_armor",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:ender_pearl",
+    "value": "{death_message_type:\"fall_variants\",exhaustion:0.0f,message_id:\"fall\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:is_fall",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:mob_projectile",
+    "value": "{exhaustion:0.1f,message_id:\"mob\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:is_projectile",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:mob_attack",
+    "value": "{exhaustion:0.1f,message_id:\"mob\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:fall",
+    "value": "{death_message_type:\"fall_variants\",exhaustion:0.0f,message_id:\"fall\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:is_fall",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:thrown",
+    "value": "{exhaustion:0.1f,message_id:\"thrown\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:is_projectile",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:falling_block",
+    "value": "{exhaustion:0.1f,message_id:\"fallingBlock\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:damages_helmet"
+    ]
+  },
+  {
+    "key": "minecraft:wind_charge",
+    "value": "{exhaustion:0.1f,message_id:\"mob\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:always_kills_armor_stands",
+      "minecraft:is_projectile",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:player_explosion",
+    "value": "{exhaustion:0.1f,message_id:\"explosion.player\",scaling:\"always\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:always_hurts_ender_dragons",
+      "minecraft:avoids_guardian_thorns",
+      "minecraft:can_break_armor_stand",
+      "minecraft:is_explosion",
+      "minecraft:no_knockback",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:unattributed_fireball",
+    "value": "{effects:\"burning\",exhaustion:0.1f,message_id:\"onFire\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:is_fire",
+      "minecraft:is_projectile",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:in_wall",
+    "value": "{exhaustion:0.0f,message_id:\"inWall\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:bypasses_wolf_armor",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:starve",
+    "value": "{exhaustion:0.0f,message_id:\"starve\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_effects",
+      "minecraft:bypasses_shield",
+      "minecraft:bypasses_wolf_armor",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:mob_attack_no_aggro",
+    "value": "{exhaustion:0.1f,message_id:\"mob\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:no_anger"
+    ]
+  },
+  {
+    "key": "minecraft:outside_border",
+    "value": "{exhaustion:0.0f,message_id:\"outsideBorder\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:bypasses_wolf_armor",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:lightning_bolt",
+    "value": "{exhaustion:0.1f,message_id:\"lightningBolt\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_shield",
+      "minecraft:is_lightning",
+      "minecraft:no_knockback",
+      "minecraft:panic_causes",
+      "minecraft:panic_environmental_causes"
+    ]
+  },
+  {
+    "key": "minecraft:out_of_world",
+    "value": "{exhaustion:0.0f,message_id:\"outOfWorld\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:always_most_significant_fall",
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_invulnerability",
+      "minecraft:bypasses_resistance",
+      "minecraft:bypasses_shield",
+      "minecraft:bypasses_wolf_armor",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:magic",
+    "value": "{exhaustion:0.0f,message_id:\"magic\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:always_triggers_silverfish",
+      "minecraft:avoids_guardian_thorns",
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:bypasses_wolf_armor",
+      "minecraft:no_knockback",
+      "minecraft:panic_causes",
+      "minecraft:witch_resistant_to"
+    ]
+  },
+  {
+    "key": "minecraft:explosion",
+    "value": "{exhaustion:0.1f,message_id:\"explosion\",scaling:\"always\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:always_hurts_ender_dragons",
+      "minecraft:avoids_guardian_thorns",
+      "minecraft:is_explosion",
+      "minecraft:no_knockback",
+      "minecraft:panic_causes"
+    ]
+  },
+  {
+    "key": "minecraft:thorns",
+    "value": "{effects:\"thorns\",exhaustion:0.1f,message_id:\"thorns\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:avoids_guardian_thorns",
+      "minecraft:bypasses_wolf_armor",
+      "minecraft:witch_resistant_to"
+    ]
+  },
+  {
+    "key": "minecraft:bad_respawn_point",
+    "value": "{death_message_type:\"intentional_game_design\",exhaustion:0.1f,message_id:\"badRespawnPoint\",scaling:\"always\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:always_hurts_ender_dragons",
+      "minecraft:avoids_guardian_thorns",
+      "minecraft:is_explosion",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:indirect_magic",
+    "value": "{exhaustion:0.0f,message_id:\"indirectMagic\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:bypasses_wolf_armor",
+      "minecraft:panic_causes",
+      "minecraft:witch_resistant_to"
+    ]
+  },
+  {
+    "key": "minecraft:cramming",
+    "value": "{exhaustion:0.0f,message_id:\"cramming\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_armor",
+      "minecraft:bypasses_shield",
+      "minecraft:bypasses_wolf_armor",
+      "minecraft:no_knockback"
+    ]
+  },
+  {
+    "key": "minecraft:cactus",
+    "value": "{exhaustion:0.1f,message_id:\"cactus\",scaling:\"when_caused_by_living_non_player\"}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:bypasses_shield",
+      "minecraft:no_knockback",
+      "minecraft:panic_causes",
+      "minecraft:panic_environmental_causes"
+    ]
+  }
+]

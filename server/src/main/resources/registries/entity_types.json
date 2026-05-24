@@ -1,0 +1,1990 @@
+[
+  {
+    "key": "minecraft:acacia_boat",
+    "value": "{id:0,translationKey:\"entity.minecraft.acacia_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:boat"
+    ]
+  },
+  {
+    "key": "minecraft:acacia_chest_boat",
+    "value": "{id:1,translationKey:\"entity.minecraft.acacia_chest_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:allay",
+    "value": "{id:2,translationKey:\"entity.minecraft.allay\",packetType:\"LIVING\",width:0.35f,height:0.6f,eyeHeight:0.36f,attachments:{VEHICLE:[[0.0f,-0.0399999991f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.1000000015f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:flying_speed\":0.1000000015f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:fall_damage_immune"
+    ]
+  },
+  {
+    "key": "minecraft:area_effect_cloud",
+    "value": "{id:3,translationKey:\"entity.minecraft.area_effect_cloud\",packetType:\"BASE\",fireImmune:1b,width:6.0f,height:0.5f,eyeHeight:0.425f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:armadillo",
+    "value": "{id:4,translationKey:\"entity.minecraft.armadillo\",packetType:\"LIVING\",width:0.7f,height:0.65f,eyeHeight:0.26f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":12.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.14f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:armor_stand",
+    "value": "{id:5,translationKey:\"entity.minecraft.armor_stand\",packetType:\"LIVING\",width:0.5f,height:1.975f,eyeHeight:1.7775f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_breathe_under_water"
+    ]
+  },
+  {
+    "key": "minecraft:arrow",
+    "value": "{id:6,translationKey:\"entity.minecraft.arrow\",packetType:\"BASE\",width:0.5f,height:0.5f,eyeHeight:0.13f,drag:0.01f,acceleration:0.05f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:arrows",
+      "minecraft:impact_projectiles"
+    ]
+  },
+  {
+    "key": "minecraft:axolotl",
+    "value": "{id:7,translationKey:\"entity.minecraft.axolotl\",packetType:\"LIVING\",width:0.75f,height:0.42f,eyeHeight:0.2751f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":14.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":1.0f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:can_breathe_under_water",
+      "minecraft:sensitive_to_impaling"
+    ]
+  },
+  {
+    "key": "minecraft:bamboo_chest_raft",
+    "value": "{id:8,translationKey:\"entity.minecraft.bamboo_chest_raft\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:bamboo_raft",
+    "value": "{id:9,translationKey:\"entity.minecraft.bamboo_raft\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:boat"
+    ]
+  },
+  {
+    "key": "minecraft:bat",
+    "value": "{id:10,translationKey:\"entity.minecraft.bat\",packetType:\"LIVING\",width:0.5f,height:0.9f,eyeHeight:0.45f,clientTrackingRange:5,defaultAttributes:{\"minecraft:max_health\":6.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:fall_damage_immune"
+    ]
+  },
+  {
+    "key": "minecraft:bee",
+    "value": "{id:11,translationKey:\"entity.minecraft.bee\",packetType:\"LIVING\",width:0.7f,height:0.6f,eyeHeight:0.3f,clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":10.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.3000000119f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:flying_speed\":0.6000000238f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:arthropod",
+      "minecraft:beehive_inhabitors",
+      "minecraft:fall_damage_immune",
+      "minecraft:followable_friendly_mobs",
+      "minecraft:sensitive_to_bane_of_arthropods"
+    ]
+  },
+  {
+    "key": "minecraft:birch_boat",
+    "value": "{id:12,translationKey:\"entity.minecraft.birch_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:boat"
+    ]
+  },
+  {
+    "key": "minecraft:birch_chest_boat",
+    "value": "{id:13,translationKey:\"entity.minecraft.birch_chest_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:blaze",
+    "value": "{id:14,translationKey:\"entity.minecraft.blaze\",packetType:\"LIVING\",fireImmune:1b,width:0.6f,height:1.8f,eyeHeight:1.53f,clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.2300000042f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":48.0f,\"minecraft:attack_damage\":6.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:fall_damage_immune",
+      "minecraft:freeze_hurts_extra_types"
+    ]
+  },
+  {
+    "key": "minecraft:block_display",
+    "value": "{id:15,translationKey:\"entity.minecraft.block_display\",packetType:\"BASE\",width:0.0f,height:0.0f,eyeHeight:0.0f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:bogged",
+    "value": "{id:16,translationKey:\"entity.minecraft.bogged\",packetType:\"LIVING\",width:0.6f,height:1.99f,eyeHeight:1.74f,attachments:{VEHICLE:[[0.0f,0.6999999881f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":16.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:burn_in_daylight",
+      "minecraft:can_breathe_under_water",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:no_anger_from_wind_charge",
+      "minecraft:sensitive_to_smite",
+      "minecraft:skeletons",
+      "minecraft:undead",
+      "minecraft:wither_friends"
+    ]
+  },
+  {
+    "key": "minecraft:breeze",
+    "value": "{id:17,translationKey:\"entity.minecraft.breeze\",packetType:\"LIVING\",width:0.6f,height:1.77f,eyeHeight:1.3452f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":30.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.6299999952f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":24.0f,\"minecraft:attack_damage\":3.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_turn_in_boats",
+      "minecraft:deflects_projectiles",
+      "minecraft:fall_damage_immune",
+      "minecraft:no_anger_from_wind_charge"
+    ]
+  },
+  {
+    "key": "minecraft:breeze_wind_charge",
+    "value": "{id:18,translationKey:\"entity.minecraft.breeze_wind_charge\",packetType:\"BASE\",width:0.3125f,height:0.3125f,eyeHeight:0.0f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:impact_projectiles",
+      "minecraft:redirectable_projectile"
+    ]
+  },
+  {
+    "key": "minecraft:camel",
+    "value": "{id:19,translationKey:\"entity.minecraft.camel\",packetType:\"LIVING\",width:1.7f,height:2.375f,eyeHeight:2.275f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":32.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.0900000036f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.5f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":6.0f,\"minecraft:fall_damage_multiplier\":0.5f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_equip_saddle",
+      "minecraft:can_float_while_ridden",
+      "minecraft:dismounts_underwater",
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:camel_husk",
+    "value": "{id:20,translationKey:\"entity.minecraft.camel_husk\",packetType:\"LIVING\",width:1.7f,height:2.375f,eyeHeight:2.275f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":32.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.0900000036f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.5f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":6.0f,\"minecraft:fall_damage_multiplier\":0.5f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_breathe_under_water",
+      "minecraft:can_equip_saddle",
+      "minecraft:can_float_while_ridden",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:sensitive_to_smite",
+      "minecraft:undead",
+      "minecraft:wither_friends",
+      "minecraft:zombies"
+    ]
+  },
+  {
+    "key": "minecraft:cat",
+    "value": "{id:21,translationKey:\"entity.minecraft.cat\",packetType:\"LIVING\",width:0.6f,height:0.7f,eyeHeight:0.35f,attachments:{PASSENGER:[[0.0f,0.5124999881f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":10.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.3000000119f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:attack_damage\":3.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:fall_damage_immune",
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:cave_spider",
+    "value": "{id:22,translationKey:\"entity.minecraft.cave_spider\",packetType:\"LIVING\",width:0.7f,height:0.5f,eyeHeight:0.45f,clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":12.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.3000000119f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:arthropod",
+      "minecraft:no_anger_from_wind_charge",
+      "minecraft:sensitive_to_bane_of_arthropods"
+    ]
+  },
+  {
+    "key": "minecraft:cherry_boat",
+    "value": "{id:23,translationKey:\"entity.minecraft.cherry_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:boat"
+    ]
+  },
+  {
+    "key": "minecraft:cherry_chest_boat",
+    "value": "{id:24,translationKey:\"entity.minecraft.cherry_chest_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:chest_minecart",
+    "value": "{id:25,translationKey:\"entity.minecraft.chest_minecart\",packetType:\"BASE\",width:0.98f,height:0.7f,eyeHeight:0.595f,attachments:{PASSENGER:[[0.0f,0.1875f,0.0f]]},clientTrackingRange:8}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:chicken",
+    "value": "{id:26,translationKey:\"entity.minecraft.chicken\",packetType:\"LIVING\",width:0.4f,height:0.7f,eyeHeight:0.644f,attachments:{PASSENGER:[[0.0f,0.7f,-0.1f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":4.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:dismounts_underwater",
+      "minecraft:fall_damage_immune",
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:cod",
+    "value": "{id:27,translationKey:\"entity.minecraft.cod\",packetType:\"LIVING\",width:0.5f,height:0.3f,eyeHeight:0.195f,clientTrackingRange:4,defaultAttributes:{\"minecraft:max_health\":3.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:axolotl_hunt_targets",
+      "minecraft:can_breathe_under_water",
+      "minecraft:cannot_be_pushed_onto_boats",
+      "minecraft:not_scary_for_pufferfish",
+      "minecraft:sensitive_to_impaling"
+    ]
+  },
+  {
+    "key": "minecraft:copper_golem",
+    "value": "{id:28,translationKey:\"entity.minecraft.copper_golem\",packetType:\"LIVING\",width:0.49f,height:0.98f,eyeHeight:0.8125f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":12.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.200000003f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:accepts_iron_golem_gift",
+      "minecraft:can_breathe_under_water",
+      "minecraft:candidate_for_iron_golem_gift",
+      "minecraft:fall_damage_immune"
+    ]
+  },
+  {
+    "key": "minecraft:command_block_minecart",
+    "value": "{id:29,translationKey:\"entity.minecraft.command_block_minecart\",packetType:\"BASE\",width:0.98f,height:0.7f,eyeHeight:0.595f,attachments:{PASSENGER:[[0.0f,0.1875f,0.0f]]},clientTrackingRange:8}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:cow",
+    "value": "{id:30,translationKey:\"entity.minecraft.cow\",packetType:\"LIVING\",width:0.9f,height:1.4f,eyeHeight:1.3f,attachments:{PASSENGER:[[0.0f,1.3687499762f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":10.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.200000003f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:creaking",
+    "value": "{id:31,translationKey:\"entity.minecraft.creaking\",packetType:\"LIVING\",width:0.9f,height:2.7f,eyeHeight:2.3f,clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":1.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.400000006f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0625f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":32.0f,\"minecraft:attack_damage\":3.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:cannot_be_pushed_onto_boats"
+    ]
+  },
+  {
+    "key": "minecraft:creeper",
+    "value": "{id:32,translationKey:\"entity.minecraft.creeper\",packetType:\"LIVING\",width:0.6f,height:1.7f,eyeHeight:1.445f,clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:dark_oak_boat",
+    "value": "{id:33,translationKey:\"entity.minecraft.dark_oak_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:boat"
+    ]
+  },
+  {
+    "key": "minecraft:dark_oak_chest_boat",
+    "value": "{id:34,translationKey:\"entity.minecraft.dark_oak_chest_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:dolphin",
+    "value": "{id:35,translationKey:\"entity.minecraft.dolphin\",packetType:\"LIVING\",width:0.9f,height:0.6f,eyeHeight:0.3f,clientTrackingRange:5,defaultAttributes:{\"minecraft:max_health\":10.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":1.2000000477f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":3.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:cannot_be_pushed_onto_boats",
+      "minecraft:not_scary_for_pufferfish",
+      "minecraft:sensitive_to_impaling"
+    ]
+  },
+  {
+    "key": "minecraft:donkey",
+    "value": "{id:36,translationKey:\"entity.minecraft.donkey\",packetType:\"LIVING\",width:1.3964844f,height:1.5f,eyeHeight:1.425f,attachments:{PASSENGER:[[0.0f,1.1124999523f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":53.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.174999997f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":6.0f,\"minecraft:fall_damage_multiplier\":0.5f,\"minecraft:jump_strength\":0.5f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_equip_saddle",
+      "minecraft:can_float_while_ridden",
+      "minecraft:dismounts_underwater",
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:dragon_fireball",
+    "value": "{id:37,translationKey:\"entity.minecraft.dragon_fireball\",packetType:\"BASE\",width:1.0f,height:1.0f,eyeHeight:0.85f,acceleration:0.1f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:impact_projectiles"
+    ]
+  },
+  {
+    "key": "minecraft:drowned",
+    "value": "{id:38,translationKey:\"entity.minecraft.drowned\",packetType:\"LIVING\",width:0.6f,height:1.95f,eyeHeight:1.74f,attachments:{PASSENGER:[[0.0f,2.0125000477f,0.0f]],VEHICLE:[[0.0f,0.6999999881f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.2300000042f,\"minecraft:armor\":2.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":35.0f,\"minecraft:attack_damage\":3.0f,\"minecraft:spawn_reinforcements\":0.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:axolotl_always_hostiles",
+      "minecraft:burn_in_daylight",
+      "minecraft:can_breathe_under_water",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:sensitive_to_smite",
+      "minecraft:undead",
+      "minecraft:wither_friends",
+      "minecraft:zombies"
+    ]
+  },
+  {
+    "key": "minecraft:egg",
+    "value": "{id:39,translationKey:\"entity.minecraft.egg\",packetType:\"BASE\",width:0.25f,height:0.25f,eyeHeight:0.2125f,drag:0.01f,acceleration:0.03f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:impact_projectiles"
+    ]
+  },
+  {
+    "key": "minecraft:elder_guardian",
+    "value": "{id:40,translationKey:\"entity.minecraft.elder_guardian\",packetType:\"LIVING\",width:1.9975f,height:1.9975f,eyeHeight:0.99875f,attachments:{PASSENGER:[[0.0f,2.3506250381f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":80.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.3000000119f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":8.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:axolotl_always_hostiles",
+      "minecraft:can_breathe_under_water",
+      "minecraft:cannot_be_pushed_onto_boats",
+      "minecraft:not_scary_for_pufferfish",
+      "minecraft:sensitive_to_impaling"
+    ]
+  },
+  {
+    "key": "minecraft:enderman",
+    "value": "{id:41,translationKey:\"entity.minecraft.enderman\",packetType:\"LIVING\",width:0.6f,height:2.9f,eyeHeight:2.55f,attachments:{PASSENGER:[[0.0f,2.8062500954f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":40.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.3000000119f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":64.0f,\"minecraft:attack_damage\":7.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:endermite",
+    "value": "{id:42,translationKey:\"entity.minecraft.endermite\",packetType:\"LIVING\",width:0.4f,height:0.3f,eyeHeight:0.13f,attachments:{PASSENGER:[[0.0f,0.237499997f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":8.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:arthropod",
+      "minecraft:powder_snow_walkable_mobs",
+      "minecraft:sensitive_to_bane_of_arthropods"
+    ]
+  },
+  {
+    "key": "minecraft:ender_dragon",
+    "value": "{id:43,translationKey:\"entity.minecraft.ender_dragon\",packetType:\"LIVING\",fireImmune:1b,width:16.0f,height:8.0f,eyeHeight:6.8f,attachments:{PASSENGER:[[0.0f,3.0f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":200.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":16.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:ender_pearl",
+    "value": "{id:44,translationKey:\"entity.minecraft.ender_pearl\",packetType:\"BASE\",width:0.25f,height:0.25f,eyeHeight:0.2125f,drag:0.01f,acceleration:0.03f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:end_crystal",
+    "value": "{id:45,translationKey:\"entity.minecraft.end_crystal\",packetType:\"BASE\",fireImmune:1b,width:2.0f,height:2.0f,eyeHeight:1.7f,clientTrackingRange:16}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:evoker",
+    "value": "{id:46,translationKey:\"entity.minecraft.evoker\",packetType:\"LIVING\",width:0.6f,height:1.95f,eyeHeight:1.6575f,attachments:{PASSENGER:[[0.0f,2.0f,0.0f]],VEHICLE:[[0.0f,0.6000000238f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":24.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.5f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":12.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:illager",
+      "minecraft:illager_friends",
+      "minecraft:raiders"
+    ]
+  },
+  {
+    "key": "minecraft:evoker_fangs",
+    "value": "{id:47,translationKey:\"entity.minecraft.evoker_fangs\",packetType:\"BASE\",width:0.5f,height:0.8f,eyeHeight:0.68f,clientTrackingRange:6}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:experience_bottle",
+    "value": "{id:48,translationKey:\"entity.minecraft.experience_bottle\",packetType:\"BASE\",width:0.25f,height:0.25f,eyeHeight:0.2125f,acceleration:0.07f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:experience_orb",
+    "value": "{id:49,translationKey:\"entity.minecraft.experience_orb\",packetType:\"EXPERIENCE_ORB\",width:0.5f,height:0.5f,eyeHeight:0.425f,clientTrackingRange:6}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:eye_of_ender",
+    "value": "{id:50,translationKey:\"entity.minecraft.eye_of_ender\",packetType:\"BASE\",width:0.25f,height:0.25f,eyeHeight:0.2125f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:falling_block",
+    "value": "{id:51,translationKey:\"entity.minecraft.falling_block\",packetType:\"BASE\",width:0.98f,height:0.98f,eyeHeight:0.83300006f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:fireball",
+    "value": "{id:52,translationKey:\"entity.minecraft.fireball\",packetType:\"BASE\",width:1.0f,height:1.0f,eyeHeight:0.85f,acceleration:0.1f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:impact_projectiles",
+      "minecraft:redirectable_projectile"
+    ]
+  },
+  {
+    "key": "minecraft:firework_rocket",
+    "value": "{id:53,translationKey:\"entity.minecraft.firework_rocket\",packetType:\"BASE\",width:0.25f,height:0.25f,eyeHeight:0.2125f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:impact_projectiles"
+    ]
+  },
+  {
+    "key": "minecraft:fox",
+    "value": "{id:54,translationKey:\"entity.minecraft.fox\",packetType:\"LIVING\",width:0.6f,height:0.7f,eyeHeight:0.4f,attachments:{PASSENGER:[[0.0f,0.6375f,-0.25f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":10.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.3000000119f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":5.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":32.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:followable_friendly_mobs",
+      "minecraft:powder_snow_walkable_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:frog",
+    "value": "{id:55,translationKey:\"entity.minecraft.frog\",packetType:\"LIVING\",width:0.5f,height:0.5f,eyeHeight:0.425f,attachments:{PASSENGER:[[0.0f,0.375f,-0.25f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":10.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":1.0f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:attack_damage\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_breathe_under_water"
+    ]
+  },
+  {
+    "key": "minecraft:furnace_minecart",
+    "value": "{id:56,translationKey:\"entity.minecraft.furnace_minecart\",packetType:\"BASE\",width:0.98f,height:0.7f,eyeHeight:0.595f,attachments:{PASSENGER:[[0.0f,0.1875f,0.0f]]},clientTrackingRange:8}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:ghast",
+    "value": "{id:57,translationKey:\"entity.minecraft.ghast\",packetType:\"LIVING\",fireImmune:1b,width:4.0f,height:4.0f,eyeHeight:2.6f,attachments:{PASSENGER:[[0.0f,4.0625f,0.0f]],VEHICLE:[[0.0f,-0.5f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":10.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":8.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":100.0f,\"minecraft:flying_speed\":0.06f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:fall_damage_immune"
+    ]
+  },
+  {
+    "key": "minecraft:happy_ghast",
+    "value": "{id:58,translationKey:\"entity.minecraft.happy_ghast\",packetType:\"LIVING\",width:4.0f,height:4.0f,eyeHeight:2.6f,attachments:{PASSENGER:[[0.0f,4.0f,1.7f],[-1.7f,4.0f,0.0f],[0.0f,4.0f,-1.7f],[1.7f,4.0f,0.0f]],VEHICLE:[[0.0f,-0.5f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.05f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":8.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":16.0f,\"minecraft:flying_speed\":0.05f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_equip_harness",
+      "minecraft:dismounts_underwater",
+      "minecraft:fall_damage_immune",
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:giant",
+    "value": "{id:59,translationKey:\"entity.minecraft.giant\",packetType:\"LIVING\",width:3.6f,height:12.0f,eyeHeight:10.44f,attachments:{VEHICLE:[[0.0f,3.75f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":100.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.5f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":16.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":50.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:glow_item_frame",
+    "value": "{id:60,translationKey:\"entity.minecraft.glow_item_frame\",packetType:\"BASE\",width:0.5f,height:0.5f,eyeHeight:0.0f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:glow_squid",
+    "value": "{id:61,translationKey:\"entity.minecraft.glow_squid\",packetType:\"LIVING\",width:0.8f,height:0.8f,eyeHeight:0.4f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":10.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:axolotl_hunt_targets",
+      "minecraft:can_breathe_under_water",
+      "minecraft:cannot_be_pushed_onto_boats",
+      "minecraft:not_scary_for_pufferfish",
+      "minecraft:sensitive_to_impaling"
+    ]
+  },
+  {
+    "key": "minecraft:goat",
+    "value": "{id:62,translationKey:\"entity.minecraft.goat\",packetType:\"LIVING\",width:0.9f,height:1.3f,eyeHeight:1.105f,attachments:{PASSENGER:[[0.0f,1.1124999523f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":10.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.200000003f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:guardian",
+    "value": "{id:63,translationKey:\"entity.minecraft.guardian\",packetType:\"LIVING\",width:0.85f,height:0.85f,eyeHeight:0.425f,attachments:{PASSENGER:[[0.0f,0.9750000238f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":30.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.5f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":6.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:axolotl_always_hostiles",
+      "minecraft:can_breathe_under_water",
+      "minecraft:not_scary_for_pufferfish",
+      "minecraft:sensitive_to_impaling"
+    ]
+  },
+  {
+    "key": "minecraft:hoglin",
+    "value": "{id:64,translationKey:\"entity.minecraft.hoglin\",packetType:\"LIVING\",width:1.3964844f,height:1.4f,eyeHeight:1.19f,attachments:{PASSENGER:[[0.0f,1.4937499762f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":40.0f,\"minecraft:knockback_resistance\":0.6000000238f,\"minecraft:movement_speed\":0.3000000119f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":1.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":6.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:hopper_minecart",
+    "value": "{id:65,translationKey:\"entity.minecraft.hopper_minecart\",packetType:\"BASE\",width:0.98f,height:0.7f,eyeHeight:0.595f,attachments:{PASSENGER:[[0.0f,0.1875f,0.0f]]},clientTrackingRange:8}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:horse",
+    "value": "{id:66,translationKey:\"entity.minecraft.horse\",packetType:\"LIVING\",width:1.3964844f,height:1.6f,eyeHeight:1.52f,attachments:{PASSENGER:[[0.0f,1.4437500238f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":53.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.224999994f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":6.0f,\"minecraft:fall_damage_multiplier\":0.5f,\"minecraft:jump_strength\":0.7f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_equip_saddle",
+      "minecraft:can_float_while_ridden",
+      "minecraft:can_wear_horse_armor",
+      "minecraft:dismounts_underwater",
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:husk",
+    "value": "{id:67,translationKey:\"entity.minecraft.husk\",packetType:\"LIVING\",width:0.6f,height:1.95f,eyeHeight:1.74f,attachments:{PASSENGER:[[0.0f,2.0750000477f,0.0f]],VEHICLE:[[0.0f,0.6999999881f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.2300000042f,\"minecraft:armor\":2.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":35.0f,\"minecraft:attack_damage\":3.0f,\"minecraft:spawn_reinforcements\":0.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_breathe_under_water",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:no_anger_from_wind_charge",
+      "minecraft:sensitive_to_smite",
+      "minecraft:undead",
+      "minecraft:wither_friends",
+      "minecraft:zombies"
+    ]
+  },
+  {
+    "key": "minecraft:illusioner",
+    "value": "{id:68,translationKey:\"entity.minecraft.illusioner\",packetType:\"LIVING\",width:0.6f,height:1.95f,eyeHeight:1.6575f,attachments:{PASSENGER:[[0.0f,2.0f,0.0f]],VEHICLE:[[0.0f,0.6000000238f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":32.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.5f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":18.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:illager",
+      "minecraft:illager_friends",
+      "minecraft:raiders"
+    ]
+  },
+  {
+    "key": "minecraft:interaction",
+    "value": "{id:69,translationKey:\"entity.minecraft.interaction\",packetType:\"BASE\",width:0.0f,height:0.0f,eyeHeight:0.0f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:iron_golem",
+    "value": "{id:70,translationKey:\"entity.minecraft.iron_golem\",packetType:\"LIVING\",width:1.4f,height:2.7f,eyeHeight:2.295f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":100.0f,\"minecraft:knockback_resistance\":1.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":15.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:fall_damage_immune"
+    ]
+  },
+  {
+    "key": "minecraft:item",
+    "value": "{id:71,translationKey:\"entity.minecraft.item\",packetType:\"BASE\",width:0.25f,height:0.25f,eyeHeight:0.2125f,acceleration:0.04f,clientTrackingRange:6}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:item_display",
+    "value": "{id:72,translationKey:\"entity.minecraft.item_display\",packetType:\"BASE\",width:0.0f,height:0.0f,eyeHeight:0.0f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:item_frame",
+    "value": "{id:73,translationKey:\"entity.minecraft.item_frame\",packetType:\"BASE\",width:0.5f,height:0.5f,eyeHeight:0.0f,acceleration:0.0f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:jungle_boat",
+    "value": "{id:74,translationKey:\"entity.minecraft.jungle_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:boat"
+    ]
+  },
+  {
+    "key": "minecraft:jungle_chest_boat",
+    "value": "{id:75,translationKey:\"entity.minecraft.jungle_chest_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:leash_knot",
+    "value": "{id:76,translationKey:\"entity.minecraft.leash_knot\",packetType:\"BASE\",width:0.375f,height:0.5f,eyeHeight:0.0625f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:lightning_bolt",
+    "value": "{id:77,translationKey:\"entity.minecraft.lightning_bolt\",packetType:\"BASE\",width:0.0f,height:0.0f,eyeHeight:0.0f,clientTrackingRange:16}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:llama",
+    "value": "{id:78,translationKey:\"entity.minecraft.llama\",packetType:\"LIVING\",width:0.9f,height:1.87f,eyeHeight:1.7765f,attachments:{PASSENGER:[[0.0f,1.37f,-0.3f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":53.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.174999997f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":6.0f,\"minecraft:fall_damage_multiplier\":0.5f,\"minecraft:jump_strength\":0.5f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:dismounts_underwater",
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:llama_spit",
+    "value": "{id:79,translationKey:\"entity.minecraft.llama_spit\",packetType:\"BASE\",width:0.25f,height:0.25f,eyeHeight:0.2125f,drag:0.01f,acceleration:0.06f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:magma_cube",
+    "value": "{id:80,translationKey:\"entity.minecraft.magma_cube\",packetType:\"LIVING\",fireImmune:1b,width:0.52f,height:0.52f,eyeHeight:0.325f,clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.200000003f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:fall_damage_immune",
+      "minecraft:freeze_hurts_extra_types",
+      "minecraft:frog_food",
+      "minecraft:non_controlling_rider"
+    ]
+  },
+  {
+    "key": "minecraft:mangrove_boat",
+    "value": "{id:81,translationKey:\"entity.minecraft.mangrove_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:boat"
+    ]
+  },
+  {
+    "key": "minecraft:mangrove_chest_boat",
+    "value": "{id:82,translationKey:\"entity.minecraft.mangrove_chest_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:mannequin",
+    "value": "{id:83,translationKey:\"entity.minecraft.mannequin\",packetType:\"LIVING\",width:0.6f,height:1.8f,eyeHeight:1.62f,attachments:{VEHICLE:[[0.0f,0.6f,0.0f]]},clientTrackingRange:32,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:marker",
+    "value": "{id:84,translationKey:\"entity.minecraft.marker\",packetType:\"BASE\",width:0.0f,height:0.0f,eyeHeight:0.0f,clientTrackingRange:0}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:minecart",
+    "value": "{id:85,translationKey:\"entity.minecraft.minecart\",packetType:\"BASE\",width:0.98f,height:0.7f,eyeHeight:0.595f,attachments:{PASSENGER:[[0.0f,0.1875f,0.0f]]},drag:0.05f,acceleration:0.04f,clientTrackingRange:8}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:mooshroom",
+    "value": "{id:86,translationKey:\"entity.minecraft.mooshroom\",packetType:\"LIVING\",width:0.9f,height:1.4f,eyeHeight:1.3f,attachments:{PASSENGER:[[0.0f,1.3687499762f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":10.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.200000003f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:mule",
+    "value": "{id:87,translationKey:\"entity.minecraft.mule\",packetType:\"LIVING\",width:1.3964844f,height:1.6f,eyeHeight:1.52f,attachments:{PASSENGER:[[0.0f,1.2124999762f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":53.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.174999997f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":6.0f,\"minecraft:fall_damage_multiplier\":0.5f,\"minecraft:jump_strength\":0.5f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_equip_saddle",
+      "minecraft:can_float_while_ridden",
+      "minecraft:dismounts_underwater",
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:nautilus",
+    "value": "{id:88,translationKey:\"entity.minecraft.nautilus\",packetType:\"LIVING\",width:0.875f,height:0.95f,eyeHeight:0.2751f,attachments:{PASSENGER:[[0.0f,1.1375000477f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":15.0f,\"minecraft:knockback_resistance\":0.3000000119f,\"minecraft:movement_speed\":1.0f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:attack_damage\":3.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:can_breathe_under_water",
+      "minecraft:can_equip_saddle",
+      "minecraft:can_wear_nautilus_armor",
+      "minecraft:cannot_be_pushed_onto_boats",
+      "minecraft:not_scary_for_pufferfish",
+      "minecraft:sensitive_to_impaling"
+    ]
+  },
+  {
+    "key": "minecraft:oak_boat",
+    "value": "{id:89,translationKey:\"entity.minecraft.oak_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:boat"
+    ]
+  },
+  {
+    "key": "minecraft:oak_chest_boat",
+    "value": "{id:90,translationKey:\"entity.minecraft.oak_chest_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:ocelot",
+    "value": "{id:91,translationKey:\"entity.minecraft.ocelot\",packetType:\"LIVING\",width:0.6f,height:0.7f,eyeHeight:0.595f,attachments:{PASSENGER:[[0.0f,0.6374999881f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":10.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.3000000119f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:attack_damage\":3.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:fall_damage_immune",
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:ominous_item_spawner",
+    "value": "{id:92,translationKey:\"entity.minecraft.ominous_item_spawner\",packetType:\"BASE\",width:0.25f,height:0.25f,eyeHeight:0.2125f,clientTrackingRange:8}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:painting",
+    "value": "{id:93,translationKey:\"entity.minecraft.painting\",packetType:\"PAINTING\",width:0.5f,height:0.5f,eyeHeight:0.425f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:pale_oak_boat",
+    "value": "{id:94,translationKey:\"entity.minecraft.pale_oak_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:boat"
+    ]
+  },
+  {
+    "key": "minecraft:pale_oak_chest_boat",
+    "value": "{id:95,translationKey:\"entity.minecraft.pale_oak_chest_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:panda",
+    "value": "{id:96,translationKey:\"entity.minecraft.panda\",packetType:\"LIVING\",width:1.3f,height:1.25f,eyeHeight:1.0625f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.150000006f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:attack_damage\":6.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:parched",
+    "value": "{id:97,translationKey:\"entity.minecraft.parched\",packetType:\"LIVING\",width:0.6f,height:1.99f,eyeHeight:1.74f,attachments:{VEHICLE:[[0.0f,0.6999999881f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":16.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_breathe_under_water",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:sensitive_to_smite",
+      "minecraft:skeletons",
+      "minecraft:undead",
+      "minecraft:wither_friends"
+    ]
+  },
+  {
+    "key": "minecraft:parrot",
+    "value": "{id:98,translationKey:\"entity.minecraft.parrot\",packetType:\"LIVING\",width:0.5f,height:0.9f,eyeHeight:0.54f,attachments:{PASSENGER:[[0.0f,0.462500006f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":6.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.200000003f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:flying_speed\":0.400000006f,\"minecraft:attack_damage\":3.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:fall_damage_immune",
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:phantom",
+    "value": "{id:99,translationKey:\"entity.minecraft.phantom\",packetType:\"LIVING\",width:0.9f,height:0.5f,eyeHeight:0.175f,attachments:{PASSENGER:[[0.0f,0.337500006f,0.0f]],VEHICLE:[[0.0f,0.125f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:burn_in_daylight",
+      "minecraft:can_breathe_under_water",
+      "minecraft:fall_damage_immune",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:sensitive_to_smite",
+      "minecraft:undead",
+      "minecraft:wither_friends"
+    ]
+  },
+  {
+    "key": "minecraft:pig",
+    "value": "{id:100,translationKey:\"entity.minecraft.pig\",packetType:\"LIVING\",width:0.9f,height:0.9f,eyeHeight:0.765f,attachments:{PASSENGER:[[0.0f,0.8687499762f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":10.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_equip_saddle",
+      "minecraft:dismounts_underwater",
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:piglin",
+    "value": "{id:101,translationKey:\"entity.minecraft.piglin\",packetType:\"LIVING\",width:0.6f,height:1.95f,eyeHeight:1.79f,attachments:{PASSENGER:[[0.0f,2.0125000477f,0.0f]],VEHICLE:[[0.0f,0.6999999881f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":16.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.349999994f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":5.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:piglin_brute",
+    "value": "{id:102,translationKey:\"entity.minecraft.piglin_brute\",packetType:\"LIVING\",width:0.6f,height:1.95f,eyeHeight:1.79f,attachments:{PASSENGER:[[0.0f,2.0125000477f,0.0f]],VEHICLE:[[0.0f,0.6999999881f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":50.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.349999994f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":12.0f,\"minecraft:attack_damage\":7.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:pillager",
+    "value": "{id:103,translationKey:\"entity.minecraft.pillager\",packetType:\"LIVING\",width:0.6f,height:1.95f,eyeHeight:1.6575f,attachments:{PASSENGER:[[0.0f,2.0f,0.0f]],VEHICLE:[[0.0f,0.6000000238f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":24.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.349999994f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":32.0f,\"minecraft:attack_damage\":5.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:illager",
+      "minecraft:illager_friends",
+      "minecraft:raiders"
+    ]
+  },
+  {
+    "key": "minecraft:polar_bear",
+    "value": "{id:104,translationKey:\"entity.minecraft.polar_bear\",packetType:\"LIVING\",width:1.4f,height:1.4f,eyeHeight:1.19f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":30.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":20.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:attack_damage\":6.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:followable_friendly_mobs",
+      "minecraft:freeze_immune_entity_types"
+    ]
+  },
+  {
+    "key": "minecraft:splash_potion",
+    "value": "{id:105,translationKey:\"entity.minecraft.splash_potion\",packetType:\"BASE\",width:0.25f,height:0.25f,eyeHeight:0.2125f,drag:0.01f,acceleration:0.05f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:lingering_potion",
+    "value": "{id:106,translationKey:\"entity.minecraft.lingering_potion\",packetType:\"BASE\",width:0.25f,height:0.25f,eyeHeight:0.2125f,drag:0.01f,acceleration:0.05f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:pufferfish",
+    "value": "{id:107,translationKey:\"entity.minecraft.pufferfish\",packetType:\"LIVING\",width:0.7f,height:0.7f,eyeHeight:0.455f,clientTrackingRange:4,defaultAttributes:{\"minecraft:max_health\":3.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:axolotl_hunt_targets",
+      "minecraft:can_breathe_under_water",
+      "minecraft:cannot_be_pushed_onto_boats",
+      "minecraft:nautilus_hostiles",
+      "minecraft:not_scary_for_pufferfish",
+      "minecraft:sensitive_to_impaling"
+    ]
+  },
+  {
+    "key": "minecraft:rabbit",
+    "value": "{id:108,translationKey:\"entity.minecraft.rabbit\",packetType:\"LIVING\",width:0.49f,height:0.6f,eyeHeight:0.59f,clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":3.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.3000000119f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:attack_damage\":3.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:followable_friendly_mobs",
+      "minecraft:powder_snow_walkable_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:ravager",
+    "value": "{id:109,translationKey:\"entity.minecraft.ravager\",packetType:\"LIVING\",width:1.95f,height:2.2f,eyeHeight:1.8700001f,attachments:{PASSENGER:[[0.0f,2.2625f,-0.0625f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":100.0f,\"minecraft:knockback_resistance\":0.75f,\"minecraft:movement_speed\":0.3f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":1.5f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":32.0f,\"minecraft:attack_damage\":12.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:dismounts_underwater",
+      "minecraft:raiders"
+    ]
+  },
+  {
+    "key": "minecraft:salmon",
+    "value": "{id:110,translationKey:\"entity.minecraft.salmon\",packetType:\"LIVING\",width:0.7f,height:0.4f,eyeHeight:0.26f,clientTrackingRange:4,defaultAttributes:{\"minecraft:max_health\":3.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:axolotl_hunt_targets",
+      "minecraft:can_breathe_under_water",
+      "minecraft:cannot_be_pushed_onto_boats",
+      "minecraft:not_scary_for_pufferfish",
+      "minecraft:sensitive_to_impaling"
+    ]
+  },
+  {
+    "key": "minecraft:sheep",
+    "value": "{id:111,translationKey:\"entity.minecraft.sheep\",packetType:\"LIVING\",width:0.9f,height:1.3f,eyeHeight:1.235f,attachments:{PASSENGER:[[0.0f,1.2374999523f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":8.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.2300000042f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:shulker",
+    "value": "{id:112,translationKey:\"entity.minecraft.shulker\",packetType:\"LIVING\",fireImmune:1b,width:1.0f,height:1.0f,eyeHeight:0.5f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":30.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:fall_damage_immune"
+    ]
+  },
+  {
+    "key": "minecraft:shulker_bullet",
+    "value": "{id:113,translationKey:\"entity.minecraft.shulker_bullet\",packetType:\"BASE\",width:0.3125f,height:0.3125f,eyeHeight:0.265625f,clientTrackingRange:8}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:silverfish",
+    "value": "{id:114,translationKey:\"entity.minecraft.silverfish\",packetType:\"LIVING\",width:0.4f,height:0.3f,eyeHeight:0.13f,attachments:{PASSENGER:[[0.0f,0.237499997f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":8.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":1.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:arthropod",
+      "minecraft:immune_to_infested",
+      "minecraft:powder_snow_walkable_mobs",
+      "minecraft:sensitive_to_bane_of_arthropods"
+    ]
+  },
+  {
+    "key": "minecraft:skeleton",
+    "value": "{id:115,translationKey:\"entity.minecraft.skeleton\",packetType:\"LIVING\",width:0.6f,height:1.99f,eyeHeight:1.74f,attachments:{VEHICLE:[[0.0f,0.6999999881f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:burn_in_daylight",
+      "minecraft:can_breathe_under_water",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:no_anger_from_wind_charge",
+      "minecraft:sensitive_to_smite",
+      "minecraft:skeletons",
+      "minecraft:undead",
+      "minecraft:wither_friends"
+    ]
+  },
+  {
+    "key": "minecraft:skeleton_horse",
+    "value": "{id:116,translationKey:\"entity.minecraft.skeleton_horse\",packetType:\"LIVING\",width:1.3964844f,height:1.6f,eyeHeight:1.52f,attachments:{PASSENGER:[[0.0f,1.3187500238f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":15.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.200000003f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":6.0f,\"minecraft:fall_damage_multiplier\":0.5f,\"minecraft:jump_strength\":0.7f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_breathe_under_water",
+      "minecraft:can_equip_saddle",
+      "minecraft:cannot_be_age_locked",
+      "minecraft:followable_friendly_mobs",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:sensitive_to_smite",
+      "minecraft:skeletons",
+      "minecraft:undead",
+      "minecraft:wither_friends"
+    ]
+  },
+  {
+    "key": "minecraft:slime",
+    "value": "{id:117,translationKey:\"entity.minecraft.slime\",packetType:\"LIVING\",width:0.52f,height:0.52f,eyeHeight:0.325f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:frog_food",
+      "minecraft:immune_to_oozing",
+      "minecraft:no_anger_from_wind_charge",
+      "minecraft:non_controlling_rider"
+    ]
+  },
+  {
+    "key": "minecraft:small_fireball",
+    "value": "{id:118,translationKey:\"entity.minecraft.small_fireball\",packetType:\"BASE\",width:0.3125f,height:0.3125f,eyeHeight:0.265625f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:impact_projectiles"
+    ]
+  },
+  {
+    "key": "minecraft:sniffer",
+    "value": "{id:119,translationKey:\"entity.minecraft.sniffer\",packetType:\"LIVING\",width:1.9f,height:1.75f,eyeHeight:1.05f,attachments:{PASSENGER:[[0.0f,2.09375f,0.0f]],NAME_TAG:[[0.0f,2.0499999523f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":14.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.1000000015f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:snowball",
+    "value": "{id:120,translationKey:\"entity.minecraft.snowball\",packetType:\"BASE\",width:0.25f,height:0.25f,eyeHeight:0.2125f,drag:0.01f,acceleration:0.03f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:impact_projectiles"
+    ]
+  },
+  {
+    "key": "minecraft:snow_golem",
+    "value": "{id:121,translationKey:\"entity.minecraft.snow_golem\",packetType:\"LIVING\",width:0.7f,height:1.9f,eyeHeight:1.7f,clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":4.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.200000003f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:fall_damage_immune",
+      "minecraft:freeze_immune_entity_types"
+    ]
+  },
+  {
+    "key": "minecraft:spawner_minecart",
+    "value": "{id:122,translationKey:\"entity.minecraft.spawner_minecart\",packetType:\"BASE\",width:0.98f,height:0.7f,eyeHeight:0.595f,attachments:{PASSENGER:[[0.0f,0.1875f,0.0f]]},clientTrackingRange:8}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:spectral_arrow",
+    "value": "{id:123,translationKey:\"entity.minecraft.spectral_arrow\",packetType:\"BASE\",width:0.5f,height:0.5f,eyeHeight:0.13f,drag:0.01f,acceleration:0.05f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:arrows",
+      "minecraft:impact_projectiles"
+    ]
+  },
+  {
+    "key": "minecraft:spider",
+    "value": "{id:124,translationKey:\"entity.minecraft.spider\",packetType:\"LIVING\",width:1.4f,height:0.9f,eyeHeight:0.65f,attachments:{PASSENGER:[[0.0f,0.7649999857f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":16.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.3000000119f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:arthropod",
+      "minecraft:dismounts_underwater",
+      "minecraft:no_anger_from_wind_charge",
+      "minecraft:sensitive_to_bane_of_arthropods"
+    ]
+  },
+  {
+    "key": "minecraft:spruce_boat",
+    "value": "{id:125,translationKey:\"entity.minecraft.spruce_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:boat"
+    ]
+  },
+  {
+    "key": "minecraft:spruce_chest_boat",
+    "value": "{id:126,translationKey:\"entity.minecraft.spruce_chest_boat\",packetType:\"BASE\",width:1.375f,height:0.5625f,eyeHeight:0.5625f,drag:0.0f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:squid",
+    "value": "{id:127,translationKey:\"entity.minecraft.squid\",packetType:\"LIVING\",width:0.8f,height:0.8f,eyeHeight:0.4f,clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":10.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:axolotl_hunt_targets",
+      "minecraft:can_breathe_under_water",
+      "minecraft:cannot_be_pushed_onto_boats",
+      "minecraft:not_scary_for_pufferfish",
+      "minecraft:sensitive_to_impaling"
+    ]
+  },
+  {
+    "key": "minecraft:stray",
+    "value": "{id:128,translationKey:\"entity.minecraft.stray\",packetType:\"LIVING\",width:0.6f,height:1.99f,eyeHeight:1.74f,attachments:{VEHICLE:[[0.0f,0.6999999881f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:burn_in_daylight",
+      "minecraft:can_breathe_under_water",
+      "minecraft:freeze_immune_entity_types",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:no_anger_from_wind_charge",
+      "minecraft:sensitive_to_smite",
+      "minecraft:skeletons",
+      "minecraft:undead",
+      "minecraft:wither_friends"
+    ]
+  },
+  {
+    "key": "minecraft:strider",
+    "value": "{id:129,translationKey:\"entity.minecraft.strider\",packetType:\"LIVING\",fireImmune:1b,width:0.9f,height:1.7f,eyeHeight:1.445f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.174999997f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_equip_saddle",
+      "minecraft:dismounts_underwater",
+      "minecraft:followable_friendly_mobs",
+      "minecraft:freeze_hurts_extra_types"
+    ]
+  },
+  {
+    "key": "minecraft:tadpole",
+    "value": "{id:130,translationKey:\"entity.minecraft.tadpole\",packetType:\"LIVING\",width:0.4f,height:0.3f,eyeHeight:0.19500001f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":6.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":1.0f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:axolotl_hunt_targets",
+      "minecraft:can_breathe_under_water",
+      "minecraft:cannot_be_pushed_onto_boats",
+      "minecraft:not_scary_for_pufferfish",
+      "minecraft:sensitive_to_impaling"
+    ]
+  },
+  {
+    "key": "minecraft:text_display",
+    "value": "{id:131,translationKey:\"entity.minecraft.text_display\",packetType:\"BASE\",width:0.0f,height:0.0f,eyeHeight:0.0f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:tnt",
+    "value": "{id:132,translationKey:\"entity.minecraft.tnt\",packetType:\"BASE\",fireImmune:1b,width:0.98f,height:0.98f,eyeHeight:0.15f,acceleration:0.04f,clientTrackingRange:10}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:tnt_minecart",
+    "value": "{id:133,translationKey:\"entity.minecraft.tnt_minecart\",packetType:\"BASE\",width:0.98f,height:0.7f,eyeHeight:0.595f,attachments:{PASSENGER:[[0.0f,0.1875f,0.0f]]},clientTrackingRange:8}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:trader_llama",
+    "value": "{id:134,translationKey:\"entity.minecraft.trader_llama\",packetType:\"LIVING\",width:0.9f,height:1.87f,eyeHeight:1.7765f,attachments:{PASSENGER:[[0.0f,1.37f,-0.3f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":53.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.174999997f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":6.0f,\"minecraft:fall_damage_multiplier\":0.5f,\"minecraft:jump_strength\":0.5f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:dismounts_underwater"
+    ]
+  },
+  {
+    "key": "minecraft:trident",
+    "value": "{id:135,translationKey:\"entity.minecraft.trident\",packetType:\"BASE\",width:0.5f,height:0.5f,eyeHeight:0.13f,drag:0.01f,acceleration:0.05f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:impact_projectiles"
+    ]
+  },
+  {
+    "key": "minecraft:tropical_fish",
+    "value": "{id:136,translationKey:\"entity.minecraft.tropical_fish\",packetType:\"LIVING\",width:0.5f,height:0.4f,eyeHeight:0.26f,clientTrackingRange:4,defaultAttributes:{\"minecraft:max_health\":3.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:axolotl_hunt_targets",
+      "minecraft:can_breathe_under_water",
+      "minecraft:cannot_be_pushed_onto_boats",
+      "minecraft:not_scary_for_pufferfish",
+      "minecraft:sensitive_to_impaling"
+    ]
+  },
+  {
+    "key": "minecraft:turtle",
+    "value": "{id:137,translationKey:\"entity.minecraft.turtle\",packetType:\"LIVING\",width:1.2f,height:0.4f,eyeHeight:0.34f,attachments:{PASSENGER:[[0.0f,0.55625f,-0.25f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":30.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:can_breathe_under_water",
+      "minecraft:not_scary_for_pufferfish",
+      "minecraft:sensitive_to_impaling"
+    ]
+  },
+  {
+    "key": "minecraft:vex",
+    "value": "{id:138,translationKey:\"entity.minecraft.vex\",packetType:\"LIVING\",fireImmune:1b,width:0.4f,height:0.8f,eyeHeight:0.51875f,attachments:{PASSENGER:[[0.0f,0.7375000119f,0.0f]],VEHICLE:[[0.0f,-0.0399999991f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":14.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":4.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:villager",
+    "value": "{id:139,translationKey:\"entity.minecraft.villager\",packetType:\"LIVING\",width:0.6f,height:1.95f,eyeHeight:1.62f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.5f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:candidate_for_iron_golem_gift",
+      "minecraft:cannot_be_age_locked",
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:vindicator",
+    "value": "{id:140,translationKey:\"entity.minecraft.vindicator\",packetType:\"LIVING\",width:0.6f,height:1.95f,eyeHeight:1.6575f,attachments:{PASSENGER:[[0.0f,2.0f,0.0f]],VEHICLE:[[0.0f,0.6000000238f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":24.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.349999994f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":12.0f,\"minecraft:attack_damage\":5.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:illager",
+      "minecraft:illager_friends",
+      "minecraft:raiders"
+    ]
+  },
+  {
+    "key": "minecraft:wandering_trader",
+    "value": "{id:141,translationKey:\"entity.minecraft.wandering_trader\",packetType:\"LIVING\",width:0.6f,height:1.95f,eyeHeight:1.62f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.7f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:warden",
+    "value": "{id:142,translationKey:\"entity.minecraft.warden\",packetType:\"LIVING\",fireImmune:1b,width:0.9f,height:2.9f,eyeHeight:2.4650002f,attachments:{PASSENGER:[[0.0f,3.1500000954f,0.0f]],WARDEN_CHEST:[[0.0f,1.6000000238f,0.0f]]},clientTrackingRange:16,defaultAttributes:{\"minecraft:max_health\":500.0f,\"minecraft:knockback_resistance\":1.0f,\"minecraft:movement_speed\":0.3000000119f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":1.5f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":24.0f,\"minecraft:attack_damage\":30.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:wind_charge",
+    "value": "{id:143,translationKey:\"entity.minecraft.wind_charge\",packetType:\"BASE\",width:0.3125f,height:0.3125f,eyeHeight:0.0f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:impact_projectiles",
+      "minecraft:redirectable_projectile"
+    ]
+  },
+  {
+    "key": "minecraft:witch",
+    "value": "{id:144,translationKey:\"entity.minecraft.witch\",packetType:\"LIVING\",width:0.6f,height:1.95f,eyeHeight:1.62f,attachments:{PASSENGER:[[0.0f,2.2625000477f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":26.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:raiders"
+    ]
+  },
+  {
+    "key": "minecraft:wither",
+    "value": "{id:145,translationKey:\"entity.minecraft.wither\",packetType:\"LIVING\",fireImmune:1b,width:0.9f,height:3.5f,eyeHeight:2.9750001f,clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":300.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.6000000238f,\"minecraft:armor\":4.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":40.0f,\"minecraft:attack_damage\":2.0f,\"minecraft:flying_speed\":0.6000000238f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_breathe_under_water",
+      "minecraft:fall_damage_immune",
+      "minecraft:freeze_immune_entity_types",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:sensitive_to_smite",
+      "minecraft:undead",
+      "minecraft:wither_friends"
+    ]
+  },
+  {
+    "key": "minecraft:wither_skeleton",
+    "value": "{id:146,translationKey:\"entity.minecraft.wither_skeleton\",packetType:\"LIVING\",fireImmune:1b,width:0.7f,height:2.4f,eyeHeight:2.1f,attachments:{VEHICLE:[[0.0f,0.875f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.25f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":2.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:burn_in_daylight",
+      "minecraft:can_breathe_under_water",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:sensitive_to_smite",
+      "minecraft:skeletons",
+      "minecraft:undead",
+      "minecraft:wither_friends"
+    ]
+  },
+  {
+    "key": "minecraft:wither_skull",
+    "value": "{id:147,translationKey:\"entity.minecraft.wither_skull\",packetType:\"BASE\",width:0.3125f,height:0.3125f,eyeHeight:0.265625f,acceleration:0.1f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:impact_projectiles"
+    ]
+  },
+  {
+    "key": "minecraft:wolf",
+    "value": "{id:148,translationKey:\"entity.minecraft.wolf\",packetType:\"LIVING\",width:0.6f,height:0.85f,eyeHeight:0.68f,attachments:{PASSENGER:[[0.0f,0.81875f,-0.0625f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":8.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.3000000119f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:attack_damage\":4.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:followable_friendly_mobs"
+    ]
+  },
+  {
+    "key": "minecraft:zoglin",
+    "value": "{id:149,translationKey:\"entity.minecraft.zoglin\",packetType:\"LIVING\",fireImmune:1b,width:1.3964844f,height:1.4f,eyeHeight:1.19f,attachments:{PASSENGER:[[0.0f,1.4937499762f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":40.0f,\"minecraft:knockback_resistance\":0.6000000238f,\"minecraft:movement_speed\":0.3000000119f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":1.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:attack_damage\":6.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_breathe_under_water",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:sensitive_to_smite",
+      "minecraft:undead",
+      "minecraft:wither_friends",
+      "minecraft:zombies"
+    ]
+  },
+  {
+    "key": "minecraft:zombie",
+    "value": "{id:150,translationKey:\"entity.minecraft.zombie\",packetType:\"LIVING\",width:0.6f,height:1.95f,eyeHeight:1.74f,attachments:{PASSENGER:[[0.0f,2.0125000477f,0.0f]],VEHICLE:[[0.0f,0.6999999881f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.2300000042f,\"minecraft:armor\":2.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":35.0f,\"minecraft:attack_damage\":3.0f,\"minecraft:spawn_reinforcements\":0.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:burn_in_daylight",
+      "minecraft:can_breathe_under_water",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:no_anger_from_wind_charge",
+      "minecraft:sensitive_to_smite",
+      "minecraft:undead",
+      "minecraft:wither_friends",
+      "minecraft:zombies"
+    ]
+  },
+  {
+    "key": "minecraft:zombie_horse",
+    "value": "{id:151,translationKey:\"entity.minecraft.zombie_horse\",packetType:\"LIVING\",width:1.3964844f,height:1.6f,eyeHeight:1.52f,attachments:{PASSENGER:[[0.0f,1.3187500238f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":25.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.224999994f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":1.0f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":6.0f,\"minecraft:fall_damage_multiplier\":0.5f,\"minecraft:jump_strength\":0.7f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:burn_in_daylight",
+      "minecraft:can_breathe_under_water",
+      "minecraft:can_equip_saddle",
+      "minecraft:can_float_while_ridden",
+      "minecraft:can_wear_horse_armor",
+      "minecraft:cannot_be_age_locked",
+      "minecraft:dismounts_underwater",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:sensitive_to_smite",
+      "minecraft:undead",
+      "minecraft:wither_friends",
+      "minecraft:zombies"
+    ]
+  },
+  {
+    "key": "minecraft:zombie_nautilus",
+    "value": "{id:152,translationKey:\"entity.minecraft.zombie_nautilus\",packetType:\"LIVING\",width:0.875f,height:0.95f,eyeHeight:0.2751f,attachments:{PASSENGER:[[0.0f,1.1375000477f,0.0f]]},clientTrackingRange:10,defaultAttributes:{\"minecraft:max_health\":15.0f,\"minecraft:knockback_resistance\":0.3000000119f,\"minecraft:movement_speed\":1.1000000238f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":16.0f,\"minecraft:tempt_range\":10.0f,\"minecraft:attack_damage\":3.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:aquatic",
+      "minecraft:burn_in_daylight",
+      "minecraft:can_breathe_under_water",
+      "minecraft:can_equip_saddle",
+      "minecraft:can_wear_nautilus_armor",
+      "minecraft:cannot_be_pushed_onto_boats",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:not_scary_for_pufferfish",
+      "minecraft:sensitive_to_impaling",
+      "minecraft:sensitive_to_smite",
+      "minecraft:undead",
+      "minecraft:wither_friends",
+      "minecraft:zombies"
+    ]
+  },
+  {
+    "key": "minecraft:zombie_villager",
+    "value": "{id:153,translationKey:\"entity.minecraft.zombie_villager\",packetType:\"LIVING\",width:0.6f,height:1.95f,eyeHeight:1.74f,attachments:{PASSENGER:[[0.0f,2.125f,0.0f]],VEHICLE:[[0.0f,0.6999999881f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.2300000042f,\"minecraft:armor\":2.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":35.0f,\"minecraft:attack_damage\":3.0f,\"minecraft:spawn_reinforcements\":0.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:burn_in_daylight",
+      "minecraft:can_breathe_under_water",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:sensitive_to_smite",
+      "minecraft:undead",
+      "minecraft:wither_friends",
+      "minecraft:zombies"
+    ]
+  },
+  {
+    "key": "minecraft:zombified_piglin",
+    "value": "{id:154,translationKey:\"entity.minecraft.zombified_piglin\",packetType:\"LIVING\",fireImmune:1b,width:0.6f,height:1.95f,eyeHeight:1.79f,attachments:{PASSENGER:[[0.0f,2.0f,0.0f]],VEHICLE:[[0.0f,0.6999999881f,0.0f]]},clientTrackingRange:8,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.2300000042f,\"minecraft:armor\":2.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":0.0f,\"minecraft:follow_range\":35.0f,\"minecraft:attack_damage\":5.0f,\"minecraft:spawn_reinforcements\":0.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:can_breathe_under_water",
+      "minecraft:ignores_poison_and_regen",
+      "minecraft:inverted_healing_and_harm",
+      "minecraft:sensitive_to_smite",
+      "minecraft:undead",
+      "minecraft:wither_friends",
+      "minecraft:zombies"
+    ]
+  },
+  {
+    "key": "minecraft:player",
+    "value": "{id:155,translationKey:\"entity.minecraft.player\",packetType:\"PLAYER\",width:0.6f,height:1.8f,eyeHeight:1.62f,attachments:{VEHICLE:[[0.0f,0.6f,0.0f]]},clientTrackingRange:32,defaultAttributes:{\"minecraft:max_health\":20.0f,\"minecraft:knockback_resistance\":0.0f,\"minecraft:movement_speed\":0.1000000015f,\"minecraft:armor\":0.0f,\"minecraft:armor_toughness\":0.0f,\"minecraft:max_absorption\":0.0f,\"minecraft:step_height\":0.6f,\"minecraft:scale\":1.0f,\"minecraft:gravity\":0.08f,\"minecraft:safe_fall_distance\":3.0f,\"minecraft:fall_damage_multiplier\":1.0f,\"minecraft:jump_strength\":0.4199999869f,\"minecraft:entity_interaction_range\":3.0f,\"minecraft:oxygen_bonus\":0.0f,\"minecraft:burning_time\":1.0f,\"minecraft:explosion_knockback_resistance\":0.0f,\"minecraft:water_movement_efficiency\":0.0f,\"minecraft:movement_efficiency\":0.0f,\"minecraft:attack_knockback\":0.0f,\"minecraft:camera_distance\":4.0f,\"minecraft:waypoint_transmit_range\":60000000.0f,\"minecraft:attack_damage\":1.0f,\"minecraft:attack_speed\":4.0f,\"minecraft:luck\":0.0f,\"minecraft:block_interaction_range\":4.5f,\"minecraft:block_break_speed\":1.0f,\"minecraft:submerged_mining_speed\":0.2f,\"minecraft:sneaking_speed\":0.3f,\"minecraft:mining_efficiency\":0.0f,\"minecraft:sweeping_damage_ratio\":0.0f,\"minecraft:waypoint_receive_range\":60000000.0f}}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:cannot_be_pushed_onto_boats"
+    ]
+  },
+  {
+    "key": "minecraft:fishing_bobber",
+    "value": "{id:156,translationKey:\"entity.minecraft.fishing_bobber\",packetType:\"BASE\",width:0.25f,height:0.25f,eyeHeight:0.2125f,drag:0.08f,acceleration:0.03f,clientTrackingRange:4}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  }
+]

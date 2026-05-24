@@ -1,0 +1,20 @@
+[
+  {
+    "key": "minecraft:warm",
+    "value": "{asset_id:\"minecraft:entity/nautilus/zombie_nautilus_coral\",model:\"warm\",spawn_conditions:[{condition:{type:\"minecraft:biome\",biomes:\"#minecraft:spawns_coral_variant_zombie_nautilus\"},priority:1}]}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  },
+  {
+    "key": "minecraft:temperate",
+    "value": "{asset_id:\"minecraft:entity/nautilus/zombie_nautilus\",spawn_conditions:[{priority:0}]}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    }
+  }
+]

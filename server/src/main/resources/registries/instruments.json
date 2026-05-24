@@ -1,0 +1,106 @@
+[
+  {
+    "key": "minecraft:admire_goat_horn",
+    "value": "{description:{translate:\"instrument.minecraft.admire_goat_horn\"},range:256.0f,sound_event:\"minecraft:item.goat_horn.sound.4\",use_duration:7.0f}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:goat_horns",
+      "minecraft:screaming_goat_horns"
+    ]
+  },
+  {
+    "key": "minecraft:yearn_goat_horn",
+    "value": "{description:{translate:\"instrument.minecraft.yearn_goat_horn\"},range:256.0f,sound_event:\"minecraft:item.goat_horn.sound.6\",use_duration:7.0f}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:goat_horns",
+      "minecraft:screaming_goat_horns"
+    ]
+  },
+  {
+    "key": "minecraft:sing_goat_horn",
+    "value": "{description:{translate:\"instrument.minecraft.sing_goat_horn\"},range:256.0f,sound_event:\"minecraft:item.goat_horn.sound.1\",use_duration:7.0f}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:goat_horns",
+      "minecraft:regular_goat_horns"
+    ]
+  },
+  {
+    "key": "minecraft:seek_goat_horn",
+    "value": "{description:{translate:\"instrument.minecraft.seek_goat_horn\"},range:256.0f,sound_event:\"minecraft:item.goat_horn.sound.2\",use_duration:7.0f}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:goat_horns",
+      "minecraft:regular_goat_horns"
+    ]
+  },
+  {
+    "key": "minecraft:feel_goat_horn",
+    "value": "{description:{translate:\"instrument.minecraft.feel_goat_horn\"},range:256.0f,sound_event:\"minecraft:item.goat_horn.sound.3\",use_duration:7.0f}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:goat_horns",
+      "minecraft:regular_goat_horns"
+    ]
+  },
+  {
+    "key": "minecraft:dream_goat_horn",
+    "value": "{description:{translate:\"instrument.minecraft.dream_goat_horn\"},range:256.0f,sound_event:\"minecraft:item.goat_horn.sound.7\",use_duration:7.0f}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:goat_horns",
+      "minecraft:screaming_goat_horns"
+    ]
+  },
+  {
+    "key": "minecraft:call_goat_horn",
+    "value": "{description:{translate:\"instrument.minecraft.call_goat_horn\"},range:256.0f,sound_event:\"minecraft:item.goat_horn.sound.5\",use_duration:7.0f}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:goat_horns",
+      "minecraft:screaming_goat_horns"
+    ]
+  },
+  {
+    "key": "minecraft:ponder_goat_horn",
+    "value": "{description:{translate:\"instrument.minecraft.ponder_goat_horn\"},range:256.0f,sound_event:\"minecraft:item.goat_horn.sound.0\",use_duration:7.0f}",
+    "known_pack": {
+      "namespace": "minecraft",
+      "path": "core",
+      "version": "26.1.2"
+    },
+    "tags": [
+      "minecraft:goat_horns",
+      "minecraft:regular_goat_horns"
+    ]
+  }
+]
