@@ -322,7 +322,7 @@ public final class RegistryManagerImpl implements RegistryManager {
             }
         }
 
-        private static final class EntryBuilder<V> implements RegistryEntryAddEvent.Builder<V> {
+        private static final class EntryBuilder<V> implements RegistryEntryAddEvent.Entry<V> {
 
             private final Key key;
             private V value;

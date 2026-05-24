@@ -1,8 +1,8 @@
 package xyz.endelith.world.block.banner;
 
 import java.util.Objects;
-import org.jetbrains.annotations.Nullable;
 import net.kyori.adventure.key.Key;
+import org.jetbrains.annotations.Nullable;
 
 public record BannerPattern(Key asset, String translationKey) {
 

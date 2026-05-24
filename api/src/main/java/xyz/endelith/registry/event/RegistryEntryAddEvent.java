@@ -10,16 +10,16 @@ import xyz.endelith.registry.reference.RegistryReference;
 public record RegistryEntryAddEvent<V>(
         RegistryReference<V> reference,
         Key key,
-        Builder<V> builder
+        Entry<V> entry
 ) implements Event {
 
     public RegistryEntryAddEvent {
         Objects.requireNonNull(reference, "reference");
         Objects.requireNonNull(key, "key");
-        Objects.requireNonNull(builder, "builder");
+        Objects.requireNonNull(entry, "entry");
     }
 
-    public interface Builder<V> {
+    public interface Entry<V> {
 
         Key key();
 
