@@ -77,6 +77,12 @@ public final class MinecraftServerImpl implements MinecraftServer {
 
     @Override
     public RegistryManagerImpl registryManager() {
+        if (this.registryManager == null) {
+            throw new IllegalStateException(
+                    "Registry manager is not available during plugin bootstrap"
+            );
+        }
+
         return this.registryManager;
     }
 

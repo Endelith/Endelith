@@ -33,8 +33,6 @@ public final class TestPlugin extends Plugin {
                     ));
                 }
         );
-
-        logger().info("If you try to access registries in here you got: {}", server().registryManager());
     }
 
     @Override
