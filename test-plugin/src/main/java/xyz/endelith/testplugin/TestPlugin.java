@@ -27,7 +27,7 @@ public final class TestPlugin extends Plugin {
         context.eventManager().listen(
                 RegistryEvents.CAT_VARIANT.entryAdd(Key.key("minecraft", "tabby")),
                 event -> {
-                    event.builder().value(new CatVariant(
+                    event.builder().setValue(new CatVariant(
                             Key.key("endelith", "textures/entity/cat/custom_tabby"),
                             Key.key("endelith", "textures/entity/cat/custom_tabby_baby")
                     ));

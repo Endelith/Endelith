@@ -27,8 +27,8 @@ public record RegistryEntryAddEvent<V>(
 
         @Nullable KnownPack pack();
 
-        void value(V value);
+        void setValue(V value);
 
-        void pack(@Nullable KnownPack pack);
+        void setPack(@Nullable KnownPack pack);
     }
 }

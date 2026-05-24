@@ -1,5 +1,7 @@
 package xyz.endelith.server.registry;
 
+import com.google.common.base.Functions;
+import com.google.common.collect.Multimap;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -9,10 +11,8 @@ import java.util.Objects;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.function.Function;
-import org.jetbrains.annotations.Nullable;
-import com.google.common.base.Functions;
-import com.google.common.collect.Multimap;
 import net.kyori.adventure.key.Key;
+import org.jetbrains.annotations.Nullable;
 import xyz.endelith.cosine.codec.Codec;
 import xyz.endelith.event.EventManager;
 import xyz.endelith.plugin.bootstrap.BootstrapContext;
@@ -40,6 +40,7 @@ public final class RegistryManagerImpl implements RegistryManager {
     public RegistryManagerImpl(EventManager<BootstrapContext> eventManager, @Nullable NetworkManager networkManager) {
         Objects.requireNonNull(eventManager, "event manager");
         this.networkManager = networkManager;
+
 
         this.registries = new RegistryMapBuilder(eventManager, this.tagsLock)
             .dataDriven(
@@ -349,12 +350,12 @@ public final class RegistryManagerImpl implements RegistryManager {
             }
 
             @Override
-            public void value(V value) {
+            public void setValue(V value) {
                 this.value = Objects.requireNonNull(value, "value");
             }
 
             @Override
-            public void pack(@Nullable KnownPack pack) {
+            public void setPack(@Nullable KnownPack pack) {
                 this.pack = pack;
             }
         }
