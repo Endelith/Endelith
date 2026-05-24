@@ -1,6 +1,7 @@
 package xyz.endelith.entity.variant.cat;
 
 import java.util.Objects;
+import org.jetbrains.annotations.Nullable;
 import net.kyori.adventure.key.Key;
 
 public record CatVariant(Key asset, Key babyAsset) {
@@ -22,8 +23,8 @@ public record CatVariant(Key asset, Key babyAsset) {
 
     public static final class Builder {
 
-        private Key asset;
-        private Key babyAsset;
+        private @Nullable Key asset;
+        private @Nullable Key babyAsset;
 
         private Builder() {
         }

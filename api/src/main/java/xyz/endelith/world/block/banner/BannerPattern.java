@@ -1,6 +1,7 @@
 package xyz.endelith.world.block.banner;
 
 import java.util.Objects;
+import org.jetbrains.annotations.Nullable;
 import net.kyori.adventure.key.Key;
 
 public record BannerPattern(Key asset, String translationKey) {
@@ -22,8 +23,8 @@ public record BannerPattern(Key asset, String translationKey) {
 
     public static final class Builder {
 
-        private Key asset;
-        private String translationKey;
+        private @Nullable Key asset;
+        private @Nullable String translationKey;
 
         private Builder() {
         }
