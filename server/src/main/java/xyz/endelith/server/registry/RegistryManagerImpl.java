@@ -24,6 +24,7 @@ import xyz.endelith.registry.reference.RegistryReference;
 import xyz.endelith.server.network.NetworkManager;
 import xyz.endelith.server.registry.MinecraftRegistryImpl.RegistrationInfo;
 import xyz.endelith.server.registry.codec.entity.variant.cat.CatVariantCodec;
+import xyz.endelith.server.registry.codec.world.block.banner.BannerPatternCodec;
 import xyz.endelith.server.util.data.DataUtil;
 
 public final class RegistryManagerImpl implements RegistryManager {
@@ -43,6 +44,12 @@ public final class RegistryManagerImpl implements RegistryManager {
                     Key.key("cat_variant"),
                     "registries/cat_variants.json",
                     CatVariantCodec.CODEC
+            )
+            .dataDriven(
+                    RegistryReference.BANNER_PATTERN,
+                    Key.key("banner_pattern"),
+                    "registries/banner_patterns.json",
+                    BannerPatternCodec.CODEC
             )
             .build();
     }
