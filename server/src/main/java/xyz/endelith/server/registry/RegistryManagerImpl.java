@@ -1,5 +1,6 @@
 package xyz.endelith.server.registry;
 
+import com.google.common.base.Functions;
 import com.google.common.collect.Multimap;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,7 +26,9 @@ import xyz.endelith.server.network.NetworkManager;
 import xyz.endelith.server.registry.MinecraftRegistryImpl.RegistrationInfo;
 import xyz.endelith.server.registry.codec.entity.variant.cat.CatVariantCodec;
 import xyz.endelith.server.registry.codec.world.block.banner.BannerPatternCodec;
+import xyz.endelith.server.registry.codec.world.sound.SoundEventCodec;
 import xyz.endelith.server.util.data.DataUtil;
+import xyz.endelith.world.sound.SoundEvent;
 
 public final class RegistryManagerImpl implements RegistryManager {
 
@@ -50,6 +53,13 @@ public final class RegistryManagerImpl implements RegistryManager {
                     Key.key("banner_pattern"),
                     "registries/banner_patterns.json",
                     BannerPatternCodec.CODEC
+            )
+            .builtIn(
+                    RegistryReference.SOUND_EVENT,
+                    Key.key("sound_event"),
+                    "registries/sound_events.json",
+                    SoundEventCodec.CODEC,
+                    Functions.identity()
             )
             .build();
     }
