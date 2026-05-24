@@ -7,21 +7,28 @@ import xyz.endelith.event.Event;
 import xyz.endelith.registry.feature.KnownPack;
 import xyz.endelith.registry.reference.RegistryReference;
 
-public record RegistryInitializeEvent<V>(
+public record RegistryEntryAddEvent<V>(
         RegistryReference<V> reference,
-        RegistryAccess<V> access
+        Key key,
+        Builder<V> builder
 ) implements Event {
 
-    public RegistryInitializeEvent {
+    public RegistryEntryAddEvent {
         Objects.requireNonNull(reference, "reference");
-        Objects.requireNonNull(access, "access");
+        Objects.requireNonNull(key, "key");
+        Objects.requireNonNull(builder, "builder");
     }
 
-    public void register(Key key, V value, @Nullable KnownPack pack) {
-        this.access.register(key, value, pack);
-    }
+    public interface Builder<V> {
 
-    public interface RegistryAccess<V> {
-        void register(Key key, V value, @Nullable KnownPack pack);
+        Key key();
+
+        V value();
+
+        @Nullable KnownPack pack();
+
+        void value(V value);
+
+        void pack(@Nullable KnownPack pack);
     }
 }

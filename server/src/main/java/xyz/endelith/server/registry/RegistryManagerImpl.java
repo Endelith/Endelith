@@ -1,25 +1,27 @@
 package xyz.endelith.server.registry;
 
-import com.google.common.base.Functions;
-import com.google.common.collect.Multimap;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.function.Function;
-import net.kyori.adventure.key.Key;
 import org.jetbrains.annotations.Nullable;
+import com.google.common.base.Functions;
+import com.google.common.collect.Multimap;
+import net.kyori.adventure.key.Key;
 import xyz.endelith.cosine.codec.Codec;
 import xyz.endelith.event.EventManager;
 import xyz.endelith.plugin.bootstrap.BootstrapContext;
 import xyz.endelith.registry.RegistryManager;
+import xyz.endelith.registry.event.RegistryComposeEvent;
+import xyz.endelith.registry.event.RegistryComposeEvent.RegistryAccess;
+import xyz.endelith.registry.event.RegistryEntryAddEvent;
+import xyz.endelith.registry.event.RegistryEventProvider;
 import xyz.endelith.registry.event.RegistryEvents;
-import xyz.endelith.registry.event.RegistryInitializeEvent;
-import xyz.endelith.registry.event.RegistryInitializeEvent.RegistryAccess;
 import xyz.endelith.registry.feature.KnownPack;
 import xyz.endelith.registry.reference.RegistryReference;
 import xyz.endelith.server.network.NetworkManager;
@@ -28,28 +30,26 @@ import xyz.endelith.server.registry.codec.entity.variant.cat.CatVariantCodec;
 import xyz.endelith.server.registry.codec.world.block.banner.BannerPatternCodec;
 import xyz.endelith.server.registry.codec.world.sound.SoundEventCodec;
 import xyz.endelith.server.util.data.DataUtil;
-import xyz.endelith.world.sound.SoundEvent;
 
 public final class RegistryManagerImpl implements RegistryManager {
 
-    private final NetworkManager networkManager;
+    private final @Nullable NetworkManager networkManager;
     private final Map<RegistryReference<?>, MinecraftRegistryImpl<?>> registries;
     private final ReadWriteLock tagsLock = new ReentrantReadWriteLock();
 
-    public RegistryManagerImpl(EventManager<BootstrapContext> eventManager, NetworkManager networkManager) {
+    public RegistryManagerImpl(EventManager<BootstrapContext> eventManager, @Nullable NetworkManager networkManager) {
         Objects.requireNonNull(eventManager, "event manager");
-        // this.networkManager = Objects.requireNonNull(networkManager, "network manager");
         this.networkManager = networkManager;
 
         this.registries = new RegistryMapBuilder(eventManager, this.tagsLock)
             .dataDriven(
-                    RegistryReference.CAT_VARIANT,
+                    RegistryEvents.CAT_VARIANT,
                     Key.key("cat_variant"),
                     "registries/cat_variants.json",
                     CatVariantCodec.CODEC
             )
             .dataDriven(
-                    RegistryReference.BANNER_PATTERN,
+                    RegistryEvents.BANNER_PATTERN,
                     Key.key("banner_pattern"),
                     "registries/banner_patterns.json",
                     BannerPatternCodec.CODEC
@@ -88,45 +88,45 @@ public final class RegistryManagerImpl implements RegistryManager {
         }
     }
 
-    //public void updateTags(Map<RegistryReference<?>, Multimap<Key, Key>> tags) {
-    //    Objects.requireNonNull(tags, "tags");
-
-    //    try {
-    //        this.tagsLock.writeLock().lock();
-    //        tags.forEach((reference, tagToKeysMap) -> registry(reference).updateTags(tagToKeysMap));
-
-    //        ServerCommonUpdateTagsPacket updatePacket = createTagsPacket();
-    //        this.networkManager.connections().forEach(connection -> {
-    //            switch (connection.getState()) {
-    //                case CONFIGURATION -> connection.sendTags(updatePacket, false);
-    //                case PLAY -> connection.sendPacket(updatePacket);
-    //                default -> { /* no-op */ }
-    //            }
-    //        });
-    //    } finally {
-    //        this.tagsLock.writeLock().unlock();
-    //    }
-    //}
+    // public void updateTags(Map<RegistryReference<?>, Multimap<Key, Key>> tags) {
+    //     Objects.requireNonNull(tags, "tags");
+    //
+    //     try {
+    //         this.tagsLock.writeLock().lock();
+    //         tags.forEach((reference, tagToKeysMap) -> registry(reference).updateTags(tagToKeysMap));
+    //
+    //         ServerCommonUpdateTagsPacket updatePacket = createTagsPacket();
+    //         this.networkManager.connections().forEach(connection -> {
+    //             switch (connection.getState()) {
+    //                 case CONFIGURATION -> connection.sendTags(updatePacket, false);
+    //                 case PLAY -> connection.sendPacket(updatePacket);
+    //                 default -> { /* no-op */ }
+    //             }
+    //         });
+    //     } finally {
+    //         this.tagsLock.writeLock().unlock();
+    //     }
+    // }
 
     public Collection<MinecraftRegistryImpl<?>> registries() {
         return this.registries.values();
     }
 
-    //public void initializeTags(PlayerConnectionImpl connection) {
-    //    try {
-    //        this.tagsLock.readLock().lock();
-    //        connection.sendTags(createTagsPacket(), true);
-    //    } finally {
-    //        this.tagsLock.readLock().unlock();
-    //    }
-    //}
+    // public void initializeTags(PlayerConnectionImpl connection) {
+    //     try {
+    //         this.tagsLock.readLock().lock();
+    //         connection.sendTags(createTagsPacket(), true);
+    //     } finally {
+    //         this.tagsLock.readLock().unlock();
+    //     }
+    // }
 
-    //private ServerCommonUpdateTagsPacket createTagsPacket() {
-    //    List<ServerCommonUpdateTagsPacket.TagRegistry> tagRegistries = registries().stream()
-    //        .map(MinecraftRegistryImpl::createTagRegistry)
-    //        .toList();
-    //    return new ServerCommonUpdateTagsPacket(tagRegistries);
-    //}
+    // private ServerCommonUpdateTagsPacket createTagsPacket() {
+    //     List<ServerCommonUpdateTagsPacket.TagRegistry> tagRegistries = registries().stream()
+    //         .map(MinecraftRegistryImpl::createTagRegistry)
+    //         .toList();
+    //     return new ServerCommonUpdateTagsPacket(tagRegistries);
+    // }
 
     private static final class RegistryMapBuilder {
 
@@ -140,12 +140,13 @@ public final class RegistryManagerImpl implements RegistryManager {
         }
 
         private <V> RegistryMapBuilder dataDriven(
-                RegistryReference<V> reference,
+                RegistryEventProvider<V> provider,
                 Key registryKey,
                 String resourcePath,
                 Codec<V> valueCodec
         ) {
-            return put(reference, registryKey, resourcePath, valueCodec, Function.identity(), valueCodec);
+            Objects.requireNonNull(provider, "provider");
+            return putDataDriven(provider, registryKey, resourcePath, valueCodec);
         }
 
         private <D, V> RegistryMapBuilder builtIn(
@@ -155,42 +156,80 @@ public final class RegistryManagerImpl implements RegistryManager {
                 Codec<D> dataCodec,
                 Function<D, V> valueConverter
         ) {
-            return put(reference, registryKey, resourcePath, dataCodec, valueConverter, null);
+            Objects.requireNonNull(reference, "reference");
+            return putBuiltIn(reference, registryKey, resourcePath, dataCodec, valueConverter);
         }
 
-        private <D, V> RegistryMapBuilder put(
+        private <V> RegistryMapBuilder putDataDriven(
+                RegistryEventProvider<V> provider,
+                Key registryKey,
+                String resourcePath,
+                Codec<V> valueCodec
+        ) {
+            RegistryReference<V> reference = provider.reference();
+
+            if (this.registries.containsKey(reference)) {
+                throw new IllegalArgumentException(String.format(
+                        "Registry with reference %s has already been registered",
+                        reference
+                ));
+            }
+
+            DataUtil.LoadResult<V> result = DataUtil.loadEntries(
+                    resourcePath,
+                    valueCodec,
+                    Function.identity()
+            );
+
+            NetworkableRegistryBuilder<V> builder = new NetworkableRegistryBuilder<>(
+                    provider,
+                    result.registrations()
+            );
+
+            this.eventManager.fire(
+                    provider.compose(),
+                    new RegistryComposeEvent<>(reference, builder)
+            );
+
+            MinecraftRegistryImpl<V> registry = builder.build(
+                    registryKey,
+                    this.tagsLock,
+                    valueCodec,
+                    result.tags()
+            );
+
+            this.registries.put(reference, registry);
+            return this;
+        }
+
+
+        private <D, V> RegistryMapBuilder putBuiltIn(
                 RegistryReference<V> reference,
                 Key registryKey,
                 String resourcePath,
                 Codec<D> dataCodec,
-                Function<D, V> valueConverter,
-                @Nullable Codec<V> valueCodec
+                Function<D, V> valueConverter
         ) {
             if (this.registries.containsKey(reference)) {
                 throw new IllegalArgumentException(String.format(
-                    "Registry with reference %s has already been registered", reference
+                        "Registry with reference %s has already been registered",
+                        reference
                 ));
             }
 
-            DataUtil.LoadResult<V> result = DataUtil.loadEntries(resourcePath, dataCodec, valueConverter);
+            DataUtil.LoadResult<V> result = DataUtil.loadEntries(
+                    resourcePath,
+                    dataCodec,
+                    valueConverter
+            );
 
-            MinecraftRegistryImpl<V> registry;
-            if (valueCodec == null) {
-                registry = new MinecraftRegistryImpl<>(
-                        registryKey,
-                        null,
-                        List.copyOf(result.registrations()),
-                        result.tags(),
-                        this.tagsLock
-                );
-            } else {
-                NetworkableRegistryBuilder<V> builder = new NetworkableRegistryBuilder<>(result.registrations());
-                this.eventManager.fire(
-                        RegistryEvents.initialize(reference),
-                        new RegistryInitializeEvent<>(reference, builder)
-                );
-                registry = builder.build(registryKey, this.tagsLock, valueCodec, result.tags());
-            }
+            MinecraftRegistryImpl<V> registry = new MinecraftRegistryImpl<>(
+                    registryKey,
+                    null,
+                    List.copyOf(result.registrations()),
+                    result.tags(),
+                    this.tagsLock
+            );
 
             this.registries.put(reference, registry);
             return this;
@@ -200,13 +239,29 @@ public final class RegistryManagerImpl implements RegistryManager {
             return Map.copyOf(this.registries);
         }
 
-        private static final class NetworkableRegistryBuilder<V> implements RegistryAccess<V> {
+        private final class NetworkableRegistryBuilder<V> implements RegistryAccess<V> {
 
-            private final List<RegistrationInfo<V>> registrations;
+            private final RegistryEventProvider<V> provider;
+            private final Map<Key, EntryBuilder<V>> registrations = new LinkedHashMap<>();
             private boolean registryCreated;
 
-            private NetworkableRegistryBuilder(List<RegistrationInfo<V>> initialRegistrations) {
-                this.registrations = new ArrayList<>(initialRegistrations);
+            private NetworkableRegistryBuilder(
+                    RegistryEventProvider<V> provider,
+                    List<RegistrationInfo<V>> initialRegistrations
+            ) {
+                this.provider = Objects.requireNonNull(provider, "provider");
+                Objects.requireNonNull(initialRegistrations, "initial registrations");
+
+                for (RegistrationInfo<V> registration : initialRegistrations) {
+                    this.registrations.put(
+                            registration.key(),
+                            new EntryBuilder<>(
+                                    registration.key(),
+                                    registration.value(),
+                                    registration.pack()
+                            )
+                    );
+                }
             }
 
             @Override
@@ -218,7 +273,14 @@ public final class RegistryManagerImpl implements RegistryManager {
                     throw new IllegalStateException("The registry has already been created");
                 }
 
-                this.registrations.add(new RegistrationInfo<>(key, value, pack));
+                if (this.registrations.containsKey(key)) {
+                    throw new IllegalArgumentException(String.format(
+                            "Registry entry with key \"%s\" has already been registered",
+                            key
+                    ));
+                }
+
+                this.registrations.put(key, new EntryBuilder<>(key, value, pack));
             }
 
             private MinecraftRegistryImpl<V> build(
@@ -228,13 +290,72 @@ public final class RegistryManagerImpl implements RegistryManager {
                     Multimap<Key, Key> tags
             ) {
                 this.registryCreated = true;
+
+                for (EntryBuilder<V> registration : this.registrations.values()) {
+                    RegistryEntryAddEvent<V> event = new RegistryEntryAddEvent<>(
+                            this.provider.reference(),
+                            registration.key(),
+                            registration
+                    );
+
+                    RegistryMapBuilder.this.eventManager.fire(this.provider.entryAdd(), event);
+                    RegistryMapBuilder.this.eventManager.fire(this.provider.entryAdd(registration.key()), event);
+                }
+
+                List<RegistrationInfo<V>> finalRegistrations = this.registrations.values()
+                        .stream()
+                        .map(registration -> new RegistrationInfo<>(
+                                registration.key(),
+                                registration.value(),
+                                registration.pack()
+                        ))
+                        .toList();
+
                 return new MinecraftRegistryImpl<>(
                         registryKey,
                         valueCodec,
-                        List.copyOf(this.registrations),
+                        finalRegistrations,
                         tags,
                         tagsLock
                 );
+            }
+        }
+
+        private static final class EntryBuilder<V> implements RegistryEntryAddEvent.Builder<V> {
+
+            private final Key key;
+            private V value;
+            private @Nullable KnownPack pack;
+
+            private EntryBuilder(Key key, V value, @Nullable KnownPack pack) {
+                this.key = Objects.requireNonNull(key, "key");
+                this.value = Objects.requireNonNull(value, "value");
+                this.pack = pack;
+            }
+
+            @Override
+            public Key key() {
+                return this.key;
+            }
+
+            @Override
+            public V value() {
+                return this.value;
+            }
+
+            @Override
+            public @Nullable KnownPack pack() {
+                return this.pack;
+            }
+
+            @Override
+            public void value(V value) {
+                this.value = Objects.requireNonNull(value, "value");
+            }
+
+            @Override
+            public void pack(@Nullable KnownPack pack) {
+                this.pack = pack;
             }
         }
     }

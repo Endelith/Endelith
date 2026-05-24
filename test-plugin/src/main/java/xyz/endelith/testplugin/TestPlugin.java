@@ -5,7 +5,6 @@ import xyz.endelith.entity.variant.cat.CatVariant;
 import xyz.endelith.plugin.Plugin;
 import xyz.endelith.plugin.bootstrap.BootstrapContext;
 import xyz.endelith.registry.event.RegistryEvents;
-import xyz.endelith.registry.reference.RegistryReference;
 
 public final class TestPlugin extends Plugin {
 
@@ -14,17 +13,24 @@ public final class TestPlugin extends Plugin {
         logger().info("Welcome! The plugin is currently in the bootstrap step.");
         logger().info("You can register commands and modify registries here!");
 
+        context.eventManager().listen(RegistryEvents.CAT_VARIANT.compose(), event -> {
+            event.register(
+                    Key.key("endelith", "ash_gray"),
+                    new CatVariant(
+                            Key.key("endelith", "textures/entity/cat/ash_gray"),
+                            Key.key("endelith", "textures/entity/cat/ash_gray_baby")
+                    ),
+                    null
+            );
+        });
+
         context.eventManager().listen(
-                RegistryEvents.initialize(RegistryReference.CAT_VARIANT),
+                RegistryEvents.CAT_VARIANT.entryAdd(Key.key("minecraft", "tabby")),
                 event -> {
-                    event.register(
-                            Key.key("endelith", "ash_gray"),
-                            new CatVariant(
-                                Key.key("endelith", "textures/entity/cat/ash_gray"),
-                                Key.key("endelith", "textures/entity/cat/ash_gray_baby")
-                            ),
-                            null
-                    );
+                    event.builder().value(new CatVariant(
+                            Key.key("endelith", "textures/entity/cat/custom_tabby"),
+                            Key.key("endelith", "textures/entity/cat/custom_tabby_baby")
+                    ));
                 }
         );
 
