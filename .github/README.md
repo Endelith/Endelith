@@ -1,11 +1,10 @@
 # Endelith
 
-Join our community on [Discord](https://discord.gg/Fda2G2pcCc).
-
 > [!WARNING]
 > Endelith is still under development and it is not recommended to use it by normal servers yet.
 
 Endelith is a server written from scratch, fully customizable, and provides a plugin API.
+Join our community on [Discord](https://discord.gg/Fda2G2pcCc).
 
 # Why Endelith?
 
