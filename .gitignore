@@ -35,6 +35,6 @@ bin/
 
 ### Endelith ###
 .command_history
-server.toml
+server.yml
 plugins
 logs

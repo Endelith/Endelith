@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import xyz.endelith.MinecraftServer;
 import xyz.endelith.plugin.Plugin;
 import xyz.endelith.plugin.bootstrap.BootstrapContext;
+import xyz.endelith.server.configuration.ServerConfigurationImpl;
 import xyz.endelith.server.event.EventManagerImpl;
 import xyz.endelith.server.plugin.PluginManagerImpl;
 
@@ -21,6 +22,8 @@ public final class MinecraftServerImpl implements MinecraftServer {
 
     private final EventManagerImpl<Plugin> pluginEventManager = new EventManagerImpl<>();
     private final EventManagerImpl<BootstrapContext> bootstrapEventManager = new EventManagerImpl<>();
+
+    private final ServerConfigurationImpl configuration = ServerConfigurationImpl.create();
 
     private final PluginManagerImpl pluginManager;
 
@@ -60,12 +63,9 @@ public final class MinecraftServerImpl implements MinecraftServer {
         return this.pluginManager;
     }
 
-    public EventManagerImpl<Plugin> pluginEventManager() {
-        return this.pluginEventManager;
-    }
-
-    public EventManagerImpl<BootstrapContext> bootstrapEventManager() {
-        return this.bootstrapEventManager;
+    @Override
+    public ServerConfigurationImpl configuration() {
+        return this.configuration;
     }
 
     @Override
@@ -75,6 +75,14 @@ public final class MinecraftServerImpl implements MinecraftServer {
         } catch (IllegalThreadStateException e) {
             // The shutdown has already been scheduled
         }
+    }
+
+    public EventManagerImpl<Plugin> pluginEventManager() {
+        return this.pluginEventManager;
+    }
+
+    public EventManagerImpl<BootstrapContext> bootstrapEventManager() {
+        return this.bootstrapEventManager;
     }
 
     private Thread createShutdownThread() {
