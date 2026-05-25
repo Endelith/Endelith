@@ -7,7 +7,9 @@ import xyz.endelith.event.server.ServerListPingEvent;
 import xyz.endelith.server.MinecraftServerImpl;
 import xyz.endelith.server.configuration.ServerConfigurationImpl;
 import xyz.endelith.server.network.PlayerConnectionImpl;
+import xyz.endelith.server.network.packet.client.status.ClientStatusPingRequestPacket;
 import xyz.endelith.server.network.packet.client.status.ClientStatusRequestPacket;
+import xyz.endelith.server.network.packet.server.status.ServerStatusPongResponsePacket;
 import xyz.endelith.server.network.packet.server.status.ServerStatusResponsePacket;
 import xyz.endelith.util.ping.ServerListPing;
 
@@ -15,6 +17,10 @@ public final class StatusPacketHandler extends PacketHandler {
 
     public StatusPacketHandler(PlayerConnectionImpl connection) {
         super(connection);
+    }
+
+    public void handle(ClientStatusPingRequestPacket packet) {
+        this.connection.sendPacket(new ServerStatusPongResponsePacket(packet.timestamp()));
     }
 
     public void handle(ClientStatusRequestPacket packet) {
