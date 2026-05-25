@@ -18,14 +18,15 @@ public final class PlayerConnectionImpl implements PlayerConnection, Thread.Unca
 
     private ConnectionState state = ConnectionState.HANDSHAKE;
 
-    private final StatusPacketHandler statusPacketHandler = new StatusPacketHandler(this);
-
     private final Channel channel;
     private final MinecraftServerImpl server;
+
+    private final StatusPacketHandler statusPacketHandler;
 
     public PlayerConnectionImpl(SocketChannel channel, MinecraftServerImpl server) {
         this.channel = Objects.requireNonNull(channel, "channel");
         this.server = Objects.requireNonNull(server, "server");
+        this.statusPacketHandler = new StatusPacketHandler(this);
     }
 
     @Override
