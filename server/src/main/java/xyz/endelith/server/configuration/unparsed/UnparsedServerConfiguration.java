@@ -6,6 +6,8 @@ import org.spongepowered.configurate.ConfigurateException;
 import org.spongepowered.configurate.objectmapping.ConfigSerializable;
 import org.spongepowered.configurate.objectmapping.meta.Comment;
 import org.spongepowered.configurate.yaml.YamlConfigurationLoader;
+import xyz.endelith.server.configuration.ConfigurationPlaceholder;
+import xyz.endelith.server.network.netty.transport.NettyTransportSelector;
 
 @ConfigSerializable
 public final class UnparsedServerConfiguration {
@@ -20,10 +22,27 @@ public final class UnparsedServerConfiguration {
     private int port = 25565;
 
     @Comment("""
+        Specifies the Netty transport implementation to be used.
+        AUTO   - Automatically selects the optimal transport for the current platform.
+        NIO    - Java NIO-based transport (portable fallback).
+        EPOLL  - Linux native epoll transport (lower latency).
+        KQUEUE - macOS native kqueue transport.""")
+    private NettyTransportSelector selector = NettyTransportSelector.AUTO;
+
+    @Comment("""
             The maximum number of players that may be reported as online.
             By default, this value is primarily used for server list ping responses.
             Plugins may additionally use this value to enforce hard player limits.""")
     private int maximumPlayers = 100;
+
+    @Comment("Controls whether players joining via server transfer are permitted.")
+    private boolean transfersAllowed = false;
+
+    @Comment("The disconnect message shown when a player attempts to join via transfer while transfers are disabled.")
+    private String transfersNotAllowedMessage = "<red>Transfers are not allowed on this server!</red>";
+
+    @Comment("A message used during disconnection when a player is trying to join with an unsupported version.")
+    private String unsupportedVersionMessage = createDefaultUnsupportedVersionMessage();
 
     @Comment("The description displayed in the Minecraft server list.")
     private String serverListDescription = "<dark_green>An Endelith server</dark_green>";
@@ -40,8 +59,24 @@ public final class UnparsedServerConfiguration {
         return this.maximumPlayers;
     }
 
+    public boolean transfersAllowed() {
+        return this.transfersAllowed;
+    }
+
+    public String unsupportedVersionMessage() {
+        return this.unsupportedVersionMessage;
+    }
+
+    public String transfersNotAllowedMessage() {
+        return this.transfersNotAllowedMessage;
+    }
+
     public String serverListDescription() {
         return this.serverListDescription;
+    }
+
+    public NettyTransportSelector selector() {
+        return this.selector;
     }
 
     public static UnparsedServerConfiguration create() {
@@ -59,5 +94,12 @@ public final class UnparsedServerConfiguration {
         } catch (ConfigurateException ex) {
             throw new IllegalStateException("Failed to load server configuration", ex);
         }
+    }
+
+    private static String createDefaultUnsupportedVersionMessage() {
+        return String.format(
+            "<dark_red><bold>Unsupported version! Please use <%s>.</bold></dark_red>",
+            ConfigurationPlaceholder.MINECRAFT_VERSION_NAME.placeholderName()
+        );
     }
 }

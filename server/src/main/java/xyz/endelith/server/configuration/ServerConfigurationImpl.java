@@ -6,17 +6,25 @@ import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import xyz.endelith.configuration.ServerConfiguration;
 import xyz.endelith.server.configuration.unparsed.UnparsedServerConfiguration;
+import xyz.endelith.server.network.netty.transport.NettyTransportSelector;
 
 public record ServerConfigurationImpl(
         String address,
         int port,
         int maximumPlayers,
-        Component serverListDescription
+        boolean transfersAllowed,
+        Component transfersNotAllowedMessage,
+        Component unsupportedVersionMessage,
+        Component serverListDescription,
+        NettyTransportSelector selector
 ) implements ServerConfiguration {
 
     public ServerConfigurationImpl {
         Objects.requireNonNull(address, "address");
+        Objects.requireNonNull(transfersNotAllowedMessage, "transfers not allowed message");
+        Objects.requireNonNull(unsupportedVersionMessage, "unsupported version message");
         Objects.requireNonNull(serverListDescription, "server list description");
+        Objects.requireNonNull(selector, "selector");
     }
 
     public static ServerConfigurationImpl create() {
@@ -26,7 +34,11 @@ public record ServerConfigurationImpl(
                 unparsed.address(),
                 unparsed.port(),
                 unparsed.maximumPlayers(),
-                deserialize(unparsed.serverListDescription(), tagResolvers)
+                unparsed.transfersAllowed(),
+                deserialize(unparsed.transfersNotAllowedMessage(), tagResolvers),
+                deserialize(unparsed.unsupportedVersionMessage(), tagResolvers),
+                deserialize(unparsed.serverListDescription(), tagResolvers),
+                unparsed.selector()
         );
     }
 
