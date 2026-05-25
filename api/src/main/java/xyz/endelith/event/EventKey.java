@@ -16,16 +16,22 @@ public record EventKey<O extends EventOwner, E extends Event>(
         return new EventKey<>(type, null, true);
     }
 
-    public static <O extends EventOwner, E extends Event> EventKey<O, E> unordered(Class<E> type) {
-        return new EventKey<>(type, null, false);
-    }
-
-    public static <O extends EventOwner, E extends Event> EventKey<O, E> ordered(Class<E> type, Object discriminator) {
+    public static <O extends EventOwner, E extends Event> EventKey<O, E> ordered(
+            Class<E> type,
+            Object discriminator
+    ) {
         Objects.requireNonNull(discriminator, "discriminator");
         return new EventKey<>(type, discriminator, true);
     }
 
-    public static <O extends EventOwner, E extends Event> EventKey<O, E> unordered(Class<E> type, Object discriminator) {
+    public static <O extends EventOwner, E extends Event> EventKey<O, E> unordered(Class<E> type) {
+        return new EventKey<>(type, null, false);
+    }
+
+    public static <O extends EventOwner, E extends Event> EventKey<O, E> unordered(
+            Class<E> type,
+            Object discriminator
+    ) {
         Objects.requireNonNull(discriminator, "discriminator");
         return new EventKey<>(type, discriminator, false);
     }
