@@ -1,6 +1,5 @@
 package xyz.endelith.server.network.netty.transport;
 
-import java.util.function.Supplier;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.epoll.Epoll;
 import io.netty.channel.epoll.EpollServerSocketChannel;
@@ -8,6 +7,8 @@ import io.netty.channel.kqueue.KQueue;
 import io.netty.channel.kqueue.KQueueServerSocketChannel;
 import io.netty.channel.socket.ServerSocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import java.util.Objects;
+import java.util.function.Supplier;
 
 public enum NettyTransportType {
     NIO(NettyTransportFactory::nio, NioServerSocketChannel.class, true),
@@ -24,13 +25,13 @@ public enum NettyTransportType {
             Class<? extends ServerSocketChannel> socketChannel,
             boolean available
     ) {
-        this.eventLoopSupplier = eventLoopSupplier;
-        this.socketChannel = socketChannel;
+        this.eventLoopSupplier = Objects.requireNonNull(eventLoopSupplier, "event loop supplier");
+        this.socketChannel = Objects.requireNonNull(socketChannel, "socket channel");
         this.available = available;
     }
 
     public EventLoopGroup createEventLoop() {
-        return eventLoopSupplier.get();
+        return this.eventLoopSupplier.get();
     }
 
     public Class<? extends ServerSocketChannel> socketChannelClass() {

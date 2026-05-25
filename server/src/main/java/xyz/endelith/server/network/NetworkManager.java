@@ -71,7 +71,7 @@ public final class NetworkManager extends ChannelInitializer<SocketChannel> {
             throw new IllegalStateException("The network manager has already been started");
         }
 
-        ServerConfigurationImpl configuration = server.configuration();
+        ServerConfigurationImpl configuration = this.server.configuration();
         String address = configuration.address();
         int port = configuration.port();
 
