@@ -9,6 +9,8 @@ import org.slf4j.LoggerFactory;
 import xyz.endelith.network.PlayerConnection;
 import xyz.endelith.server.MinecraftServerImpl;
 import xyz.endelith.server.network.exception.NetworkException;
+import xyz.endelith.server.network.handler.StatusPacketHandler;
+import xyz.endelith.server.network.packet.server.ServerPacket;
 
 public final class PlayerConnectionImpl implements PlayerConnection, Thread.UncaughtExceptionHandler {
 
@@ -19,9 +21,12 @@ public final class PlayerConnectionImpl implements PlayerConnection, Thread.Unca
     private final Channel channel;
     private final MinecraftServerImpl server;
 
+    private final StatusPacketHandler statusPacketHandler;
+
     public PlayerConnectionImpl(SocketChannel channel, MinecraftServerImpl server) {
         this.channel = Objects.requireNonNull(channel, "channel");
         this.server = Objects.requireNonNull(server, "server");
+        this.statusPacketHandler = new StatusPacketHandler(this);
     }
 
     @Override
@@ -44,6 +49,21 @@ public final class PlayerConnectionImpl implements PlayerConnection, Thread.Unca
 
         NetworkException networkException = new NetworkException(this, e);
         LOGGER.error("A network error occurred in thread {}", t.getName(), networkException);
+    }
+
+    public void sendPacket(ServerPacket packet) {
+        try {
+            if (!this.channel.isActive()) {
+                return;
+            }
+            this.channel.writeAndFlush(packet);
+        } catch (Throwable t) {
+            uncaughtException(Thread.currentThread(), t);
+        }
+    }
+
+    public StatusPacketHandler statusPacketHandler() {
+        return this.statusPacketHandler;
     }
 
     public ConnectionState state() {

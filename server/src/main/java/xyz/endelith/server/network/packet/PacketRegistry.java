@@ -7,7 +7,13 @@ import org.slf4j.LoggerFactory;
 import xyz.endelith.cosine.stream.StreamCodec;
 import xyz.endelith.server.network.ConnectionState;
 import xyz.endelith.server.network.packet.client.handshake.ClientHandshakeIntentionPacket;
+import xyz.endelith.server.network.packet.client.status.ClientStatusPingRequestPacket;
+import xyz.endelith.server.network.packet.client.status.ClientStatusRequestPacket;
 import xyz.endelith.server.network.packet.identifier.ClientHandshakePacketIdentifier;
+import xyz.endelith.server.network.packet.identifier.ClientStatusPacketIdentifier;
+import xyz.endelith.server.network.packet.identifier.ServerStatusPacketIdentifier;
+import xyz.endelith.server.network.packet.server.status.ServerStatusPongResponsePacket;
+import xyz.endelith.server.network.packet.server.status.ServerStatusResponsePacket;
 
 public final class PacketRegistry {
 
@@ -22,6 +28,27 @@ public final class PacketRegistry {
                     ClientHandshakePacketIdentifier.INTENTION,
                     ClientHandshakeIntentionPacket.class,
                     ClientHandshakeIntentionPacket.STREAM_CODEC
+                )
+            .state(ConnectionState.STATUS)
+                .serverbound(
+                    ClientStatusPacketIdentifier.STATUS_REQUEST,
+                    ClientStatusRequestPacket.class,
+                    ClientStatusRequestPacket.STREAM_CODEC
+                )
+                .serverbound(
+                    ClientStatusPacketIdentifier.PING_REQUEST,
+                    ClientStatusPingRequestPacket.class,
+                    ClientStatusPingRequestPacket.STREAM_CODEC
+                )
+                .clientbound(
+                    ServerStatusPacketIdentifier.STATUS_RESPONSE,
+                    ServerStatusResponsePacket.class,
+                    ServerStatusResponsePacket.STREAM_CODEC
+                )
+                .clientbound(
+                    ServerStatusPacketIdentifier.PONG_RESPONSE,
+                    ServerStatusPongResponsePacket.class,
+                    ServerStatusPongResponsePacket.STREAM_CODEC
                 )
             .build();
     }
