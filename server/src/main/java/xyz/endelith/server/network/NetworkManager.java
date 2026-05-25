@@ -6,14 +6,13 @@ import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.EventLoopGroup;
-import io.netty.channel.MultiThreadIoEventLoopGroup;
-import io.netty.channel.nio.NioIoHandler;
 import io.netty.channel.socket.SocketChannel;
-import io.netty.channel.socket.nio.NioServerSocketChannel;
 import java.util.Objects;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.endelith.server.MinecraftServerImpl;
+import xyz.endelith.server.configuration.ServerConfigurationImpl;
+import xyz.endelith.server.network.netty.transport.NettyTransportType;
 
 public final class NetworkManager extends ChannelInitializer<SocketChannel> {
 
@@ -40,12 +39,22 @@ public final class NetworkManager extends ChannelInitializer<SocketChannel> {
     public NetworkManager(MinecraftServerImpl server) {
         this.server = Objects.requireNonNull(server, "server");
 
-        this.bossGroup = new MultiThreadIoEventLoopGroup(NioIoHandler.newFactory());
-        this.workerGroup = new MultiThreadIoEventLoopGroup(NioIoHandler.newFactory());
+        NettyTransportType transport = server.configuration().selector().transportType();
+        if (!transport.isAvailable()) {
+            NettyTransportType oldTransport = transport;
+            transport = NettyTransportType.select();
+            LOGGER.warn(
+                    "The netty transport specified - {} - is not available, falling back to {}...",
+                    oldTransport, transport
+            );
+        }
+
+        this.bossGroup = transport.createEventLoop();
+        this.workerGroup = transport.createEventLoop();
 
         this.bootstrap = new ServerBootstrap()
             .group(this.bossGroup, this.workerGroup)
-            .channel(NioServerSocketChannel.class)
+            .channel(transport.socketChannelClass())
             .childOption(ChannelOption.TCP_NODELAY, true)
             .childOption(ChannelOption.SO_KEEPALIVE, true)
             .childHandler(this);
@@ -55,7 +64,6 @@ public final class NetworkManager extends ChannelInitializer<SocketChannel> {
     protected void initChannel(SocketChannel ch) {
         PlayerConnectionImpl connection = new PlayerConnectionImpl(ch, this.server);
         ChannelPipeline pipeline = ch.pipeline();
-
     }
 
     public void bind() {
@@ -63,9 +71,9 @@ public final class NetworkManager extends ChannelInitializer<SocketChannel> {
             throw new IllegalStateException("The network manager has already been started");
         }
 
-        // ServerConfiguration configuration = server.configuration();
-        String address = "localhost";
-        int port = 25565;
+        ServerConfigurationImpl configuration = server.configuration();
+        String address = configuration.address();
+        int port = configuration.port();
 
         this.channel = this.bootstrap.bind(address, port).awaitUninterruptibly().channel();
         LOGGER.info("Listening on {}", this.channel.localAddress());

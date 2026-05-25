@@ -6,6 +6,7 @@ import org.spongepowered.configurate.ConfigurateException;
 import org.spongepowered.configurate.objectmapping.ConfigSerializable;
 import org.spongepowered.configurate.objectmapping.meta.Comment;
 import org.spongepowered.configurate.yaml.YamlConfigurationLoader;
+import xyz.endelith.server.network.netty.transport.NettyTransportSelector;
 
 @ConfigSerializable
 public final class UnparsedServerConfiguration {
@@ -18,6 +19,14 @@ public final class UnparsedServerConfiguration {
 
     @Comment("The TCP port on which the server will accept incoming connections.")
     private int port = 25565;
+
+    @Comment("""
+        Specifies the Netty transport implementation to be used.
+        AUTO   - Automatically selects the optimal transport for the current platform.
+        NIO    - Java NIO-based transport (portable fallback).
+        EPOLL  - Linux native epoll transport (lower latency).
+        KQUEUE - macOS native kqueue transport.""")
+    private NettyTransportSelector selector = NettyTransportSelector.AUTO;
 
     @Comment("""
             The maximum number of players that may be reported as online.
@@ -42,6 +51,10 @@ public final class UnparsedServerConfiguration {
 
     public String serverListDescription() {
         return this.serverListDescription;
+    }
+
+    public NettyTransportSelector selector() {
+        return this.selector;
     }
 
     public static UnparsedServerConfiguration create() {

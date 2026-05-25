@@ -6,12 +6,14 @@ import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import xyz.endelith.configuration.ServerConfiguration;
 import xyz.endelith.server.configuration.unparsed.UnparsedServerConfiguration;
+import xyz.endelith.server.network.netty.transport.NettyTransportSelector;
 
 public record ServerConfigurationImpl(
         String address,
         int port,
         int maximumPlayers,
-        Component serverListDescription
+        Component serverListDescription,
+        NettyTransportSelector selector
 ) implements ServerConfiguration {
 
     public ServerConfigurationImpl {
@@ -26,7 +28,8 @@ public record ServerConfigurationImpl(
                 unparsed.address(),
                 unparsed.port(),
                 unparsed.maximumPlayers(),
-                deserialize(unparsed.serverListDescription(), tagResolvers)
+                deserialize(unparsed.serverListDescription(), tagResolvers),
+                unparsed.selector()
         );
     }
 
