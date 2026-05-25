@@ -7,6 +7,7 @@ import xyz.endelith.plugin.Plugin;
 import xyz.endelith.plugin.bootstrap.BootstrapContext;
 import xyz.endelith.server.configuration.ServerConfigurationImpl;
 import xyz.endelith.server.event.EventManagerImpl;
+import xyz.endelith.server.network.NetworkManager;
 import xyz.endelith.server.plugin.PluginManagerImpl;
 
 public final class MinecraftServerImpl implements MinecraftServer {
@@ -26,13 +27,16 @@ public final class MinecraftServerImpl implements MinecraftServer {
     private final ServerConfigurationImpl configuration = ServerConfigurationImpl.create();
 
     private final PluginManagerImpl pluginManager;
+    private final NetworkManager networkManager;
 
     public MinecraftServerImpl() {
         this.pluginManager = new PluginManagerImpl(this);
+        this.networkManager = new NetworkManager(this);
 
         try {
             Runtime.getRuntime().addShutdownHook(this.shutdownThread);
             this.pluginManager.enablePlugins();
+            this.networkManager.bind();
         } catch (Throwable t) {
             LOGGER.error("an error occurred while starting the server", t);
             shutdown();
