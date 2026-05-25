@@ -12,13 +12,19 @@ public record ServerConfigurationImpl(
         String address,
         int port,
         int maximumPlayers,
+        boolean transfersAllowed,
+        Component transfersNotAllowedMessage,
+        Component unsupportedVersionMessage,
         Component serverListDescription,
         NettyTransportSelector selector
 ) implements ServerConfiguration {
 
     public ServerConfigurationImpl {
         Objects.requireNonNull(address, "address");
+        Objects.requireNonNull(transfersNotAllowedMessage, "transfers not allowed message");
+        Objects.requireNonNull(unsupportedVersionMessage, "unsupported version message");
         Objects.requireNonNull(serverListDescription, "server list description");
+        Objects.requireNonNull(selector, "selector");
     }
 
     public static ServerConfigurationImpl create() {
@@ -28,6 +34,9 @@ public record ServerConfigurationImpl(
                 unparsed.address(),
                 unparsed.port(),
                 unparsed.maximumPlayers(),
+                unparsed.transfersAllowed(),
+                deserialize(unparsed.transfersNotAllowedMessage(), tagResolvers),
+                deserialize(unparsed.unsupportedVersionMessage(), tagResolvers),
                 deserialize(unparsed.serverListDescription(), tagResolvers),
                 unparsed.selector()
         );

@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.endelith.cosine.stream.StreamCodec;
 import xyz.endelith.server.network.ConnectionState;
+import xyz.endelith.server.network.packet.client.handshake.ClientHandshakeIntentionPacket;
+import xyz.endelith.server.network.packet.identifier.ClientHandshakePacketIdentifier;
 
 public final class PacketRegistry {
 
@@ -16,11 +18,11 @@ public final class PacketRegistry {
     public PacketRegistry() {
         this.entries = new PacketMapBuilder()
             .state(ConnectionState.HANDSHAKE)
-            // .serverbound(
-            //     0x00,
-            //     ClientHandshakeIntentionPacket.class,
-            //     ClientHandshakeIntentionPacket.STREAM_CODEC
-            // )
+                .serverbound(
+                    ClientHandshakePacketIdentifier.INTENTION,
+                    ClientHandshakeIntentionPacket.class,
+                    ClientHandshakeIntentionPacket.STREAM_CODEC
+                )
             .build();
     }
 

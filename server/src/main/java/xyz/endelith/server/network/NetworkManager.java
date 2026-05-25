@@ -7,12 +7,21 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
+import java.util.Collections;
 import java.util.Objects;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.endelith.server.MinecraftServerImpl;
 import xyz.endelith.server.configuration.ServerConfigurationImpl;
+import xyz.endelith.server.network.netty.decoder.PacketDecoder;
+import xyz.endelith.server.network.netty.decoder.PacketLenghtDecoder;
+import xyz.endelith.server.network.netty.encoder.PacketEncoder;
+import xyz.endelith.server.network.netty.encoder.PacketLenghtEncoder;
+import xyz.endelith.server.network.netty.handler.PacketHandler;
 import xyz.endelith.server.network.netty.transport.NettyTransportType;
+import xyz.endelith.server.network.packet.PacketRegistry;
 
 public final class NetworkManager extends ChannelInitializer<SocketChannel> {
 
@@ -27,6 +36,9 @@ public final class NetworkManager extends ChannelInitializer<SocketChannel> {
     public static final String CIPHER_ENCODER = "cipher-encoder";
     public static final String COMPRESSOR_ENCODER = "compressor-encoder";
     public static final String LENGTH_ENCODER = "length-encoder";
+
+    private final Set<PlayerConnectionImpl> connections = Collections.newSetFromMap(new ConcurrentHashMap<>());
+    private final PacketRegistry registry = new PacketRegistry();
 
     private final MinecraftServerImpl server;
     private final ServerBootstrap bootstrap;
@@ -61,9 +73,19 @@ public final class NetworkManager extends ChannelInitializer<SocketChannel> {
     }
 
     @Override
-    protected void initChannel(SocketChannel ch) {
+    protected void initChannel(SocketChannel ch) throws Exception {
         PlayerConnectionImpl connection = new PlayerConnectionImpl(ch, this.server);
+        this.connections.add(connection);
+        ch.closeFuture().addListener(_ -> this.connections.remove(connection));
+
         ChannelPipeline pipeline = ch.pipeline();
+
+        pipeline.addFirst(PACKET_ENCODER, new PacketEncoder(connection, this.registry));
+        pipeline.addBefore(PACKET_ENCODER, LENGTH_ENCODER, new PacketLenghtEncoder(connection));
+
+        pipeline.addFirst(LENGTH_DECODER, new PacketLenghtDecoder(connection));
+        pipeline.addAfter(LENGTH_DECODER, PACKET_DECODER, new PacketDecoder(connection, this.registry));
+        pipeline.addAfter(PACKET_DECODER, PACKET_HANDLER, new PacketHandler(connection));
     }
 
     public void bind() {
@@ -87,5 +109,9 @@ public final class NetworkManager extends ChannelInitializer<SocketChannel> {
         this.bossGroup.shutdownGracefully();
         this.workerGroup.shutdownGracefully();
         this.channel = null;
+    }
+
+    public Set<PlayerConnectionImpl> connections() {
+        return this.connections;
     }
 }
