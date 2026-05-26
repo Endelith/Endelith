@@ -35,6 +35,7 @@ public final class BlockStateRegistryImpl implements BlockStateRegistry {
     );
 
     private static final StructCodec<BlockData> BLOCK_CODEC = StructCodec.of(
+            "required_feature_flags", Codec.KEY.list(), BlockData::requiredFeatureFlags,
             "default_state", Codec.INT, BlockData::defaultState,
             "states", Codec.INT.list(), BlockData::states,
             BlockData::new
@@ -193,8 +194,9 @@ public final class BlockStateRegistryImpl implements BlockStateRegistry {
         }
     }
 
-    private record BlockData(int defaultState, List<Integer> states) {
+    private record BlockData(List<Key> requiredFeatureFlags, int defaultState, List<Integer> states) {
         private BlockData {
+            requiredFeatureFlags = List.copyOf(Objects.requireNonNull(requiredFeatureFlags, "required feature flags"));
             states = List.copyOf(Objects.requireNonNull(states, "states"));
         }
     }
