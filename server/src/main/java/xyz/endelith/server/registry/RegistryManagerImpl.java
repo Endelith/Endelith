@@ -41,28 +41,27 @@ public final class RegistryManagerImpl implements RegistryManager {
         Objects.requireNonNull(eventManager, "event manager");
         this.networkManager = networkManager;
 
-
         this.registries = new RegistryMapBuilder(eventManager, this.tagsLock)
-            .dataDriven(
-                    RegistryEvents.CAT_VARIANT,
-                    Key.key("cat_variant"),
-                    "registries/cat_variants.json",
-                    CatVariantCodec.CODEC
-            )
-            .dataDriven(
-                    RegistryEvents.BANNER_PATTERN,
-                    Key.key("banner_pattern"),
-                    "registries/banner_patterns.json",
-                    BannerPatternCodec.CODEC
-            )
-            .builtIn(
-                    RegistryReference.SOUND_EVENT,
-                    Key.key("sound_event"),
-                    "registries/sound_events.json",
-                    SoundEventCodec.CODEC,
-                    Functions.identity()
-            )
-            .build();
+                .dataDriven(
+                        RegistryEvents.CAT_VARIANT,
+                        Key.key("cat_variant"),
+                        "registries/cat_variants.json",
+                        CatVariantCodec.CODEC
+                )
+                .dataDriven(
+                        RegistryEvents.BANNER_PATTERN,
+                        Key.key("banner_pattern"),
+                        "registries/banner_patterns.json",
+                        BannerPatternCodec.CODEC
+                )
+                .builtIn(
+                        RegistryReference.SOUND_EVENT,
+                        Key.key("sound_event"),
+                        "registries/sound_events.json",
+                        SoundEventCodec.CODEC,
+                        Functions.identity()
+                )
+                .build();
     }
 
     @Override
@@ -203,7 +202,6 @@ public final class RegistryManagerImpl implements RegistryManager {
             return this;
         }
 
-
         private <D, V> RegistryMapBuilder putBuiltIn(
                 RegistryReference<V> reference,
                 Key registryKey,
@@ -296,11 +294,15 @@ public final class RegistryManagerImpl implements RegistryManager {
                     RegistryEntryAddEvent<V> event = new RegistryEntryAddEvent<>(
                             this.provider.reference(),
                             registration.key(),
-                            registration
+                            registration.value(),
+                            registration.pack()
                     );
 
                     RegistryMapBuilder.this.eventManager.fire(this.provider.entryAdd(), event);
                     RegistryMapBuilder.this.eventManager.fire(this.provider.entryAdd(registration.key()), event);
+
+                    registration.setValue(event.value());
+                    registration.setPack(event.pack());
                 }
 
                 List<RegistrationInfo<V>> finalRegistrations = this.registrations.values()
@@ -322,7 +324,7 @@ public final class RegistryManagerImpl implements RegistryManager {
             }
         }
 
-        private static final class EntryBuilder<V> implements RegistryEntryAddEvent.Entry<V> {
+        private static final class EntryBuilder<V> {
 
             private final Key key;
             private V value;
@@ -334,28 +336,23 @@ public final class RegistryManagerImpl implements RegistryManager {
                 this.pack = pack;
             }
 
-            @Override
-            public Key key() {
+            private Key key() {
                 return this.key;
             }
 
-            @Override
-            public V value() {
+            private V value() {
                 return this.value;
             }
 
-            @Override
-            public @Nullable KnownPack pack() {
-                return this.pack;
-            }
-
-            @Override
-            public void setValue(V value) {
+            private void setValue(V value) {
                 this.value = Objects.requireNonNull(value, "value");
             }
 
-            @Override
-            public void setPack(@Nullable KnownPack pack) {
+            private @Nullable KnownPack pack() {
+                return this.pack;
+            }
+
+            private void setPack(@Nullable KnownPack pack) {
                 this.pack = pack;
             }
         }

@@ -7,28 +7,57 @@ import xyz.endelith.event.Event;
 import xyz.endelith.registry.feature.KnownPack;
 import xyz.endelith.registry.reference.RegistryReference;
 
-public record RegistryEntryAddEvent<V>(
-        RegistryReference<V> reference,
-        Key key,
-        Entry<V> entry
-) implements Event {
+public final class RegistryEntryAddEvent<V> implements Event {
 
-    public RegistryEntryAddEvent {
-        Objects.requireNonNull(reference, "reference");
-        Objects.requireNonNull(key, "key");
-        Objects.requireNonNull(entry, "entry");
+    private final RegistryReference<V> reference;
+    private final Key key;
+
+    private V value;
+    private @Nullable KnownPack pack;
+
+    public RegistryEntryAddEvent(
+            RegistryReference<V> reference,
+            Key key,
+            V value,
+            @Nullable KnownPack pack
+    ) {
+        this.reference = Objects.requireNonNull(reference, "reference");
+        this.key = Objects.requireNonNull(key, "key");
+        this.value = Objects.requireNonNull(value, "value");
+        this.pack = pack;
     }
 
-    public interface Entry<V> {
+    public RegistryReference<V> reference() {
+        return this.reference;
+    }
 
-        Key key();
+    public Key key() {
+        return this.key;
+    }
 
-        V value();
+    public V value() {
+        return this.value;
+    }
 
-        @Nullable KnownPack pack();
+    public void setValue(V value) {
+        this.value = Objects.requireNonNull(value, "value");
+    }
 
-        void setValue(V value);
+    public @Nullable KnownPack pack() {
+        return this.pack;
+    }
 
-        void setPack(@Nullable KnownPack pack);
+    public void setPack(@Nullable KnownPack pack) {
+        this.pack = pack;
+    }
+
+    @Override
+    public String toString() {
+        return "RegistryEntryAddEvent["
+                + "reference=" + this.reference
+                + ", key=" + this.key
+                + ", value=" + this.value
+                + ", pack=" + this.pack
+                + "]";
     }
 }

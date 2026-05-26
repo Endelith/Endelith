@@ -27,12 +27,12 @@ public final class TestPlugin extends Plugin {
         context.eventManager().listen(
                 RegistryEvents.CAT_VARIANT.entryAdd(Key.key("minecraft", "tabby")),
                 event -> {
-                    CatVariant variant = event.entry().value()
+                    CatVariant variant = event.value()
                             .toBuilder()
                             .asset(Key.key("endelith", "textures/entity/cat/custom_tabby"))
                             .build();
 
-                    event.entry().setValue(variant);
+                    event.setValue(variant);
                 }
         );
     }
