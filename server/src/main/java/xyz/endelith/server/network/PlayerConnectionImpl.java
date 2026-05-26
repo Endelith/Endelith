@@ -9,8 +9,10 @@ import org.slf4j.LoggerFactory;
 import xyz.endelith.network.PlayerConnection;
 import xyz.endelith.server.MinecraftServerImpl;
 import xyz.endelith.server.network.exception.NetworkException;
+import xyz.endelith.server.network.handler.LoginPacketHandler;
 import xyz.endelith.server.network.handler.StatusPacketHandler;
 import xyz.endelith.server.network.packet.server.ServerPacket;
+import xyz.endelith.server.network.packet.server.login.ServerLoginDisconnectPacket;
 
 public final class PlayerConnectionImpl implements PlayerConnection, Thread.UncaughtExceptionHandler {
 
@@ -22,11 +24,13 @@ public final class PlayerConnectionImpl implements PlayerConnection, Thread.Unca
     private final MinecraftServerImpl server;
 
     private final StatusPacketHandler statusPacketHandler;
+    private final LoginPacketHandler loginPacketHandler;
 
     public PlayerConnectionImpl(SocketChannel channel, MinecraftServerImpl server) {
         this.channel = Objects.requireNonNull(channel, "channel");
         this.server = Objects.requireNonNull(server, "server");
         this.statusPacketHandler = new StatusPacketHandler(this);
+        this.loginPacketHandler = new LoginPacketHandler(this);
     }
 
     @Override
@@ -36,6 +40,10 @@ public final class PlayerConnectionImpl implements PlayerConnection, Thread.Unca
 
     @Override
     public void disconnect(Component reason) {
+        switch (this.state) {
+            case LOGIN -> sendPacket(new ServerLoginDisconnectPacket(reason));
+            default -> throw new IllegalStateException("Not implemented yet");
+        }
         this.channel.close();
     }
 
@@ -64,6 +72,10 @@ public final class PlayerConnectionImpl implements PlayerConnection, Thread.Unca
 
     public StatusPacketHandler statusPacketHandler() {
         return this.statusPacketHandler;
+    }
+
+    public LoginPacketHandler loginPacketHandler() {
+        return this.loginPacketHandler;
     }
 
     public ConnectionState state() {

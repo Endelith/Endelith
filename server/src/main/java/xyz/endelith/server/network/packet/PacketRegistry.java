@@ -11,7 +11,9 @@ import xyz.endelith.server.network.packet.client.status.ClientStatusPingRequestP
 import xyz.endelith.server.network.packet.client.status.ClientStatusRequestPacket;
 import xyz.endelith.server.network.packet.identifier.ClientHandshakePacketIdentifier;
 import xyz.endelith.server.network.packet.identifier.ClientStatusPacketIdentifier;
+import xyz.endelith.server.network.packet.identifier.ServerLoginPacketIdentifier;
 import xyz.endelith.server.network.packet.identifier.ServerStatusPacketIdentifier;
+import xyz.endelith.server.network.packet.server.login.ServerLoginDisconnectPacket;
 import xyz.endelith.server.network.packet.server.status.ServerStatusPongResponsePacket;
 import xyz.endelith.server.network.packet.server.status.ServerStatusResponsePacket;
 
@@ -49,6 +51,12 @@ public final class PacketRegistry {
                     ServerStatusPacketIdentifier.PONG_RESPONSE,
                     ServerStatusPongResponsePacket.class,
                     ServerStatusPongResponsePacket.STREAM_CODEC
+                )
+            .state(ConnectionState.LOGIN)
+                .clientbound(
+                    ServerLoginPacketIdentifier.LOGIN_DISCONNECT,
+                    ServerLoginDisconnectPacket.class,
+                    ServerLoginDisconnectPacket.STREAM_CODEC
                 )
             .build();
     }
