@@ -26,6 +26,7 @@ import xyz.endelith.registry.feature.KnownPack;
 import xyz.endelith.registry.reference.RegistryReference;
 import xyz.endelith.server.network.NetworkManager;
 import xyz.endelith.server.registry.MinecraftRegistryImpl.RegistrationInfo;
+import xyz.endelith.server.registry.blockstate.BlockStateRegistryImpl;
 import xyz.endelith.server.registry.codec.entity.variant.cat.CatVariantCodec;
 import xyz.endelith.server.registry.codec.world.block.banner.BannerPatternCodec;
 import xyz.endelith.server.registry.codec.world.sound.SoundEventCodec;
@@ -35,6 +36,8 @@ public final class RegistryManagerImpl implements RegistryManager {
 
     private final @Nullable NetworkManager networkManager;
     private final Map<RegistryReference<?>, MinecraftRegistryImpl<?>> registries;
+    private final BlockStateRegistryImpl blockStateRegistry;
+
     private final ReadWriteLock tagsLock = new ReentrantReadWriteLock();
 
     public RegistryManagerImpl(EventManager<BootstrapContext> eventManager, @Nullable NetworkManager networkManager) {
@@ -62,6 +65,8 @@ public final class RegistryManagerImpl implements RegistryManager {
                         Functions.identity()
                 )
                 .build();
+
+        this.blockStateRegistry = new BlockStateRegistryImpl();
     }
 
     @Override
@@ -74,6 +79,11 @@ public final class RegistryManagerImpl implements RegistryManager {
         }
 
         return (MinecraftRegistryImpl<V>) this.registries.get(reference);
+    }
+
+    @Override
+    public BlockStateRegistryImpl blockStateRegistry() {
+        return this.blockStateRegistry;
     }
 
     @Override
