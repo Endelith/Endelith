@@ -10,22 +10,23 @@ public record GameProfile(UUID uuid, String username, List<Property> properties)
     public GameProfile {
         Objects.requireNonNull(uuid, "uuid");
         Objects.requireNonNull(username, "username");
+        Objects.requireNonNull(properties, "properties");
 
         if (username.length() > 16) {
             throw new IllegalArgumentException(String.format(
-                "Username too long: %s",
-                username.length()
+                    "Username too long: %s",
+                    username.length()
             ));
         }
 
         if (properties.size() > 16) {
             throw new IllegalArgumentException(String.format(
-                "Too many properties: %s",
-                properties.size()
+                    "Too many properties: %s",
+                    properties.size()
             ));
         }
 
-        properties = List.copyOf(Objects.requireNonNull(properties, "properties"));
+        properties = List.copyOf(properties);
     }
 
     public GameProfile(UUID uuid, String username) {
@@ -40,22 +41,22 @@ public record GameProfile(UUID uuid, String username, List<Property> properties)
 
             if (name.length() > 64) {
                 throw new IllegalArgumentException(String.format(
-                    "Property name too long: %s",
-                    name.length()
+                        "Property name too long: %s",
+                        name.length()
                 ));
             }
 
             if (value.length() > 32767) {
                 throw new IllegalArgumentException(String.format(
-                    "Property value too long: %s",
-                    value.length()
+                        "Property value too long: %s",
+                        value.length()
                 ));
             }
 
             if (signature != null && signature.length() > 1024) {
                 throw new IllegalArgumentException(String.format(
-                    "Property signature too long: %s",
-                    signature.length()
+                        "Property signature too long: %s",
+                        signature.length()
                 ));
             }
         }

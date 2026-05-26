@@ -7,13 +7,17 @@ import org.slf4j.LoggerFactory;
 import xyz.endelith.cosine.stream.StreamCodec;
 import xyz.endelith.server.network.ConnectionState;
 import xyz.endelith.server.network.packet.client.handshake.ClientHandshakeIntentionPacket;
+import xyz.endelith.server.network.packet.client.login.ClientLoginAcknowledgedPacket;
+import xyz.endelith.server.network.packet.client.login.ClientLoginHelloPacket;
 import xyz.endelith.server.network.packet.client.status.ClientStatusPingRequestPacket;
 import xyz.endelith.server.network.packet.client.status.ClientStatusRequestPacket;
 import xyz.endelith.server.network.packet.identifier.ClientHandshakePacketIdentifier;
+import xyz.endelith.server.network.packet.identifier.ClientLoginPacketIdentifier;
 import xyz.endelith.server.network.packet.identifier.ClientStatusPacketIdentifier;
 import xyz.endelith.server.network.packet.identifier.ServerLoginPacketIdentifier;
 import xyz.endelith.server.network.packet.identifier.ServerStatusPacketIdentifier;
 import xyz.endelith.server.network.packet.server.login.ServerLoginDisconnectPacket;
+import xyz.endelith.server.network.packet.server.login.ServerLoginFinishedPacket;
 import xyz.endelith.server.network.packet.server.status.ServerStatusPongResponsePacket;
 import xyz.endelith.server.network.packet.server.status.ServerStatusResponsePacket;
 
@@ -53,10 +57,25 @@ public final class PacketRegistry {
                     ServerStatusPongResponsePacket.STREAM_CODEC
                 )
             .state(ConnectionState.LOGIN)
+                .serverbound(
+                    ClientLoginPacketIdentifier.HELLO,
+                    ClientLoginHelloPacket.class,
+                    ClientLoginHelloPacket.STREAM_CODEC
+                )
+                .serverbound(
+                    ClientLoginPacketIdentifier.LOGIN_ACKNOWLEDGED,
+                    ClientLoginAcknowledgedPacket.class,
+                    ClientLoginAcknowledgedPacket.STREAM_CODEC
+                )
                 .clientbound(
                     ServerLoginPacketIdentifier.LOGIN_DISCONNECT,
                     ServerLoginDisconnectPacket.class,
                     ServerLoginDisconnectPacket.STREAM_CODEC
+                )
+                .clientbound(
+                    ServerLoginPacketIdentifier.LOGIN_FINISHED,
+                    ServerLoginFinishedPacket.class,
+                    ServerLoginFinishedPacket.STREAM_CODEC
                 )
             .build();
     }
