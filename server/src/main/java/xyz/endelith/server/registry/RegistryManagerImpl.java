@@ -64,6 +64,13 @@ public final class RegistryManagerImpl implements RegistryManager {
                         SoundEventCodec.CODEC,
                         Functions.identity()
                 )
+                .builtIn(
+                        RegistryReference.BLOCK,
+                        Key.key("block"),
+                        "registries/blocks.json",
+                        BlockStateRegistryImpl.BLOCK_CODEC,
+                        Functions.identity()
+                )
                 .build();
 
         this.blockStateRegistry = new BlockStateRegistryImpl();

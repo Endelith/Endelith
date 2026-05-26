@@ -34,12 +34,20 @@ public final class BlockStateRegistryImpl implements BlockStateRegistry {
             BlockStateData::new
     );
 
-    private static final StructCodec<BlockData> BLOCK_CODEC = StructCodec.of(
+    private static final StructCodec<BlockData> BLOCK_DATA_CODEC = StructCodec.of(
             "required_feature_flags", Codec.KEY.list(), BlockData::requiredFeatureFlags,
             "default_state", Codec.INT, BlockData::defaultState,
             "states", Codec.INT.list(), BlockData::states,
             BlockData::new
     );
+
+    public static final Codec<BlockType> BLOCK_CODEC = BLOCK_DATA_CODEC.transform(data -> data, blockType -> {
+        if (blockType instanceof BlockData data) {
+            return data;
+        }
+
+        throw new IllegalArgumentException("The specified block type is not a registry block type");
+    });
 
     private final List<RegistryBlockState> blockStates;
     private final Map<RegistryBlockState, Integer> blockStateToIndex;
@@ -52,7 +60,7 @@ public final class BlockStateRegistryImpl implements BlockStateRegistry {
                 .loadEntries(BLOCK_STATES_RESOURCE, BLOCK_STATE_CODEC, data -> data)
                 .registrations();
         final List<RegistrationInfo<BlockData>> blockRegistrations = DataUtil
-                .loadEntries(BLOCKS_RESOURCE, BLOCK_CODEC, data -> data)
+                .loadEntries(BLOCKS_RESOURCE, BLOCK_DATA_CODEC, data -> data)
                 .registrations();
 
         List<RegistryBlockState> blockStates = new ArrayList<>();
@@ -194,7 +202,8 @@ public final class BlockStateRegistryImpl implements BlockStateRegistry {
         }
     }
 
-    private record BlockData(List<Key> requiredFeatureFlags, int defaultState, List<Integer> states) {
+    private record BlockData(List<Key> requiredFeatureFlags, int defaultState, List<Integer> states)
+            implements BlockType {
         private BlockData {
             requiredFeatureFlags = List.copyOf(Objects.requireNonNull(requiredFeatureFlags, "required feature flags"));
             states = List.copyOf(Objects.requireNonNull(states, "states"));

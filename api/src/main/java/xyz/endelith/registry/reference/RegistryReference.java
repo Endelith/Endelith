@@ -2,12 +2,15 @@ package xyz.endelith.registry.reference;
 
 import java.util.Objects;
 import xyz.endelith.entity.variant.cat.CatVariant;
+import xyz.endelith.world.block.BlockType;
 import xyz.endelith.world.block.banner.BannerPattern;
 import xyz.endelith.world.sound.SoundEvent;
 
 public final class RegistryReference<V> {
 
     public static final RegistryReference<BannerPattern> BANNER_PATTERN = create("banner_pattern");
+
+    public static final RegistryReference<BlockType> BLOCK = create("block");
 
     public static final RegistryReference<CatVariant> CAT_VARIANT = create("cat_variant");
 
