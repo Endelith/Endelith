@@ -32,6 +32,7 @@ import xyz.endelith.server.registry.codec.world.biome.BiomeCodec;
 import xyz.endelith.server.registry.codec.world.block.banner.BannerPatternCodec;
 import xyz.endelith.server.registry.codec.world.sound.SoundEventCodec;
 import xyz.endelith.server.util.data.DataUtil;
+import xyz.endelith.server.world.block.entity.BlockEntityTypeImpl;
 
 public final class RegistryManagerImpl implements RegistryManager {
 
@@ -78,6 +79,13 @@ public final class RegistryManagerImpl implements RegistryManager {
                         "registries/blocks.json",
                         BlockStateRegistryImpl.BLOCK_CODEC,
                         Functions.identity()
+                )
+                .builtIn(
+                        RegistryReference.BLOCK_ENTITY_TYPE,
+                        Key.key("block_entity_type"),
+                        "registries/block_entity_types.json",
+                        Codec.KEY.list(),
+                        BlockEntityTypeImpl::convert
                 )
                 .build();
 
