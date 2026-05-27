@@ -1,6 +1,7 @@
 package xyz.endelith.registry.reference;
 
 import java.util.Objects;
+import xyz.endelith.entity.variant.cat.CatSoundVariant;
 import xyz.endelith.entity.variant.cat.CatVariant;
 import xyz.endelith.world.biome.Biome;
 import xyz.endelith.world.block.BlockType;
@@ -17,6 +18,8 @@ public final class RegistryReference<V> {
     public static final RegistryReference<BlockEntityType> BLOCK_ENTITY_TYPE = create("block_entity_type");
 
     public static final RegistryReference<BlockType> BLOCK = create("block");
+
+    public static final RegistryReference<CatSoundVariant> CAT_SOUND_VARIANT = create("cat_sound_variant");
 
     public static final RegistryReference<CatVariant> CAT_VARIANT = create("cat_variant");
 

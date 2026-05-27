@@ -27,6 +27,7 @@ import xyz.endelith.registry.reference.RegistryReference;
 import xyz.endelith.server.network.NetworkManager;
 import xyz.endelith.server.registry.MinecraftRegistryImpl.RegistrationInfo;
 import xyz.endelith.server.registry.blockstate.BlockStateRegistryImpl;
+import xyz.endelith.server.registry.codec.entity.variant.cat.CatSoundVariantCodec;
 import xyz.endelith.server.registry.codec.entity.variant.cat.CatVariantCodec;
 import xyz.endelith.server.registry.codec.world.biome.BiomeCodec;
 import xyz.endelith.server.registry.codec.world.block.banner.BannerPatternCodec;
@@ -47,6 +48,12 @@ public final class RegistryManagerImpl implements RegistryManager {
         this.networkManager = networkManager;
 
         this.registries = new RegistryMapBuilder(eventManager, this.tagsLock)
+                .dataDriven(
+                        RegistryEvents.CAT_SOUND_VARIANT,
+                        Key.key("cat_sound_variant"),
+                        "registries/cat_sound_variants.json",
+                        CatSoundVariantCodec.CODEC
+                )
                 .dataDriven(
                         RegistryEvents.CAT_VARIANT,
                         Key.key("cat_variant"),
