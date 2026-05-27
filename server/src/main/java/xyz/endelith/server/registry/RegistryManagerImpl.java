@@ -28,6 +28,7 @@ import xyz.endelith.server.network.NetworkManager;
 import xyz.endelith.server.registry.MinecraftRegistryImpl.RegistrationInfo;
 import xyz.endelith.server.registry.blockstate.BlockStateRegistryImpl;
 import xyz.endelith.server.registry.codec.entity.variant.cat.CatVariantCodec;
+import xyz.endelith.server.registry.codec.world.biome.BiomeCodec;
 import xyz.endelith.server.registry.codec.world.block.banner.BannerPatternCodec;
 import xyz.endelith.server.registry.codec.world.sound.SoundEventCodec;
 import xyz.endelith.server.util.data.DataUtil;
@@ -62,6 +63,13 @@ public final class RegistryManagerImpl implements RegistryManager {
                         Key.key("sound_event"),
                         "registries/sound_events.json",
                         SoundEventCodec.CODEC,
+                        Functions.identity()
+                )
+                .builtIn(
+                        RegistryReference.BIOME,
+                        Key.key("biome"),
+                        "registries/biomes.json",
+                        BiomeCodec.CODEC,
                         Functions.identity()
                 )
                 .builtIn(
