@@ -92,12 +92,12 @@ public final class BlockStateRegistryImpl implements BlockStateRegistry {
             Key blockTypeKey = registration.key();
             BlockData data = registration.value();
 
-            RegistryBlockState defaultState = this.byIndex(data.defaultState());
+            RegistryBlockState defaultState = byIndex(data.defaultState());
             defaultStates.put(blockTypeKey, defaultState);
 
             Map<Map<String, String>, RegistryBlockState> statesByProperties = new HashMap<>();
             for (int stateIndex : data.states()) {
-                RegistryBlockState state = this.byIndex(stateIndex);
+                RegistryBlockState state = byIndex(stateIndex);
                 statesByProperties.put(state.properties(), state);
             }
 
