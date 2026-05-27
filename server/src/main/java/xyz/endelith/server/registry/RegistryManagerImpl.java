@@ -49,6 +49,18 @@ public final class RegistryManagerImpl implements RegistryManager {
 
         this.registries = new RegistryMapBuilder(eventManager, this.tagsLock)
                 .dataDriven(
+                        RegistryEvents.BANNER_PATTERN,
+                        Key.key("banner_pattern"),
+                        "registries/banner_patterns.json",
+                        BannerPatternCodec.CODEC
+                )
+                .dataDriven(
+                        RegistryEvents.BIOME,
+                        Key.key("biome"),
+                        "registries/biomes.json",
+                        BiomeCodec.CODEC
+                )
+                .dataDriven(
                         RegistryEvents.CAT_SOUND_VARIANT,
                         Key.key("cat_sound_variant"),
                         "registries/cat_sound_variants.json",
@@ -59,26 +71,6 @@ public final class RegistryManagerImpl implements RegistryManager {
                         Key.key("cat_variant"),
                         "registries/cat_variants.json",
                         CatVariantCodec.CODEC
-                )
-                .dataDriven(
-                        RegistryEvents.BANNER_PATTERN,
-                        Key.key("banner_pattern"),
-                        "registries/banner_patterns.json",
-                        BannerPatternCodec.CODEC
-                )
-                .builtIn(
-                        RegistryReference.SOUND_EVENT,
-                        Key.key("sound_event"),
-                        "registries/sound_events.json",
-                        SoundEventCodec.CODEC,
-                        Functions.identity()
-                )
-                .builtIn(
-                        RegistryReference.BIOME,
-                        Key.key("biome"),
-                        "registries/biomes.json",
-                        BiomeCodec.CODEC,
-                        Functions.identity()
                 )
                 .builtIn(
                         RegistryReference.BLOCK,
@@ -93,6 +85,13 @@ public final class RegistryManagerImpl implements RegistryManager {
                         "registries/block_entity_types.json",
                         Codec.KEY.list(),
                         BlockEntityTypeImpl::convert
+                )
+                .builtIn(
+                        RegistryReference.SOUND_EVENT,
+                        Key.key("sound_event"),
+                        "registries/sound_events.json",
+                        SoundEventCodec.CODEC,
+                        Functions.identity()
                 )
                 .build();
 
