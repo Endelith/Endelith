@@ -28,6 +28,7 @@ import xyz.endelith.server.network.NetworkManager;
 import xyz.endelith.server.registry.MinecraftRegistryImpl.RegistrationInfo;
 import xyz.endelith.server.registry.blockstate.BlockStateRegistryImpl;
 import xyz.endelith.server.registry.codec.chat.ChatTypeCodec;
+import xyz.endelith.server.registry.codec.entity.damage.DamageTypeCodec;
 import xyz.endelith.server.registry.codec.entity.variant.cat.CatSoundVariantCodec;
 import xyz.endelith.server.registry.codec.entity.variant.cat.CatVariantCodec;
 import xyz.endelith.server.registry.codec.entity.variant.chicken.ChickenSoundVariantCodec;
@@ -106,6 +107,12 @@ public final class RegistryManagerImpl implements RegistryManager {
                         Key.key("cow_variant"),
                         "registries/cow_variants.json",
                         CowVariantCodec.CODEC
+                )
+                .dataDriven(
+                        RegistryEvents.DAMAGE_TYPE,
+                        Key.key("damage_type"),
+                        "registries/damage_types.json",
+                        DamageTypeCodec.CODEC
                 )
                 .builtIn(
                         RegistryReference.BLOCK,

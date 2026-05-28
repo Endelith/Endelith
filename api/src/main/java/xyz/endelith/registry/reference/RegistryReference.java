@@ -2,6 +2,7 @@ package xyz.endelith.registry.reference;
 
 import java.util.Objects;
 import xyz.endelith.chat.ChatType;
+import xyz.endelith.entity.damage.DamageType;
 import xyz.endelith.entity.variant.cat.CatSoundVariant;
 import xyz.endelith.entity.variant.cat.CatVariant;
 import xyz.endelith.entity.variant.chicken.ChickenSoundVariant;
@@ -37,6 +38,8 @@ public final class RegistryReference<V> {
     public static final RegistryReference<CowSoundVariant> COW_SOUND_VARIANT = create("cow_sound_variant");
 
     public static final RegistryReference<CowVariant> COW_VARIANT = create("cow_variant");
+
+    public static final RegistryReference<DamageType> DAMAGE_TYPE = create("damage_type");
 
     public static final RegistryReference<SoundEvent> SOUND_EVENT = create("sound_event");
 

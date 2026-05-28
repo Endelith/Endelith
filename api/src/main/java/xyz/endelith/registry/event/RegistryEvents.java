@@ -1,6 +1,7 @@
 package xyz.endelith.registry.event;
 
 import xyz.endelith.chat.ChatType;
+import xyz.endelith.entity.damage.DamageType;
 import xyz.endelith.entity.variant.cat.CatSoundVariant;
 import xyz.endelith.entity.variant.cat.CatVariant;
 import xyz.endelith.entity.variant.chicken.ChickenSoundVariant;
@@ -39,6 +40,9 @@ public final class RegistryEvents {
 
     public static final RegistryEventProvider<CowVariant> COW_VARIANT =
             create(RegistryReference.COW_VARIANT);
+
+    public static final RegistryEventProvider<DamageType> DAMAGE_TYPE =
+            create(RegistryReference.DAMAGE_TYPE);
 
     private RegistryEvents() {
     }
