@@ -27,6 +27,7 @@ import xyz.endelith.registry.reference.RegistryReference;
 import xyz.endelith.server.network.NetworkManager;
 import xyz.endelith.server.registry.MinecraftRegistryImpl.RegistrationInfo;
 import xyz.endelith.server.registry.blockstate.BlockStateRegistryImpl;
+import xyz.endelith.server.registry.codec.chat.ChatTypeCodec;
 import xyz.endelith.server.registry.codec.entity.variant.cat.CatSoundVariantCodec;
 import xyz.endelith.server.registry.codec.entity.variant.cat.CatVariantCodec;
 import xyz.endelith.server.registry.codec.world.biome.BiomeCodec;
@@ -71,6 +72,12 @@ public final class RegistryManagerImpl implements RegistryManager {
                         Key.key("cat_variant"),
                         "registries/cat_variants.json",
                         CatVariantCodec.CODEC
+                )
+                .dataDriven(
+                        RegistryEvents.CHAT_TYPE,
+                        Key.key("chat_type"),
+                        "registries/chat_types.json",
+                        ChatTypeCodec.CODEC
                 )
                 .builtIn(
                         RegistryReference.BLOCK,

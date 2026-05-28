@@ -1,5 +1,6 @@
 package xyz.endelith.registry.event;
 
+import xyz.endelith.chat.ChatType;
 import xyz.endelith.entity.variant.cat.CatSoundVariant;
 import xyz.endelith.entity.variant.cat.CatVariant;
 import xyz.endelith.registry.reference.RegistryReference;
@@ -19,6 +20,9 @@ public final class RegistryEvents {
 
     public static final RegistryEventProvider<CatVariant> CAT_VARIANT =
             create(RegistryReference.CAT_VARIANT);
+
+    public static final RegistryEventProvider<ChatType> CHAT_TYPE =
+            create(RegistryReference.CHAT_TYPE);
 
     private RegistryEvents() {
     }

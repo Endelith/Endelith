@@ -1,6 +1,7 @@
 package xyz.endelith.registry.reference;
 
 import java.util.Objects;
+import xyz.endelith.chat.ChatType;
 import xyz.endelith.entity.variant.cat.CatSoundVariant;
 import xyz.endelith.entity.variant.cat.CatVariant;
 import xyz.endelith.world.biome.Biome;
@@ -22,6 +23,8 @@ public final class RegistryReference<V> {
     public static final RegistryReference<CatSoundVariant> CAT_SOUND_VARIANT = create("cat_sound_variant");
 
     public static final RegistryReference<CatVariant> CAT_VARIANT = create("cat_variant");
+
+    public static final RegistryReference<ChatType> CHAT_TYPE = create("chat_type");
 
     public static final RegistryReference<SoundEvent> SOUND_EVENT = create("sound_event");
 
