@@ -5,6 +5,8 @@ import xyz.endelith.entity.variant.cat.CatSoundVariant;
 import xyz.endelith.entity.variant.cat.CatVariant;
 import xyz.endelith.entity.variant.chicken.ChickenSoundVariant;
 import xyz.endelith.entity.variant.chicken.ChickenVariant;
+import xyz.endelith.entity.variant.cow.CowSoundVariant;
+import xyz.endelith.entity.variant.cow.CowVariant;
 import xyz.endelith.registry.reference.RegistryReference;
 import xyz.endelith.world.biome.Biome;
 import xyz.endelith.world.block.banner.BannerPattern;
@@ -31,6 +33,12 @@ public final class RegistryEvents {
 
     public static final RegistryEventProvider<ChickenVariant> CHICKEN_VARIANT =
             create(RegistryReference.CHICKEN_VARIANT);
+
+    public static final RegistryEventProvider<CowSoundVariant> COW_SOUND_VARIANT =
+            create(RegistryReference.COW_SOUND_VARIANT);
+
+    public static final RegistryEventProvider<CowVariant> COW_VARIANT =
+            create(RegistryReference.COW_VARIANT);
 
     private RegistryEvents() {
     }

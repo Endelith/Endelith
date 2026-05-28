@@ -32,6 +32,8 @@ import xyz.endelith.server.registry.codec.entity.variant.cat.CatSoundVariantCode
 import xyz.endelith.server.registry.codec.entity.variant.cat.CatVariantCodec;
 import xyz.endelith.server.registry.codec.entity.variant.chicken.ChickenSoundVariantCodec;
 import xyz.endelith.server.registry.codec.entity.variant.chicken.ChickenVariantCodec;
+import xyz.endelith.server.registry.codec.entity.variant.cow.CowSoundVariantCodec;
+import xyz.endelith.server.registry.codec.entity.variant.cow.CowVariantCodec;
 import xyz.endelith.server.registry.codec.world.biome.BiomeCodec;
 import xyz.endelith.server.registry.codec.world.block.banner.BannerPatternCodec;
 import xyz.endelith.server.registry.codec.world.sound.SoundEventCodec;
@@ -92,6 +94,18 @@ public final class RegistryManagerImpl implements RegistryManager {
                         Key.key("chicken_variant"),
                         "registries/chicken_variants.json",
                         ChickenVariantCodec.CODEC
+                )
+                .dataDriven(
+                        RegistryEvents.COW_SOUND_VARIANT,
+                        Key.key("cow_sound_variant"),
+                        "registries/cow_sound_variants.json",
+                        CowSoundVariantCodec.CODEC
+                )
+                .dataDriven(
+                        RegistryEvents.COW_VARIANT,
+                        Key.key("cow_variant"),
+                        "registries/cow_variants.json",
+                        CowVariantCodec.CODEC
                 )
                 .builtIn(
                         RegistryReference.BLOCK,
